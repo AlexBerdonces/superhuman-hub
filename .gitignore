@@ -1,0 +1,13 @@
+# Scripts de deploy (contienen configuracion local, no subir a GitHub)
+deploy_to_github.ps1
+instalar_watcher.ps1
+github_watcher.ps1
+deploy_log.txt
+
+# Credenciales (nunca subir a GitHub)
+.github_token
+.github_token.txt
+
+# Datos fuente (solo se sirve index.html)
+newsletter_news.json
+newsletter_news.html
