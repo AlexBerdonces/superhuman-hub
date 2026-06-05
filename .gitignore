@@ -8,6 +8,5 @@ deploy_log.txt
 .github_token
 .github_token.txt
 
-# Datos fuente (solo se sirve index.html)
-newsletter_news.json
+# Datos fuente (el HTML original, solo se sirve index.html)
 newsletter_news.html
