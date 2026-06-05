@@ -1,412 +1,7 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Newsletter Hub</title>
-<style>
-:root {
-  --bg: #0f0f1a;
-  --surface: #1a1a2e;
-  --surface2: #22223a;
-  --accent: #6c63ff;
-  --violet: #8b5cf6;
-  --green: #00c896;
-  --orange: #ff9f40;
-  --red: #ff4757;
-  --blue: #4fc3f7;
-  --purple: #ce93d8;
-  --teal: #80cbc4;
-  --accent2: #ff6584;
-  --text: #e8e8f0;
-  --text2: #9090a8;
-  --border: #2a2a3a;
-}
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: system-ui, -apple-system, sans-serif;
-  min-height: 100vh;
-}
-
-/* HEADER */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: var(--surface);
-  border-bottom: 1px solid var(--border);
-  padding: 16px 20px 12px;
-}
-.header-top {
-  display: flex;
-  align-items: baseline;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-bottom: 8px;
-}
-.header-title {
-  font-size: 1.6rem;
-  font-weight: 700;
-  background: linear-gradient(135deg, var(--accent), var(--violet));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-.header-sub {
-  font-size: 0.85rem;
-  color: var(--text2);
-}
-.cat-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-top: 6px;
-}
-.cat-chip {
-  font-size: 0.72rem;
-  padding: 2px 8px;
-  border-radius: 20px;
-  background: var(--surface2);
-  color: var(--text2);
-  border: 1px solid var(--border);
-}
-
-/* CONTROLS */
-.controls {
-  position: sticky;
-  top: 0;
-  z-index: 99;
-  background: var(--bg);
-  border-bottom: 1px solid var(--border);
-  padding: 10px 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.search-box {
-  width: 100%;
-  padding: 8px 12px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  color: var(--text);
-  font-size: 0.9rem;
-  outline: none;
-  transition: border-color 0.2s;
-}
-.search-box:focus {
-  border-color: var(--accent);
-}
-.search-box::placeholder { color: var(--text2); }
-
-.btn-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  align-items: center;
-}
-.btn-row label {
-  font-size: 0.78rem;
-  color: var(--text2);
-  margin-right: 2px;
-}
-.filter-btn {
-  padding: 5px 12px;
-  border-radius: 20px;
-  border: 1px solid var(--border);
-  background: var(--surface);
-  color: var(--text2);
-  cursor: pointer;
-  font-size: 0.8rem;
-  transition: all 0.15s;
-}
-.filter-btn:hover {
-  border-color: var(--accent);
-  color: var(--text);
-}
-.filter-btn.active {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: #fff;
-  font-weight: 600;
-}
-.filter-btn.active-sort {
-  background: var(--violet);
-  border-color: var(--violet);
-  color: #fff;
-  font-weight: 600;
-}
-
-/* GRID */
-.grid-container {
-  padding: 20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 16px;
-}
-
-/* CARDS */
-.card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  overflow: hidden;
-  transition: transform 0.15s, border-color 0.15s, box-shadow 0.15s;
-  display: flex;
-  flex-direction: column;
-}
-.card:hover {
-  transform: translateY(-2px);
-  border-color: var(--blue);
-  box-shadow: 0 4px 20px rgba(79,195,247,0.15);
-}
-.card-top-border {
-  height: 3px;
-  width: 100%;
-}
-.card-body {
-  padding: 14px 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  flex: 1;
-}
-.card-badges {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-.badge {
-  font-size: 0.7rem;
-  padding: 3px 8px;
-  border-radius: 12px;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-}
-.badge-cat {
-  background: rgba(108,99,255,0.15);
-  color: var(--accent);
-  border: 1px solid rgba(108,99,255,0.3);
-}
-.badge-score-green { background: rgba(0,200,150,0.15); color: var(--green); border: 1px solid rgba(0,200,150,0.3); }
-.badge-score-orange { background: rgba(255,159,64,0.15); color: var(--orange); border: 1px solid rgba(255,159,64,0.3); }
-.badge-score-red { background: rgba(255,71,87,0.15); color: var(--red); border: 1px solid rgba(255,71,87,0.3); }
-.badge-prompt {
-  background: rgba(139,92,246,0.15);
-  color: var(--violet);
-  border: 1px solid rgba(139,92,246,0.3);
-}
-.badge-tool {
-  font-size: 0.7rem;
-  padding: 3px 8px;
-  border-radius: 12px;
-  font-weight: 600;
-  color: #fff;
-}
-
-.card-title {
-  font-size: 0.95rem;
-  font-weight: 600;
-  line-height: 1.35;
-  color: var(--text);
-}
-.card-summary {
-  font-size: 0.82rem;
-  color: var(--text2);
-  line-height: 1.5;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-.card-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-}
-.tag {
-  font-size: 0.7rem;
-  padding: 2px 8px;
-  border-radius: 10px;
-  background: var(--surface2);
-  color: var(--text2);
-  border: 1px solid var(--border);
-}
-.card-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-top: auto;
-  padding-top: 8px;
-  border-top: 1px solid var(--border);
-  font-size: 0.75rem;
-  color: var(--text2);
-}
-.card-footer a {
-  color: var(--accent);
-  text-decoration: none;
-  font-size: 0.75rem;
-}
-.card-footer a:hover { text-decoration: underline; }
-
-/* ACCORDION */
-.accordion-btn {
-  background: var(--surface2);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  color: var(--violet);
-  cursor: pointer;
-  font-size: 0.8rem;
-  padding: 6px 12px;
-  width: 100%;
-  text-align: left;
-  transition: background 0.15s;
-}
-.accordion-btn:hover { background: rgba(139,92,246,0.1); }
-.accordion-content {
-  display: none;
-  margin-top: 8px;
-}
-.accordion-content.open { display: block; }
-.prompt-code {
-  background: #0d0d1a;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 12px;
-  font-size: 0.78rem;
-  color: var(--text);
-  white-space: pre-wrap;
-  word-break: break-word;
-  line-height: 1.5;
-  font-family: 'Fira Mono', 'Consolas', monospace;
-  position: relative;
-}
-.copy-btn {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  background: var(--surface2);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  color: var(--text2);
-  cursor: pointer;
-  font-size: 0.72rem;
-  padding: 3px 8px;
-  transition: all 0.15s;
-}
-.copy-btn:hover { color: var(--text); border-color: var(--accent); }
-.copy-btn.copied { color: var(--green); border-color: var(--green); }
-
-.desglose-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-  font-size: 0.78rem;
-}
-.desglose-table th {
-  text-align: left;
-  padding: 6px 8px;
-  background: var(--surface2);
-  color: var(--text2);
-  border-bottom: 1px solid var(--border);
-  font-weight: 600;
-  width: 38%;
-}
-.desglose-table td {
-  padding: 6px 8px;
-  color: var(--text);
-  border-bottom: 1px solid var(--border);
-  vertical-align: top;
-  line-height: 1.4;
-}
-.desglose-table tr:last-child th,
-.desglose-table tr:last-child td { border-bottom: none; }
-
-/* EMPTY STATE */
-.empty-state {
-  grid-column: 1 / -1;
-  text-align: center;
-  padding: 60px 20px;
-  color: var(--text2);
-  font-size: 1rem;
-}
-
-/* MOBILE */
-@media (max-width: 480px) {
-  .grid-container { padding: 12px; gap: 12px; }
-  .controls { padding: 8px 12px; }
-  .header-title { font-size: 1.3rem; }
-}
-</style>
-</head>
-<body>
-
-<header class="site-header" id="site-header">
-  <div class="header-top">
-    <span class="header-title">📰 Newsletter Hub</span>
-    <span class="header-sub" id="header-sub"></span>
-  </div>
-  <div class="cat-chips" id="cat-chips"></div>
-</header>
-
-<div class="controls" id="controls">
-  <input class="search-box" id="search-input" type="text" placeholder="🔍 Buscar en título, resumen, prompt, etiquetas..." oninput="applyFilters()">
-
-  <div class="btn-row" id="type-row">
-    <label>Tipo:</label>
-    <button class="filter-btn active" onclick="setTypeFilter('all')">✨ Todo</button>
-    <button class="filter-btn" onclick="setTypeFilter('noticia')">📰 Noticias</button>
-    <button class="filter-btn" onclick="setTypeFilter('prompt')">💡 Prompts</button>
-  </div>
-
-  <div class="btn-row" id="sort-row">
-    <label>Ordenar:</label>
-    <span class="filter-label">Ordenar:</span>
-    <button class="filter-btn active-sort" onclick="setSort('puntuacion')">🏆 Puntuación</button>
-    <button class="filter-btn" onclick="setSort('fecha')">📅 Más reciente</button>
-    <button class="filter-btn" id="sort-herramienta-btn" onclick="setSort('herramienta')" style="display:none">🤖 Herramienta (prompts)</button>
-  </div>
-
-  <div class="btn-row" id="cat-row">
-    <label>Categoría:</label>
-    <button class="filter-btn active" onclick="setCatFilter('all')">✨ Todas</button>
-    <button class="filter-btn" onclick="setCatFilter('IA')">🤖 IA</button>
-    <button class="filter-btn" onclick="setCatFilter('Robotica')">🦾 Robótica</button>
-    <button class="filter-btn" onclick="setCatFilter('Espacio')">🚀 Espacio</button>
-    <button class="filter-btn" onclick="setCatFilter('Salud')">🏥 Salud</button>
-    <button class="filter-btn" onclick="setCatFilter('Negocios')">💼 Negocios</button>
-    <button class="filter-btn" onclick="setCatFilter('Tecnologia')">💻 Tecnología</button>
-    <button class="filter-btn" onclick="setCatFilter('Ciencia')">🔬 Ciencia</button>
-    <button class="filter-btn" onclick="setCatFilter('Politica')">⚖️ Política</button>
-  </div>
-
-  <div class="btn-row" id="score-row">
-    <label>Impacto:</label>
-    <button class="filter-btn active" onclick="setScoreFilter('all')">⭐ Todos</button>
-    <button class="filter-btn" onclick="setScoreFilter('alto')">🟢 Alto</button>
-    <button class="filter-btn" onclick="setScoreFilter('medio')">🟠 Medio</button>
-    <button class="filter-btn" onclick="setScoreFilter('bajo')">🔴 Bajo</button>
-  </div>
-
-  <div class="btn-row" id="newsletter-row">
-    <label>Newsletter:</label>
-    <!-- populated dynamically by JS -->
-  </div>
-</div>
-
-<div class="grid-container" id="grid"></div>
-
-<script>
-const RAW_DATA = {
+{
   "version": "1.0",
   "ultima_actualizacion": "2026-06-05",
-  "total_noticias": 173,
+  "total_noticias": 178,
   "noticias": [
     {
       "id": "news_014",
@@ -531,7 +126,7 @@ const RAW_DATA = {
       "titulo": "OpenAI y Anthropic anuncian una inusual alianza estratégica conjunta en empresas",
       "resumen": "OpenAI y Anthropic han anunciado una inusual alianza estratégica para el mercado empresarial, colaborando en estándares de seguridad y compatibilidad de APIs. La cooperación entre los dos principales competidores en IA marca un cambio histórico en el sector.",
       "categoria": "Negocios e Impacto Económico",
-      "puntuacion": 72,
+      "puntuacion": 70,
       "fecha": "2026-05-05",
       "fuente_asunto": "👀 Cofounder 2: Launch agent-only startups",
       "url": "https://www.anthropic.com/news/enterprise-ai-services-company",
@@ -542,7 +137,7 @@ const RAW_DATA = {
       "titulo": "Subquadratic anuncia avance en eficiencia de LLMs que reduce costes",
       "resumen": "Subquadratic ha presentado una arquitectura que supera las limitaciones cuadráticas de la atención en transformers, reduciendo dramáticamente los costes computacionales para modelos de lenguaje de gran escala. Si se adopta ampliamente, podría democratizar el acceso a modelos de IA avanzados.",
       "categoria": "Inteligencia Artificial",
-      "puntuacion": 70,
+      "puntuacion": 68,
       "fecha": "2026-05-06",
       "fuente_asunto": "💬 ChatGPT's new default model just dropped",
       "url": "https://venturebeat.com/technology/when-product-managers-ship-code-ai-just-broke-the-software-org-chart",
@@ -689,7 +284,7 @@ const RAW_DATA = {
       "titulo": "Cofounder 2 permite a solopreneurs gestionar empresas enteras con agentes de IA",
       "resumen": "Cofounder 2 ha lanzado una plataforma que permite a emprendedores individuales gestionar empresas completas con agentes de IA que actúan como cofundadores virtuales en ventas, marketing, producto y operaciones. La herramienta hace viable la empresa unipersonal a escala.",
       "categoria": "Negocios e Impacto Económico",
-      "puntuacion": 62,
+      "puntuacion": 60,
       "fecha": "2026-05-05",
       "fuente_asunto": "👀 Cofounder 2: Launch agent-only startups",
       "url": "https://thenextweb.com/news/openai-deployco-finalized-10-billion-joint-venture",
@@ -779,7 +374,7 @@ const RAW_DATA = {
       "titulo": "Claude y Perplexity Computer obtienen superpoderes financieros",
       "resumen": "Anthropic y Perplexity han integrado capacidades financieras avanzadas en sus asistentes, permitiendo análisis de mercados en tiempo real, gestión de carteras y ejecución de operaciones. La convergencia entre IA conversacional y servicios financieros marca un nuevo hito en la democratización del asesoramiento financiero.",
       "categoria": "Negocios e Impacto Económico",
-      "puntuacion": 58,
+      "puntuacion": 56,
       "fecha": "2026-05-06",
       "fuente_asunto": "💬 ChatGPT's new default model just dropped",
       "url": "https://openai.com/index/gpt-5-5-instant/",
@@ -1101,7 +696,7 @@ const RAW_DATA = {
       "titulo": "Apple confirma que la demanda de agentes de IA provoca escasez del Mac mini",
       "resumen": "Apple ha confirmado que la escasez del Mac mini se debe en parte a la demanda masiva de empresas que los usan como servidores locales para agentes de IA. El fenómeno refleja cómo la IA agéntica está cambiando los patrones de compra de hardware de forma inesperada.",
       "categoria": "Negocios e Impacto Económico",
-      "puntuacion": 45,
+      "puntuacion": 43,
       "fecha": "2026-05-04",
       "fuente_asunto": "💻 Apple confirms Mac Mini shortage",
       "url": "https://techcrunch.com/2026/04/30/as-tim-cook-steps-down-apple-hit-record-sales-but-a-chip-shortage-looms/?utm_source=superhuman&utm_medium=newsletter&utm_campaign=apple-confirms-mac-mini-shortage",
@@ -1145,7 +740,7 @@ const RAW_DATA = {
       "titulo": "Perplexity Computer llega a Microsoft Teams para investigación avanzada",
       "resumen": "Perplexity ha integrado su sistema de búsqueda e investigación con IA directamente en Microsoft Teams, permitiendo a equipos realizar investigaciones profundas sin salir de su entorno de trabajo. La integración llega a millones de usuarios corporativos de Teams a nivel global.",
       "categoria": "Inteligencia Artificial",
-      "puntuacion": 30,
+      "puntuacion": 28,
       "fecha": "2026-05-05",
       "fuente_asunto": "👀 Cofounder 2: Launch agent-only startups",
       "url": "https://marketplace.microsoft.com/en-us/product/WA200010619?tab=Overview",
@@ -1171,7 +766,7 @@ const RAW_DATA = {
       "titulo": "Meta abre su ecosistema publicitario a herramientas de IA de terceros",
       "resumen": "Meta ha anunciado la apertura de su plataforma publicitaria a herramientas de IA de terceros, permitiendo a anunciantes integrar sus propios modelos para optimización de campañas. El movimiento democratiza el acceso a los datos y herramientas de publicidad de Facebook e Instagram para el ecosistema de IA.",
       "categoria": "Negocios e Impacto Económico",
-      "puntuacion": 42,
+      "puntuacion": 40,
       "fecha": "2026-05-04",
       "fuente_asunto": "💻 Apple confirms Mac Mini shortage",
       "url": "https://techcrunch.com/2026/04/30/as-tim-cook-steps-down-apple-hit-record-sales-but-a-chip-shortage-looms/",
@@ -1193,7 +788,7 @@ const RAW_DATA = {
       "titulo": "Dos líderes de SaaS reportan trimestres excepcionales impulsados por IA",
       "resumen": "Dos de las principales empresas de software como servicio han publicado resultados trimestrales muy superiores a las expectativas, atribuidos directamente a la adopción de sus funciones de IA por clientes empresariales. Los resultados refuerzan la tesis de que la IA está acelerando el crecimiento del SaaS.",
       "categoria": "Negocios e Impacto Económico",
-      "puntuacion": 50,
+      "puntuacion": 48,
       "fecha": "2026-05-04",
       "fuente_asunto": "💻 Apple confirms Mac Mini shortage",
       "url": "https://techcrunch.com/2026/04/30/meta-says-its-business-ai-now-facilitates-10-million-conversations-a-week/",
@@ -1396,7 +991,7 @@ const RAW_DATA = {
       "titulo": "OpenAI convierte GPT-5.5 Instant en el modelo predeterminado de ChatGPT",
       "resumen": "GPT-5.5 Instant offers clearer, more concise answers and produces 52.5% fewer hallucinated claims than GPT-5.3 Instant in high-stakes domains like medicine, law, and finance. The new model is rolling out now to all users in ChatGPT.",
       "categoria": "Negocios e Impacto Económico",
-      "puntuacion": 38,
+      "puntuacion": 36,
       "fecha": "2026-05-06",
       "fuente_asunto": "💬 ChatGPT's new default model just dropped",
       "url": "https://www.reddit.com/r/ChatGPT/comments/1t3ii1l/chat_gpt_got_that_guy_in_trouble_and_he_doesnt/",
@@ -2647,7 +2242,7 @@ const RAW_DATA = {
       "titulo": "Anthropic Institute publica agenda de investigación sobre IA que se auto-mejora",
       "resumen": "El recién formado Anthropic Institute publicó su agenda formal de investigación, tratando la posibilidad de que los sistemas de IA se mejoren a sí mismos como algo que la empresa está preparando activamente. La agenda abarca amenazas de seguridad, disrupción económica, gobernanza y planificación para modelos auto-mejorantes, y propone 'ejercicios de simulacro' para prepararse ante surgimientos repentinos de capacidades.",
       "categoria": "Inteligencia Artificial",
-      "puntuacion": 68,
+      "puntuacion": 78,
       "fecha": "2026-05-08",
       "fuente_asunto": "OpenAI closes reasoning gap in voice agents",
       "url": "https://www.anthropic.com/research/anthropic-institute-agenda",
@@ -2783,7 +2378,7 @@ const RAW_DATA = {
       "titulo": "Claude escribe el 80% del código de Anthropic y acelera su propia evolución",
       "resumen": "Anthropic reveló que Claude escribió el 80% de su propio código en mayo de 2026. La empresa alerta de que si esta tendencia continúa, podría llegarse a un escenario donde Claude diseñe y entrene a sus propios sucesores. El artículo se convirtió viral con más de 3 millones de vistas el mismo día de su publicación.",
       "categoria": "Inteligencia Artificial",
-      "puntuacion": 90,
+      "puntuacion": 95,
       "fecha": "2026-06-05",
       "fuente_asunto": "👀 Claude is accelerating its own development",
       "url": "https://www.anthropic.com/institute/recursive-self-improvement",
@@ -2843,7 +2438,7 @@ const RAW_DATA = {
       "titulo": "Los humanos ya son minoría en internet: bots superan el tráfico humano según Cloudflare",
       "resumen": "Según datos en tiempo real de Cloudflare Radar, los bots generan ahora más tráfico en internet que los humanos. Es la primera vez que esto se confirma con datos públicos de escala global, y coincide con la explosión del uso de agentes de IA autónomos.",
       "categoria": "Tecnología",
-      "puntuacion": 75,
+      "puntuacion": 85,
       "fecha": "2026-06-05",
       "fuente_asunto": "👀 Claude is accelerating its own development",
       "url": "https://radar.cloudflare.com/traffic#bot-vs-human",
@@ -2897,365 +2492,80 @@ const RAW_DATA = {
         "formato": "Lista de empleos encontrados con estado de aplicación por cada uno",
         "restricciones": "Requiere extensión de Claude para Chrome instalada y CV actualizado en formato PDF o Word"
       }
+    },
+    {
+      "id": "news_139",
+      "tipo": "noticia",
+      "titulo": "ChatGPT 'sueña' para conocerte y mejorar su memoria personal",
+      "resumen": "OpenAI lanzó 'dreaming', un sistema en segundo plano que convierte el historial de chats en un perfil categorizado del usuario (viajes, hobbies, trabajo). La precisión de memoria factual pasó del 41.5% al 82.8% en evaluaciones internas. Disponible primero para usuarios Plus y Pro en EE.UU.; los usuarios pueden revisar y corregir sus memorias.",
+      "categoria": "Inteligencia Artificial",
+      "puntuacion": 58,
+      "fecha": "2026-06-05",
+      "fuente_asunto": "⌛️ Anthropic's self-improving AI warning",
+      "url": "https://openai.com/index/chatgpt-memory-dreaming/",
+      "newsletter": "The Rundown AI"
+    },
+    {
+      "id": "news_140",
+      "tipo": "noticia",
+      "titulo": "CEOs de IA exigen al Congreso frenar el riesgo de bioarmas con ADN sintético",
+      "resumen": "Los CEOs de OpenAI, Anthropic, Google DeepMind y Microsoft firmaron una carta conjunta al Congreso pidiendo que los vendedores de ADN sintético verifiquen compradores y registren ventas. Advierten que los modelos de IA ya superan a virólogos doctores en conocimiento técnico de laboratorio. Es la primera vez que estos labs rivales se alinean formalmente en un riesgo de seguridad.",
+      "categoria": "Política y Regulación",
+      "puntuacion": 75,
+      "fecha": "2026-06-05",
+      "fuente_asunto": "⌛️ Anthropic's self-improving AI warning",
+      "url": "https://prod-i.a.dj.com/public/resources/documents/dnaletter.pdf",
+      "newsletter": "The Rundown AI"
+    },
+    {
+      "id": "news_141",
+      "tipo": "noticia",
+      "titulo": "Nvidia lanza Nemotron 3 Ultra, modelo open-source de 550B para agentes",
+      "resumen": "Nvidia publicó en código abierto Nemotron 3 Ultra, un modelo de razonamiento de 550.000 millones de parámetros que corre 5 veces más rápido y hasta un 30% más barato para agentes que competidores. Su rendimiento es comparable a los mejores modelos open-source del momento.",
+      "categoria": "Inteligencia Artificial",
+      "puntuacion": 60,
+      "fecha": "2026-06-05",
+      "fuente_asunto": "⌛️ Anthropic's self-improving AI warning",
+      "url": "https://developer.nvidia.com/blog/nvidia-nemotron-3-ultra-powers-faster-more-efficient-reasoning-for-long-running-agents/",
+      "newsletter": "The Rundown AI"
+    },
+    {
+      "id": "news_142",
+      "tipo": "noticia",
+      "titulo": "EE.UU. y Japón lanzan alianza de $1.000M para duplicar producción científica con IA",
+      "resumen": "EE.UU. y Japón anunciaron una asociación de investigación de IA de 1.000 millones de dólares, convirtiéndose Japón en el primer país en unirse a la misión Genesis de EE.UU., cuyo objetivo es duplicar la producción científica usando IA.",
+      "categoria": "Política y Regulación",
+      "puntuacion": 55,
+      "fecha": "2026-06-05",
+      "fuente_asunto": "⌛️ Anthropic's self-improving AI warning",
+      "url": "https://www.energy.gov/articles/united-states-and-japan-announce-historic-1-billion-partnership-under-president-trumps",
+      "newsletter": "The Rundown AI"
+    },
+    {
+      "id": "prompt_036",
+      "tipo": "prompt",
+      "titulo": "Evalúa cualquier idea de negocio con Perplexity Deep Research",
+      "herramienta": "Perplexity",
+      "puntuacion": 80,
+      "fecha": "2026-06-05",
+      "fuente_asunto": "⌛️ Anthropic's self-improving AI warning",
+      "newsletter": "The Rundown AI",
+      "etiquetas": [
+        "Negocios",
+        "Análisis",
+        "Productividad",
+        "Estrategia",
+        "Validación"
+      ],
+      "prompt_completo": "Actúa como un analista de venture capital sénior con 15 años de experiencia evaluando ideas de negocio. Analiza en profundidad la siguiente idea: [TU IDEA DE NEGOCIO]. Crea un análisis completo estructurado en 6 apartados: 1) Resumen ejecutivo y propuesta de valor única, 2) Análisis del mercado (TAM/SAM/SOM, tendencias, tasa de crecimiento), 3) Análisis competitivo (competidores directos e indirectos, ventajas diferenciales reales), 4) Modelo de negocio y fuentes de ingresos, 5) Riesgos principales y cómo mitigarlos, 6) Próximos pasos y MVP en 90 días. Usa únicamente datos reales y actuales que puedas verificar. Al final, da un veredicto claro: viable tal cual, viable con pivote (explicar cuál), o descartar (explicar por qué).",
+      "desglose": {
+        "rol": "Analista de venture capital sénior con 15 años de experiencia",
+        "contexto": "Evaluación profunda de una idea de negocio desde perspectiva inversora con datos reales de mercado",
+        "instruccion": "Crear análisis de 6 apartados cubriendo mercado, competencia, modelo de negocio, riesgos y MVP en 90 días",
+        "cadena_pensamiento": "Progresa desde propuesta de valor hasta plan concreto, justificando cada sección con datos verificables",
+        "formato": "6 apartados estructurados con veredicto final claro sobre viabilidad",
+        "restricciones": "Solo datos reales verificables; veredicto directo y sin ambigüedades sobre la viabilidad"
+      }
     }
   ]
-};
-
-const CAT_BORDER = {
-  'IA': '#6c63ff',
-  'Robotica': '#00c896',
-  'Tecnologia': '#4fc3f7',
-  'Espacio': '#ce93d8',
-  'Salud': '#80cbc4',
-  'Negocios': '#ff6584',
-  'Ciencia': '#f9a825',
-  'Politica': '#ef5350',
-};
-
-const CAT_LABEL = {
-  'IA': '🤖 IA',
-  'Robotica': '🦾 Robótica',
-  'Tecnologia': '💻 Tecnología',
-  'Espacio': '🚀 Espacio',
-  'Salud': '🏥 Salud',
-  'Negocios': '💼 Negocios',
-  'Ciencia': '🔬 Ciencia',
-  'Politica': '⚖️ Política',
-};
-
-const TOOL_COLORS = {
-  'ChatGPT': '#10a37f',
-  'Claude': '#d97706',
-  'Gemini': '#4285f4',
-  'Grok': '#6b7280',
-  'Perplexity': '#7c3aed',
-};
-
-const CAT_MAP = {
-  'Inteligencia Artificial': 'IA',
-  'Robótica': 'Robotica',
-  'Robotica': 'Robotica',
-  'Tecnología': 'Tecnologia',
-  'Tecnologia': 'Tecnologia',
-  'Espacio y Aviación': 'Espacio',
-  'Espacio': 'Espacio',
-  'Salud y Ciencia': 'Salud',
-  'Salud': 'Salud',
-  'Negocios e Impacto Económico': 'Negocios',
-  'Negocios': 'Negocios',
-  'Ciencia y Matemáticas': 'Ciencia',
-  'Ciencia': 'Ciencia',
-  'Política y Regulación': 'Politica',
-  'Politica': 'Politica',
-};
-
-const noticias = RAW_DATA.noticias;
-
-let activeType = 'all';
-let activeCat = 'all';
-let activeSort = 'puntuacion';
-let activeScore = 'all';
-let activeNewsletter = 'all';
-
-function escapeHtml(str) {
-  if (!str) return '';
-  return String(str)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
 }
-
-function formatDate(d) {
-  if (!d) return '';
-  const parts = d.split('-');
-  if (parts.length === 3) {
-    return parts[2] + '/' + parts[1] + '/' + parts[0];
-  }
-  return d;
-}
-
-function getCatKey(item) {
-  const c = item.categoria || '';
-  return CAT_MAP[c] || 'IA';
-}
-
-function getScoreBadgeClass(score) {
-  if (score > 70) return 'badge-score-green';
-  if (score >= 40) return 'badge-score-orange';
-  return 'badge-score-red';
-}
-
-function toggleAccordion(btn) {
-  const content = btn.nextElementSibling;
-  const isOpen = content.classList.contains('open');
-  content.classList.toggle('open', !isOpen);
-  btn.textContent = isOpen ? '▶ Ver desglose del prompt ▼' : '▼ Ocultar desglose ▲';
-}
-
-function copyPromptById(btn) {
-  const id = btn.getAttribute('data-prompt-id');
-  const item = RAW_DATA.noticias.find(x => x.id === id);
-  const text = item ? (item.prompt_completo || '') : '';
-  copyPrompt(btn, text);
-}
-
-function copyPrompt(btn, text) {
-  navigator.clipboard.writeText(text).then(() => {
-    btn.textContent = '✓ Copiado';
-    btn.classList.add('copied');
-    setTimeout(() => {
-      btn.textContent = '📋 Copiar';
-      btn.classList.remove('copied');
-    }, 2000);
-  }).catch(() => {
-    // fallback
-    const ta = document.createElement('textarea');
-    ta.value = text;
-    document.body.appendChild(ta);
-    ta.select();
-    document.execCommand('copy');
-    document.body.removeChild(ta);
-    btn.textContent = '✓ Copiado';
-    btn.classList.add('copied');
-    setTimeout(() => {
-      btn.textContent = '📋 Copiar';
-      btn.classList.remove('copied');
-    }, 2000);
-  });
-}
-
-function buildCard(item) {
-  const catKey = getCatKey(item);
-  const borderColor = CAT_BORDER[catKey] || '#6c63ff';
-  const scoreClass = getScoreBadgeClass(item.puntuacion || 0);
-  const catLabel = CAT_LABEL[catKey] || catKey;
-  const newsletter = item.newsletter || 'SuperHuman';
-  const url = item.url || '';
-  
-  return `<div class="card">
-    <div class="card-top-border" style="background:${borderColor}"></div>
-    <div class="card-body">
-      <div class="card-badges">
-        <span class="badge badge-cat">${escapeHtml(catLabel)}</span>
-        <span class="badge ${scoreClass}">⭐ ${item.puntuacion || 0}</span>
-      </div>
-      <div class="card-title">${escapeHtml(item.titulo)}</div>
-      <div class="card-summary">${escapeHtml(item.resumen)}</div>
-      <div class="card-footer">
-        <span>📅 ${formatDate(item.fecha)}</span>
-        <span>📨 ${escapeHtml(newsletter)}</span>
-        ${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener">→ Ver artículo</a>` : ''}
-      </div>
-    </div>
-  </div>`;
-}
-
-function buildPromptCard(item) {
-  const tool = item.herramienta || 'Otro';
-  const toolColor = TOOL_COLORS[tool] || '#6c63ff';
-  const scoreClass = getScoreBadgeClass(item.puntuacion || 0);
-  const tags = item.etiquetas || [];
-  const promptText = item.prompt_completo || '';
-  const d = item.desglose || {};
-  const newsletter = item.newsletter || 'SuperHuman';
-  
-  const desgloseRows = [
-    ['🎭 Rol', d.rol],
-    ['🌍 Contexto', d.contexto],
-    ['📋 Instrucción', d.instruccion],
-    ['🧠 Cadena de pensamiento', d.cadena_pensamiento],
-    ['📐 Formato', d.formato],
-    ['🚫 Restricciones', d.restricciones],
-  ].filter(r => r[1] && r[1] !== 'No especificado' && r[1] !== 'N/A').map(r =>
-    `<tr><th>${escapeHtml(r[0])}</th><td>${escapeHtml(r[1])}</td></tr>`
-  ).join('');
-
-  const promptId = 'prompt_' + (item.id || Math.random().toString(36).slice(2));
-
-  return `<div class="card">
-    <div class="card-top-border" style="background:var(--violet)"></div>
-    <div class="card-body">
-      <div class="card-badges">
-        <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center">
-          <span class="badge badge-prompt">💡 PROMPT</span>
-          <span class="badge badge-tool" style="background:${toolColor}">${escapeHtml(tool)}</span>
-        </div>
-        <span class="badge ${scoreClass}">⭐ ${item.puntuacion || 0}</span>
-      </div>
-      <div class="card-title">${escapeHtml(item.titulo)}</div>
-      ${tags.length ? `<div class="card-tags">${tags.map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('')}</div>` : ''}
-      <div class="card-footer">
-        <span>📅 ${formatDate(item.fecha)}</span>
-        <span>📨 ${escapeHtml(newsletter)}</span>
-      </div>
-      <button class="accordion-btn" onclick="toggleAccordion(this)">▶ Ver desglose del prompt ▼</button>
-      <div class="accordion-content">
-        <div class="prompt-code" id="${promptId}-code">
-          <button class="copy-btn" data-prompt-id="${escapeHtml(item.id)}" onclick="copyPromptById(this)">📋 Copiar</button>
-          ${escapeHtml(promptText)}
-        </div>
-        ${desgloseRows ? `<table class="desglose-table"><tbody>${desgloseRows}</tbody></table>` : ''}
-      </div>
-    </div>
-  </div>`;
-}
-
-function setTypeFilter(type) {
-  activeType = type;
-  document.querySelectorAll('#type-row .filter-btn').forEach(b => b.classList.remove('active'));
-  event.target.classList.add('active');
-  
-  const sortRow = document.getElementById('sort-row');
-  const catRow = document.getElementById('cat-row');
-  const scoreRow = document.getElementById('score-row');
-  
-  const sortHerramienta = document.getElementById('sort-herramienta-btn');
-  if (type === 'prompt') {
-    catRow.style.display = 'none';
-    scoreRow.style.display = 'none';
-    sortHerramienta.style.display = '';
-    // Reset category filter so prompts are visible
-    activeCat = 'all';
-    document.querySelectorAll('#cat-row .filter-btn').forEach(b => b.classList.remove('active'));
-    document.querySelector('#cat-row .filter-btn').classList.add('active');
-  } else {
-    catRow.style.display = 'flex';
-    scoreRow.style.display = 'flex';
-    sortHerramienta.style.display = 'none';
-  }
-  applyFilters();
-}
-
-function setCatFilter(cat) {
-  activeCat = cat;
-  document.querySelectorAll('#cat-row .filter-btn').forEach(b => b.classList.remove('active'));
-  event.target.classList.add('active');
-  applyFilters();
-}
-
-function setScoreFilter(score) {
-  activeScore = score;
-  document.querySelectorAll('#score-row .filter-btn').forEach(b => b.classList.remove('active'));
-  event.target.classList.add('active');
-  applyFilters();
-}
-
-function setSort(sort) {
-  activeSort = sort;
-  document.querySelectorAll('#sort-row .filter-btn').forEach(b => b.classList.remove('active-sort'));
-  event.target.classList.add('active-sort');
-  applyFilters();
-}
-
-function setNewsletterFilter(nl) {
-  activeNewsletter = nl;
-  document.querySelectorAll('#newsletter-row .filter-btn').forEach(b => b.classList.remove('active'));
-  event.target.classList.add('active');
-  applyFilters();
-}
-
-function applyFilters() {
-  const query = document.getElementById('search-input').value.toLowerCase().trim();
-  
-  let items = noticias.filter(item => {
-    // Type filter
-    const itemType = item.tipo || 'noticia';
-    if (activeType !== 'all' && itemType !== activeType) return false;
-    
-    // Category filter: if a category is active, exclude prompts (they have no category)
-    if (activeCat !== 'all') {
-      if (itemType !== 'noticia') return false;
-      const catKey = getCatKey(item);
-      if (catKey !== activeCat) return false;
-    }
-    
-    // Newsletter filter
-    if (activeNewsletter !== 'all') {
-      const itemNewsletter = item.newsletter || 'SuperHuman';
-      if (itemNewsletter !== activeNewsletter) return false;
-    }
-
-    // Score filter (only for noticias)
-    if (activeScore !== 'all' && itemType === 'noticia') {
-      const s = item.puntuacion || 0;
-      if (activeScore === 'alto' && s <= 70) return false;
-      if (activeScore === 'medio' && (s < 40 || s > 70)) return false;
-      if (activeScore === 'bajo' && s >= 40) return false;
-    }
-    
-    // Search filter
-    if (query) {
-      const searchable = [
-        item.titulo || '',
-        item.resumen || '',
-        item.prompt_completo || '',
-        (item.etiquetas || []).join(' '),
-        item.categoria || '',
-      ].join(' ').toLowerCase();
-      if (!searchable.includes(query)) return false;
-    }
-    
-    return true;
-  });
-  
-  // Sort
-  items.sort((a, b) => {
-    if (activeSort === 'puntuacion') return (b.puntuacion || 0) - (a.puntuacion || 0);
-    if (activeSort === 'fecha') return (b.fecha || '').localeCompare(a.fecha || '');
-    if (activeSort === 'herramienta') return (a.herramienta || '').localeCompare(b.herramienta || '');
-    return (b.puntuacion || 0) - (a.puntuacion || 0);
-  });
-  
-  const grid = document.getElementById('grid');
-  if (items.length === 0) {
-    grid.innerHTML = '<div class="empty-state">😕 No se encontraron resultados para tu búsqueda</div>';
-    return;
-  }
-  
-  grid.innerHTML = items.map(item => {
-    const tipo = item.tipo || 'noticia';
-    return tipo === 'prompt' ? buildPromptCard(item) : buildCard(item);
-  }).join('');
-}
-
-(function initPage() {
-  // --- Header stats (dynamic) ---
-  const noticiaCount = noticias.filter(n => (n.tipo || 'noticia') === 'noticia').length;
-  const promptCount = noticias.filter(n => n.tipo === 'prompt').length;
-  const lastUpdate = RAW_DATA.ultima_actualizacion || '';
-  document.getElementById('header-sub').textContent =
-    `${noticiaCount} noticias · ${promptCount} prompts · última actualización: ${lastUpdate}`;
-
-  // --- Category chips ---
-  const cats = {};
-  noticias.forEach(n => {
-    if ((n.tipo || 'noticia') === 'noticia') {
-      const k = getCatKey(n);
-      cats[k] = (cats[k] || 0) + 1;
-    }
-  });
-  const chipsEl = document.getElementById('cat-chips');
-  const entries = Object.entries(cats).sort((a,b) => b[1]-a[1]);
-  chipsEl.innerHTML = entries.map(([k,v]) => {
-    const label = CAT_LABEL[k] || k;
-    return `<span class="cat-chip" style="border-color:${CAT_BORDER[k]||'#6c63ff'};color:${CAT_BORDER[k]||'#6c63ff'}; background:rgba(0,0,0,0.2)">${label} ${v}</span>`;
-  }).join('');
-  chipsEl.innerHTML += `<span class="cat-chip" style="border-color:var(--violet);color:var(--violet);background:rgba(0,0,0,0.2)">💡 Prompts ${promptCount}</span>`;
-
-  // --- Newsletter filter (auto-generated) ---
-  const newsletters = [...new Set(noticias.map(n => n.newsletter || 'SuperHuman'))].sort();
-  const nlRow = document.getElementById('newsletter-row');
-  const nlBtns = [`<button class="filter-btn active" onclick="setNewsletterFilter('all')">✨ Todas</button>`];
-  const NL_ICONS = { 'SuperHuman': '🦸', 'The Rundown AI': '📋' };
-  newsletters.forEach(nl => {
-    const icon = NL_ICONS[nl] || '📨';
-    nlBtns.push(`<button class="filter-btn" onclick="setNewsletterFilter('${nl.replace(/'/g, "\'")}')">${icon} ${nl}</button>`);
-  });
-  nlRow.innerHTML = '<label>Newsletter:</label>' + nlBtns.join('');
-})();
-
-applyFilters();
-</script>
-</body>
-</html>
