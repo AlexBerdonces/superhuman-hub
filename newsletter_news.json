@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "ultima_actualizacion": "2026-06-08",
-  "total_noticias": 189,
+  "ultima_actualizacion": "2026-06-11",
+  "total_noticias": 212,
   "noticias": [
     {
       "id": "news_014",
@@ -32,11 +32,13 @@
       "titulo": "SpaceX presenta la mayor OPI de la historia en bolsa",
       "resumen": "SpaceX ha registrado oficialmente lo que podría ser la mayor oferta pública inicial de la historia, con una valoración estimada que podría superar los $400.000 millones. La OPI daría a inversores acceso público a la empresa de cohetes más valiosa del mundo.",
       "categoria": "Negocios e Impacto Económico",
-      "puntuacion": 90,
+      "puntuacion": 95,
       "fecha": "2026-05-22",
       "fuente_asunto": "📊 ChatGPT gets PowerPoint skills",
       "url": "https://www.cnbc.com/2026/05/20/spacex-ipo-live-updates.html",
-      "tipo": "noticia"
+      "tipo": "noticia",
+      "puntuacion_anterior": 90,
+      "razon_cambio": "Cross-boost por nuevas noticias relacionadas (+5)"
     },
     {
       "id": "news_024",
@@ -93,11 +95,13 @@
       "titulo": "Científicos revierten el envejecimiento del hígado en ratones",
       "resumen": "Un nuevo estudio ha logrado revertir el envejecimiento del hígado en ratones mediante una técnica de reprogramación celular. Si los resultados se replican en humanos, podría representar un avance revolucionario en medicina antienvejecimiento y tratamiento de enfermedades hepáticas.",
       "categoria": "Salud y Ciencia",
-      "puntuacion": 72,
+      "puntuacion": 70,
       "fecha": "2026-05-10",
       "fuente_asunto": "✈️ NASA's jet hits a key milestone",
       "url": "https://www.sciencedaily.com/releases/2026/05/260508003121.htm",
-      "tipo": "noticia"
+      "tipo": "noticia",
+      "puntuacion_anterior": 72,
+      "razon_cambio": "Decaimiento temporal (32 días)"
     },
     {
       "id": "news_032",
@@ -126,35 +130,39 @@
       "titulo": "OpenAI y Anthropic anuncian una inusual alianza estratégica conjunta en empresas",
       "resumen": "OpenAI y Anthropic han anunciado una inusual alianza estratégica para el mercado empresarial, colaborando en estándares de seguridad y compatibilidad de APIs. La cooperación entre los dos principales competidores en IA marca un cambio histórico en el sector.",
       "categoria": "Negocios e Impacto Económico",
-      "puntuacion": 68,
+      "puntuacion": 66,
       "fecha": "2026-05-05",
       "fuente_asunto": "👀 Cofounder 2: Launch agent-only startups",
       "url": "https://www.anthropic.com/news/enterprise-ai-services-company",
-      "tipo": "noticia"
+      "tipo": "noticia",
+      "puntuacion_anterior": 68,
+      "razon_cambio": "Decaimiento temporal (37 días)"
     },
     {
       "id": "news_086",
       "titulo": "Subquadratic anuncia avance en eficiencia de LLMs que reduce costes",
       "resumen": "Subquadratic ha presentado una arquitectura que supera las limitaciones cuadráticas de la atención en transformers, reduciendo dramáticamente los costes computacionales para modelos de lenguaje de gran escala. Si se adopta ampliamente, podría democratizar el acceso a modelos de IA avanzados.",
       "categoria": "Inteligencia Artificial",
-      "puntuacion": 66,
+      "puntuacion": 64,
       "fecha": "2026-05-06",
       "fuente_asunto": "💬 ChatGPT's new default model just dropped",
       "url": "https://venturebeat.com/technology/when-product-managers-ship-code-ai-just-broke-the-software-org-chart",
-      "tipo": "noticia"
+      "tipo": "noticia",
+      "puntuacion_anterior": 66,
+      "razon_cambio": "Decaimiento temporal (36 días)"
     },
     {
       "id": "news_011",
       "titulo": "Anthropic lanza Claude Opus 4.8 con valoración de $965.000 millones",
       "resumen": "Anthropic ha presentado Claude Opus 4.8, destacando por su honestidad y precisión factual mejoradas. La empresa alcanza una valoración de $965.000 millones, acercándose al billón de dólares, en lo que sería una de las mayores valoraciones privadas de la historia tecnológica.",
       "categoria": "Inteligencia Artificial",
-      "puntuacion": 82,
+      "puntuacion": 92,
       "fecha": "2026-05-29",
       "fuente_asunto": "🦾 Opus 4.8 lands, excels at \"honesty\"",
       "url": null,
       "tipo": "noticia",
-      "puntuacion_anterior": 70,
-      "razon_cambio": "Anthropic presenta S-1 ante la SEC con valoración ~$1T; Opus 4.8 fue el modelo previo al IPO"
+      "puntuacion_anterior": 82,
+      "razon_cambio": "Cross-boost por nuevas noticias relacionadas (+10)"
     },
     {
       "id": "news_042",
@@ -218,11 +226,13 @@
       "titulo": "Huawei anuncia que igualará los chips de vanguardia para 2031",
       "resumen": "Huawei ha declarado que alcanzará la paridad con los chips de semiconductores más avanzados del mundo para 2031, a pesar de las sanciones estadounidenses. Si se cumple, representaría un cambio geopolítico significativo en la cadena de suministro global de chips para IA.",
       "categoria": "Tecnología",
-      "puntuacion": 65,
+      "puntuacion": 75,
       "fecha": "2026-05-26",
       "fuente_asunto": "💼 AI is bad news for consulting",
       "url": "https://www.reuters.com/world/asia-pacific/huawei-proposes-new-path-chip-development-amid-us-sanctions-2026-05-25/",
-      "tipo": "noticia"
+      "tipo": "noticia",
+      "puntuacion_anterior": 65,
+      "razon_cambio": "Cross-boost por nuevas noticias relacionadas (+10)"
     },
     {
       "id": "news_053",
@@ -240,11 +250,13 @@
       "titulo": "Google y SpaceX exploran centros de datos en órbita",
       "resumen": "Google y SpaceX están explorando la viabilidad de instalar centros de datos en órbita terrestre, aprovechando la temperatura del espacio para refrigeración y la energía solar constante. El proyecto podría transformar la infraestructura computacional global si se demuestra económicamente viable.",
       "categoria": "Espacio y Aviación",
-      "puntuacion": 75,
+      "puntuacion": 80,
       "fecha": "2026-05-13",
       "fuente_asunto": "💻 Google's Macbook competitor",
       "url": "https://www.wsj.com/tech/spacex-google-in-talks-to-explore-data-centers-in-orbit-7b7799e2?st�Xy9x&mod=superhuman",
-      "tipo": "noticia"
+      "tipo": "noticia",
+      "puntuacion_anterior": 75,
+      "razon_cambio": "Cross-boost por nuevas noticias relacionadas (+5)"
     },
     {
       "id": "news_057",
@@ -284,11 +296,13 @@
       "titulo": "Cofounder 2 permite a solopreneurs gestionar empresas enteras con agentes de IA",
       "resumen": "Cofounder 2 ha lanzado una plataforma que permite a emprendedores individuales gestionar empresas completas con agentes de IA que actúan como cofundadores virtuales en ventas, marketing, producto y operaciones. La herramienta hace viable la empresa unipersonal a escala.",
       "categoria": "Negocios e Impacto Económico",
-      "puntuacion": 58,
+      "puntuacion": 56,
       "fecha": "2026-05-05",
       "fuente_asunto": "👀 Cofounder 2: Launch agent-only startups",
       "url": "https://thenextweb.com/news/openai-deployco-finalized-10-billion-joint-venture",
-      "tipo": "noticia"
+      "tipo": "noticia",
+      "puntuacion_anterior": 58,
+      "razon_cambio": "Decaimiento temporal (37 días)"
     },
     {
       "id": "news_015",
@@ -308,11 +322,13 @@
       "titulo": "Astrónomos detectan atmósfera en el objeto más pequeño más allá de Plutón",
       "resumen": "Científicos afirman haber detectado una atmósfera alrededor de un planeta helado en el Cinturón de Kuiper, convirtiéndolo en el objeto más pequeño conocido con atmósfera. El descubrimiento abre nuevas preguntas sobre la distribución de objetos con atmósfera en el sistema solar exterior.",
       "categoria": "Espacio y Aviación",
-      "puntuacion": 60,
+      "puntuacion": 58,
       "fecha": "2026-05-10",
       "fuente_asunto": "✈️ NASA's jet hits a key milestone",
       "url": "https://apnews.com/article/pluto-atmosphere-kuiper-belt-c6b0ec2e0631f47c25ce18479b14e1ed",
-      "tipo": "noticia"
+      "tipo": "noticia",
+      "puntuacion_anterior": 60,
+      "razon_cambio": "Decaimiento temporal (32 días)"
     },
     {
       "id": "news_064",
@@ -330,11 +346,13 @@
       "titulo": "SpaceX y Anthropic firman un gran acuerdo de infraestructura computacional",
       "resumen": "SpaceX y Anthropic han formalizado un acuerdo significativo para que SpaceX provea infraestructura computacional para el entrenamiento de los modelos de IA de Anthropic. La alianza entre el líder en lanzamiento espacial y la empresa de IA segura es inusual y estratégicamente significativa.",
       "categoria": "Negocios e Impacto Económico",
-      "puntuacion": 63,
+      "puntuacion": 66,
       "fecha": "2026-05-07",
       "fuente_asunto": "🖥️ Interact AI launches website tour guides",
       "url": "https://www.anthropic.com/news/higher-limits-spacex",
-      "tipo": "noticia"
+      "tipo": "noticia",
+      "puntuacion_anterior": 61,
+      "razon_cambio": "Cross-boost por nuevas noticias relacionadas (+5)"
     },
     {
       "id": "news_009",
@@ -374,11 +392,13 @@
       "titulo": "Claude y Perplexity Computer obtienen superpoderes financieros",
       "resumen": "Anthropic y Perplexity han integrado capacidades financieras avanzadas en sus asistentes, permitiendo análisis de mercados en tiempo real, gestión de carteras y ejecución de operaciones. La convergencia entre IA conversacional y servicios financieros marca un nuevo hito en la democratización del asesoramiento financiero.",
       "categoria": "Negocios e Impacto Económico",
-      "puntuacion": 54,
+      "puntuacion": 52,
       "fecha": "2026-05-06",
       "fuente_asunto": "💬 ChatGPT's new default model just dropped",
       "url": "https://openai.com/index/gpt-5-5-instant/",
-      "tipo": "noticia"
+      "tipo": "noticia",
+      "puntuacion_anterior": 54,
+      "razon_cambio": "Decaimiento temporal (36 días)"
     },
     {
       "id": "news_025",
@@ -398,24 +418,26 @@
       "titulo": "Claude de Anthropic ya disponible para todos los usuarios de Microsoft 365",
       "resumen": "Anthropic ha anunciado la disponibilidad general de Claude en el ecosistema de Microsoft 365, permitiendo a millones de usuarios empresariales integrar el asistente en Word, Excel, Teams y Outlook. La expansión amplía significativamente el alcance de Claude en el mercado empresarial global.",
       "categoria": "Inteligencia Artificial",
-      "puntuacion": 63,
+      "puntuacion": 61,
       "fecha": "2026-05-08",
       "fuente_asunto": "🤝 Claude's now available for Microsoft 365",
       "url": "https://www.cnbc.com/2026/05/06/anthropic-ceo-dario-amodei-says-company-crew-80-fold-in-first-quarter.html",
       "tipo": "noticia",
-      "puntuacion_anterior": 58,
-      "razon_cambio": "Anthropic supera a OpenAI en adopción empresarial (34.4% vs 32.3%); M365 fue palanca clave"
+      "puntuacion_anterior": 63,
+      "razon_cambio": "Decaimiento temporal (34 días)"
     },
     {
       "id": "news_073",
       "titulo": "El avión supersónico silencioso de NASA alcanza velocidad casi Mach en prueba clave",
       "resumen": "El X-59 de NASA, diseñado para crear un 'sonic thump' en lugar del boom sónico tradicional, ha alcanzado velocidades cercanas a Mach en su vuelo de prueba más exitoso. El hito abre la puerta a viajes aéreos supersónicos comerciales sobre tierra en los próximos años.",
       "categoria": "Espacio y Aviación",
-      "puntuacion": 58,
+      "puntuacion": 56,
       "fecha": "2026-05-10",
       "fuente_asunto": "✈️ NASA's jet hits a key milestone",
       "url": "https://www.sciencedaily.com/releases/2026/05/260509210643.htm",
-      "tipo": "noticia"
+      "tipo": "noticia",
+      "puntuacion_anterior": 58,
+      "razon_cambio": "Decaimiento temporal (32 días)"
     },
     {
       "id": "news_055",
@@ -433,11 +455,13 @@
       "titulo": "Los agentes de Claude obtienen función 'soñar' para auto-mejora continua",
       "resumen": "Anthropic ha añadido una función experimental llamada 'dreaming' a sus Claude Managed Agents, que permite a los agentes practicar y mejorar sus habilidades durante períodos de baja actividad. El mecanismo busca que los agentes mejoren continuamente sin intervención humana directa.",
       "categoria": "Inteligencia Artificial",
-      "puntuacion": 56,
+      "puntuacion": 54,
       "fecha": "2026-05-07",
       "fuente_asunto": "🖥️ Interact AI launches website tour guides",
       "url": "https://claude.com/blog/new-in-claude-managed-agents",
-      "tipo": "noticia"
+      "tipo": "noticia",
+      "puntuacion_anterior": 56,
+      "razon_cambio": "Decaimiento temporal (35 días)"
     },
     {
       "id": "news_034",
@@ -488,11 +512,13 @@
       "titulo": "Prime Intellect revela plataforma de entrenamiento distribuido de agentes de IA",
       "resumen": "Prime Intellect ha presentado una plataforma para entrenar agentes de IA de forma distribuida, usando computación descentralizada para reducir costes y democratizar el entrenamiento de modelos avanzados. La tecnología podría permitir a organizaciones más pequeñas entrenar modelos de escala sin los recursos de las grandes tecnológicas.",
       "categoria": "Inteligencia Artificial",
-      "puntuacion": 55,
+      "puntuacion": 53,
       "fecha": "2026-05-11",
       "fuente_asunto": "🎧 Apple's AI AirPods near production",
       "url": "https://www.primeintellect.ai/blog/lab-is-open",
-      "tipo": "noticia"
+      "tipo": "noticia",
+      "puntuacion_anterior": 55,
+      "razon_cambio": "Decaimiento temporal (31 días)"
     },
     {
       "id": "news_038",
@@ -556,11 +582,13 @@
       "titulo": "Genesis AI se vuelve full-stack con nuevo modelo y manos robóticas",
       "resumen": "Genesis AI ha presentado un stack tecnológico completo que incluye un nuevo modelo de IA y manos robóticas propias para tareas de manipulación precisas. La integración vertical permite a la empresa controlar toda la cadena desde el software de IA hasta el hardware robótico.",
       "categoria": "Robótica",
-      "puntuacion": 50,
+      "puntuacion": 48,
       "fecha": "2026-05-09",
       "fuente_asunto": "💥 Roomba inventor makes a comeback",
       "url": "https://techcrunch.com/2026/05/01/uber-wants-to-turn-its-millions-of-drivers-into-a-sensor-grid-for-self-driving-companies/",
-      "tipo": "noticia"
+      "tipo": "noticia",
+      "puntuacion_anterior": 50,
+      "razon_cambio": "Decaimiento temporal (33 días)"
     },
     {
       "id": "news_016",
@@ -589,22 +617,26 @@
       "titulo": "Empleados de OpenAI obtuvieron $6.600M el pasado otoño",
       "resumen": "Los empleados de OpenAI recibieron pagos totales de $6.600 millones en ofertas de compra de acciones secundarias el pasado otoño, reflejando la enorme riqueza generada internamente. La cifra ilustra la escala de la creación de riqueza en el sector de IA para los trabajadores de las principales empresas.",
       "categoria": "Negocios e Impacto Económico",
-      "puntuacion": 55,
+      "puntuacion": 53,
       "fecha": "2026-05-12",
       "fuente_asunto": "👀 Gemini's next video model leaks",
       "url": "https://finance.yahoo.com/markets/stocks/articles/600-openai-employees-scored-6-162500548.html",
-      "tipo": "noticia"
+      "tipo": "noticia",
+      "puntuacion_anterior": 55,
+      "razon_cambio": "Decaimiento temporal (30 días)"
     },
     {
       "id": "news_071",
       "titulo": "Los AirPods con cámara de Apple se acercan a la producción en masa",
       "resumen": "Apple está en las etapas finales de preparación para la producción en masa de AirPods equipados con cámaras integradas, según fuentes de la cadena de suministro. Los nuevos AirPods podrían ofrecer realidad aumentada espacial y reconocimiento del entorno sin necesitar el Vision Pro.",
       "categoria": "Tecnología",
-      "puntuacion": 55,
+      "puntuacion": 53,
       "fecha": "2026-05-11",
       "fuente_asunto": "🎧 Apple's AI AirPods near production",
       "url": "https://wccftech.com/apples-incoming-ceo-declares-the-company-is-about-to-change-the-world-as-the-camera-equipped-airpods-pro-take-shape/",
-      "tipo": "noticia"
+      "tipo": "noticia",
+      "puntuacion_anterior": 55,
+      "razon_cambio": "Decaimiento temporal (31 días)"
     },
     {
       "id": "news_061",
@@ -635,11 +667,13 @@
       "titulo": "Uber planea convertir a sus conductores en una red de sensores de IA",
       "resumen": "Uber ha revelado planes para equipar los vehículos de sus conductores con sensores que recopilen datos del entorno urbano, creando una red de mapeo e inteligencia urbana sin precedentes. Los datos generados alimentarían sistemas de IA para ciudades inteligentes y vehículos autónomos.",
       "categoria": "Tecnología",
-      "puntuacion": 46,
+      "puntuacion": 44,
       "fecha": "2026-05-09",
       "fuente_asunto": "💥 Roomba inventor makes a comeback",
       "url": "https://www.forbes.com/sites/johnkoetsier/2026/04/30/1x-kicks-off-full-scale-production-of-humanoid-robot-neo/",
-      "tipo": "noticia"
+      "tipo": "noticia",
+      "puntuacion_anterior": 46,
+      "razon_cambio": "Decaimiento temporal (33 días)"
     },
     {
       "id": "news_017",
@@ -659,13 +693,13 @@
       "titulo": "El inventor del Roomba vuelve con una mascota robot peluda",
       "resumen": "Colin Angle, creador del Roomba, ha presentado su nuevo proyecto: una mascota robot con apariencia y comportamiento similar a un animal real, diseñada para compañía emocional. El proyecto marca el regreso del pionero de la robótica doméstica con un enfoque en el bienestar emocional.",
       "categoria": "Robótica",
-      "puntuacion": 35,
+      "puntuacion": 33,
       "fecha": "2026-05-09",
       "fuente_asunto": "💥 Roomba inventor makes a comeback",
       "url": "https://www.bloomberg.com/news/articles/2026-05-07/humanoid-robots-to-power-next-leg-of-china-s-export-dominance",
       "tipo": "noticia",
-      "puntuacion_anterior": 45,
-      "razon_cambio": "La mascota robot de Angle no generó tracción en el sector ni cobertura de seguimiento"
+      "puntuacion_anterior": 35,
+      "razon_cambio": "Decaimiento temporal (33 días)"
     },
     {
       "id": "news_058",
@@ -685,22 +719,26 @@
       "titulo": "Vellum lanza agentes de 'Inteligencia Personal' para empresas",
       "resumen": "Vellum ha presentado agentes de 'Inteligencia Personal' que aprenden las preferencias, flujos de trabajo y contexto de cada empleado para proporcionar asistencia altamente personalizada. La plataforma busca ir más allá de los asistentes genéricos hacia IA verdaderamente adaptativa al individuo.",
       "categoria": "Inteligencia Artificial",
-      "puntuacion": 43,
+      "puntuacion": 41,
       "fecha": "2026-05-08",
       "fuente_asunto": "🤝 Claude's now available for Microsoft 365",
       "url": "https://blog.google/products-and-platforms/products/google-health/google-health-app/",
-      "tipo": "noticia"
+      "tipo": "noticia",
+      "puntuacion_anterior": 43,
+      "razon_cambio": "Decaimiento temporal (34 días)"
     },
     {
       "id": "news_092",
       "titulo": "Apple confirma que la demanda de agentes de IA provoca escasez del Mac mini",
       "resumen": "Apple ha confirmado que la escasez del Mac mini se debe en parte a la demanda masiva de empresas que los usan como servidores locales para agentes de IA. El fenómeno refleja cómo la IA agéntica está cambiando los patrones de compra de hardware de forma inesperada.",
       "categoria": "Negocios e Impacto Económico",
-      "puntuacion": 51,
+      "puntuacion": 49,
       "fecha": "2026-05-04",
       "fuente_asunto": "💻 Apple confirms Mac Mini shortage",
       "url": "https://techcrunch.com/2026/04/30/as-tim-cook-steps-down-apple-hit-record-sales-but-a-chip-shortage-looms/?utm_source=superhuman&utm_medium=newsletter&utm_campaign=apple-confirms-mac-mini-shortage",
-      "tipo": "noticia"
+      "tipo": "noticia",
+      "puntuacion_anterior": 51,
+      "razon_cambio": "Decaimiento temporal (38 días)"
     },
     {
       "id": "news_003",
@@ -740,13 +778,13 @@
       "titulo": "Perplexity Computer llega a Microsoft Teams para investigación avanzada",
       "resumen": "Perplexity ha integrado su sistema de búsqueda e investigación con IA directamente en Microsoft Teams, permitiendo a equipos realizar investigaciones profundas sin salir de su entorno de trabajo. La integración llega a millones de usuarios corporativos de Teams a nivel global.",
       "categoria": "Inteligencia Artificial",
-      "puntuacion": 26,
+      "puntuacion": 24,
       "fecha": "2026-05-05",
       "fuente_asunto": "👀 Cofounder 2: Launch agent-only startups",
       "url": "https://marketplace.microsoft.com/en-us/product/WA200010619?tab=Overview",
       "tipo": "noticia",
-      "puntuacion_anterior": 42,
-      "razon_cambio": "Perplexity en Microsoft Teams es una integración útil pero muy específica; el producto no ha ganado tracción visible en el mercado corporativo"
+      "puntuacion_anterior": 26,
+      "razon_cambio": "Decaimiento temporal (37 días)"
     },
     {
       "id": "news_040",
@@ -766,11 +804,13 @@
       "titulo": "Meta abre su ecosistema publicitario a herramientas de IA de terceros",
       "resumen": "Meta ha anunciado la apertura de su plataforma publicitaria a herramientas de IA de terceros, permitiendo a anunciantes integrar sus propios modelos para optimización de campañas. El movimiento democratiza el acceso a los datos y herramientas de publicidad de Facebook e Instagram para el ecosistema de IA.",
       "categoria": "Negocios e Impacto Económico",
-      "puntuacion": 38,
+      "puntuacion": 36,
       "fecha": "2026-05-04",
       "fuente_asunto": "💻 Apple confirms Mac Mini shortage",
       "url": "https://techcrunch.com/2026/04/30/as-tim-cook-steps-down-apple-hit-record-sales-but-a-chip-shortage-looms/",
-      "tipo": "noticia"
+      "tipo": "noticia",
+      "puntuacion_anterior": 38,
+      "razon_cambio": "Decaimiento temporal (38 días)"
     },
     {
       "id": "news_060",
@@ -788,13 +828,13 @@
       "titulo": "Dos líderes de SaaS reportan trimestres excepcionales impulsados por IA",
       "resumen": "Dos de las principales empresas de software como servicio han publicado resultados trimestrales muy superiores a las expectativas, atribuidos directamente a la adopción de sus funciones de IA por clientes empresariales. Los resultados refuerzan la tesis de que la IA está acelerando el crecimiento del SaaS.",
       "categoria": "Negocios e Impacto Económico",
-      "puntuacion": 46,
+      "puntuacion": 44,
       "fecha": "2026-05-04",
       "fuente_asunto": "💻 Apple confirms Mac Mini shortage",
       "url": "https://techcrunch.com/2026/04/30/meta-says-its-business-ai-now-facilitates-10-million-conversations-a-week/",
       "tipo": "noticia",
-      "puntuacion_anterior": 40,
-      "razon_cambio": "Con ChatGPT en 1B usuarios, los resultados excepcionales de SaaS impulsados por IA reflejan una tendencia estructural confirmada"
+      "puntuacion_anterior": 46,
+      "razon_cambio": "Decaimiento temporal (38 días)"
     },
     {
       "id": "news_018",
@@ -812,13 +852,13 @@
       "titulo": "Thinking Machines presenta su primer modelo de interacción con IA",
       "resumen": "Thinking Machines ha presentado su primer modelo de IA diseñado para interacciones naturales y prolongadas con usuarios, con énfasis en la coherencia conversacional a largo plazo. La empresa, fundada por ex-investigadores de OpenAI, entra en el competitivo mercado de modelos fundacionales.",
       "categoria": "Inteligencia Artificial",
-      "puntuacion": 28,
+      "puntuacion": 26,
       "fecha": "2026-05-12",
       "fuente_asunto": "👀 Gemini's next video model leaks",
       "url": "https://thinkingmachines.ai/blog/interaction-models/",
       "tipo": "noticia",
-      "puntuacion_anterior": 40,
-      "razon_cambio": "Thinking Machines fue lanzada con mucha expectativa pero sus modelos han quedado eclipsados por los lanzamientos de OpenAI, Anthropic y Google de las semanas siguientes"
+      "puntuacion_anterior": 28,
+      "razon_cambio": "Decaimiento temporal (30 días)"
     },
     {
       "id": "news_043",
@@ -930,22 +970,26 @@
       "titulo": "Reactor lanza plataforma de generación de mundos virtuales con IA",
       "resumen": "Reactor ha presentado una plataforma de generación de mundos virtuales que usa IA para crear entornos 3D completos y coherentes a partir de descripciones en lenguaje natural. La tecnología tiene aplicaciones inmediatas en videojuegos, simulación industrial y entornos de entrenamiento para IA.",
       "categoria": "Inteligencia Artificial",
-      "puntuacion": 35,
+      "puntuacion": 33,
       "fecha": "2026-05-11",
       "fuente_asunto": "🎧 Apple's AI AirPods near production",
       "url": "https://www.pewresearch.org/short-reads/2026/05/05/many-americans-hold-utility-companies-responsible-for-their-rising-home-energy-bills/?cb_viewport=mobile",
-      "tipo": "noticia"
+      "tipo": "noticia",
+      "puntuacion_anterior": 35,
+      "razon_cambio": "Decaimiento temporal (31 días)"
     },
     {
       "id": "news_080",
       "titulo": "Gemini impulsa un nuevo hub de bienestar digital personalizado",
       "resumen": "Google ha integrado Gemini en una nueva plataforma de bienestar digital que centraliza métricas de salud, hábitos y objetivos personales. El hub usa la IA de Gemini para generar recomendaciones personalizadas basadas en datos de múltiples fuentes de salud del usuario.",
       "categoria": "Salud y Ciencia",
-      "puntuacion": 33,
+      "puntuacion": 31,
       "fecha": "2026-05-08",
       "fuente_asunto": "🤝 Claude's now available for Microsoft 365",
       "url": "https://blog.google/products-and-platforms/products/google-health/google-health-coach/",
-      "tipo": "noticia"
+      "tipo": "noticia",
+      "puntuacion_anterior": 33,
+      "razon_cambio": "Decaimiento temporal (34 días)"
     },
     {
       "id": "news_020",
@@ -978,26 +1022,26 @@
       "titulo": "Se filtra el nuevo modelo de vídeo de Gemini con capacidades superiores a Sora",
       "resumen": "Users online spotted a revised Gemini interface exposing a new model card pitching Gemini Omni: a video model that can remix videos, make edits in chat, and create videos with templates. Omni is expected to make its full debut at I/O on May 19-20. Watch the leaked Omni video clip (1M views).",
       "categoria": "Inteligencia Artificial",
-      "puntuacion": 45,
+      "puntuacion": 43,
       "fecha": "2026-05-12",
       "fuente_asunto": "👀 Gemini's next video model leaks",
       "url": "https://www.testingcatalog.com/googles-gemini-omni-video-model-surfaces-ahead-of-i-o-debut/",
       "tipo": "noticia",
-      "puntuacion_anterior": 30,
-      "razon_cambio": "Gemini Omni lanzado en I/O 2026; la filtración anticipó exactamente las capacidades de video"
+      "puntuacion_anterior": 45,
+      "razon_cambio": "Decaimiento temporal (30 días)"
     },
     {
       "id": "news_087",
       "titulo": "OpenAI convierte GPT-5.5 Instant en el modelo predeterminado de ChatGPT",
       "resumen": "GPT-5.5 Instant offers clearer, more concise answers and produces 52.5% fewer hallucinated claims than GPT-5.3 Instant in high-stakes domains like medicine, law, and finance. The new model is rolling out now to all users in ChatGPT.",
       "categoria": "Negocios e Impacto Económico",
-      "puntuacion": 34,
+      "puntuacion": 32,
       "fecha": "2026-05-06",
       "fuente_asunto": "💬 ChatGPT's new default model just dropped",
       "url": "https://www.reddit.com/r/ChatGPT/comments/1t3ii1l/chat_gpt_got_that_guy_in_trouble_and_he_doesnt/",
       "tipo": "noticia",
-      "puntuacion_anterior": 30,
-      "razon_cambio": "Ahora sabemos que afecta a 1B usuarios; la decisión de modelo por defecto tiene un impacto mayor de lo esperado"
+      "puntuacion_anterior": 34,
+      "razon_cambio": "Decaimiento temporal (36 días)"
     },
     {
       "id": "news_065",
@@ -1017,13 +1061,13 @@
       "titulo": "Interact AI lanza guías de visita interactivas para sitios web",
       "resumen": "Interact AI ha presentado una capa interactiva que añade guías de tour virtuales a cualquier sitio web, permitiendo a los visitantes explorar el contenido guiados por un asistente de IA. La tecnología busca mejorar la conversión y el engagement en sitios web de e-commerce y SaaS.",
       "categoria": "Inteligencia Artificial",
-      "puntuacion": 16,
+      "puntuacion": 14,
       "fecha": "2026-05-07",
       "fuente_asunto": "🖥️ Interact AI launches website tour guides",
       "url": "https://www.technologyreview.com/2026/05/04/1136826/week-one-of-the-musk-v-altman-trial-what-it-was-like-in-the-room/",
       "tipo": "noticia",
-      "puntuacion_anterior": 28,
-      "razon_cambio": "Las guías de visita con IA son un nicho muy específico con bajo potencial de escala; no hubo seguimiento en prensa especializada"
+      "puntuacion_anterior": 16,
+      "razon_cambio": "Decaimiento temporal (35 días)"
     },
     {
       "id": "news_004",
@@ -1553,11 +1597,13 @@
       "titulo": "Anthropic presenta confidencialmente su solicitud de OPI",
       "resumen": "Anthropic ha registrado confidencialmente su S-1 ante la SEC, adelantándose a OpenAI en la carrera hacia la bolsa. La valoración esperada ronda el billón de dólares. La compañía también amplía acceso a Mythos, su modelo de ciberseguridad, a la UE.",
       "categoria": "Negocios e Impacto Económico",
-      "puntuacion": 93,
+      "puntuacion": 95,
       "fecha": "2026-06-02",
       "fuente_asunto": "💻 Nvidia's new \"superchip\" powers Windows PCs",
       "url": "https://techcrunch.com/2026/06/01/anthropic-files-to-go-public/",
-      "newsletter": "SuperHuman"
+      "newsletter": "SuperHuman",
+      "puntuacion_anterior": 93,
+      "razon_cambio": "Cross-boost por nuevas noticias relacionadas (+10)"
     },
     {
       "id": "news_096",
@@ -1577,11 +1623,13 @@
       "titulo": "Apple apunta al mercado de gafas inteligentes de 200.000 millones",
       "resumen": "Apple planea lanzar sus primeras gafas inteligentes a finales de 2027, con precio entre 200 y 500 dólares. El proyecto, liderado por el futuro CEO John Ternus, incluye cámaras ovales y múltiples estilos de montura.",
       "categoria": "Tecnología",
-      "puntuacion": 63,
+      "puntuacion": 68,
       "fecha": "2026-06-02",
       "fuente_asunto": "💻 Nvidia's new \"superchip\" powers Windows PCs",
       "url": "https://thenextweb.com/news/apple-smart-glasses-eyewear-market-disruption-watch-playbook",
-      "newsletter": "SuperHuman"
+      "newsletter": "SuperHuman",
+      "puntuacion_anterior": 63,
+      "razon_cambio": "Cross-boost por nuevas noticias relacionadas (+5)"
     },
     {
       "id": "news_098",
@@ -1700,12 +1748,14 @@
       "titulo": "Trump suaviza orden ejecutiva sobre IA a revisión voluntaria de 30 días",
       "resumen": "Donald Trump firmó una orden ejecutiva pidiendo a los laboratorios de IA que voluntariamente entreguen sus modelos frontera al gobierno para una revisión de seguridad de 30 días antes de su lanzamiento, reducida desde los 90 días originalmente previstos. La orden excluye licencias obligatorias y dirige al DOJ a perseguir hackeos asistidos por IA.",
       "categoria": "Política y Regulación",
-      "puntuacion": 58,
+      "puntuacion": 68,
       "fecha": "2026-06-03",
       "fuente_asunto": "Microsoft paves its own AI way at Build",
       "url": "https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/",
       "newsletter": "The Rundown AI",
-      "tipo": "noticia"
+      "tipo": "noticia",
+      "puntuacion_anterior": 58,
+      "razon_cambio": "Cross-boost por nuevas noticias relacionadas (+10)"
     },
     {
       "id": "news_104",
@@ -1930,14 +1980,14 @@
       "titulo": "California avanza proyecto de ley para proteger a trabajadores afectados por la IA",
       "resumen": "California está avanzando en legislación para proteger a los trabajadores desplazados por la automatización con IA, estableciendo requisitos de notificación, programas de reentrenamiento y beneficios de transición. La propuesta pone a California a la vanguardia de la regulación laboral relacionada con la IA en Estados Unidos.",
       "categoria": "Política y Regulación",
-      "puntuacion": 63,
+      "puntuacion": 68,
       "fecha": "2026-05-22",
       "fuente_asunto": "Exclusive interview: Sundar Pichai on AI's flip phone moment",
       "url": null,
       "newsletter": "The Rundown AI",
       "tipo": "noticia",
-      "puntuacion_anterior": 58,
-      "razon_cambio": "Contraste acentuado con orden ejecutiva federal leve; California se convierte en único regulador real"
+      "puntuacion_anterior": 63,
+      "razon_cambio": "Cross-boost por nuevas noticias relacionadas (+5)"
     },
     {
       "id": "prompt_026",
@@ -2020,14 +2070,14 @@
       "titulo": "Google I/O 2026: Gemini Omni, 3.5 Flash, Spark y rediseño de Search con agentes",
       "resumen": "Google presentó en I/O 2026 una oleada de lanzamientos de Gemini: Omni (convierte texto, imágenes, audio o video en salidas de video), Gemini 3.5 Flash (compite con Opus 4.7 y GPT-5.5 a 4x velocidad y mitad de costo), Spark (agente 24/7 que actúa en Workspace, Chrome y email) y una renovación total de Search con agentes de información permanentes.",
       "categoria": "Inteligencia Artificial",
-      "puntuacion": 82,
+      "puntuacion": 87,
       "fecha": "2026-05-20",
       "fuente_asunto": "The biggest reveals from Google I/O",
       "url": "https://www.youtube.com/watch?v=wYSncx9zLIU",
       "newsletter": "The Rundown AI",
       "tipo": "noticia",
-      "puntuacion_anterior": 78,
-      "razon_cambio": "Google I/O 2026 fue un evento clave con lanzamientos masivos de Gemini que se han consolidado en el mercado"
+      "puntuacion_anterior": 82,
+      "razon_cambio": "Cross-boost por nuevas noticias relacionadas (+5)"
     },
     {
       "id": "news_117",
@@ -2169,24 +2219,28 @@
       "titulo": "Thinking Machines Lab de Mira Murati presenta modelos de interacción en tiempo real",
       "resumen": "TML (Thinking Machines Lab) de Mira Murati introdujo un preview de investigación de 'modelos de interacción', un nuevo tipo de IA construida para colaborar en tiempo real a través de voz, video y texto en chunks de 200ms sin pausas de turno. Un segundo modelo en segundo plano maneja el razonamiento lento y las búsquedas, mientras el modelo en vivo continúa interactuando con el usuario.",
       "categoria": "Inteligencia Artificial",
-      "puntuacion": 65,
+      "puntuacion": 63,
       "fecha": "2026-05-12",
       "fuente_asunto": "Thinking Machines gets interactive with new AI",
       "url": "https://thinkingmachines.ai/blog/interaction-models/",
       "newsletter": "The Rundown AI",
-      "tipo": "noticia"
+      "tipo": "noticia",
+      "puntuacion_anterior": 65,
+      "razon_cambio": "Decaimiento temporal (30 días)"
     },
     {
       "id": "news_123",
       "titulo": "Google confirma el primer hackeo con IA para descubrir y explotar vulnerabilidad zero-day",
       "resumen": "El Grupo de Inteligencia de Amenazas de Google confirmó el primer caso conocido de hackers usando IA para descubrir y escribir una vulnerabilidad de seguridad zero-day en software, atrapándolos antes de que pudieran eludir las protecciones de inicio de sesión en una herramienta de gestión web ampliamente utilizada. El investigador de GTIG John Hultquist calificó el hallazgo como 'la punta del iceberg'.",
       "categoria": "Tecnología",
-      "puntuacion": 72,
+      "puntuacion": 70,
       "fecha": "2026-05-12",
       "fuente_asunto": "Thinking Machines gets interactive with new AI",
       "url": "https://cloud.google.com/blog/topics/threat-intelligence/ai-vulnerability-exploitation-initial-access",
       "newsletter": "The Rundown AI",
-      "tipo": "noticia"
+      "tipo": "noticia",
+      "puntuacion_anterior": 72,
+      "razon_cambio": "Decaimiento temporal (30 días)"
     },
     {
       "id": "prompt_031",
@@ -2218,24 +2272,28 @@
       "titulo": "OpenAI lanza GPT-Realtime-2 con razonamiento GPT-5 para agentes de voz en tiempo real",
       "resumen": "OpenAI presentó GPT-Realtime-2, GPT-Realtime-Translate y GPT-Realtime-Whisper, tres modelos de voz API que llevan razonamiento de nivel GPT-5 a la voz en vivo, con capacidad para usar múltiples herramientas simultáneamente, hablar mientras piensa y mejor control de tono. En Big Bench Audio, Realtime-2 alcanzó 96.6% frente al 81.4% de su predecesor. Zillow, Priceline y Deutsche Telekom ya están construyendo sobre estos modelos.",
       "categoria": "Inteligencia Artificial",
-      "puntuacion": 68,
+      "puntuacion": 66,
       "fecha": "2026-05-08",
       "fuente_asunto": "OpenAI closes reasoning gap in voice agents",
       "url": "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/",
       "newsletter": "The Rundown AI",
-      "tipo": "noticia"
+      "tipo": "noticia",
+      "puntuacion_anterior": 68,
+      "razon_cambio": "Decaimiento temporal (34 días)"
     },
     {
       "id": "news_125",
       "titulo": "Google integra Fitbit en nueva plataforma Google Health con coach de IA en salud",
       "resumen": "Google abrió su coach de salud con IA al público tras meses en beta, integrando la app Fitbit en una nueva plataforma Google Health con un tracker sin pantalla de $99. El coach basado en Gemini puede crear rutinas de ejercicio semanales, interpretar registros médicos subidos y reconocer alimentos desde fotos del teléfono. Apple Watch, Garmin y Oura también tendrán acceso al coach de IA más adelante en el año.",
       "categoria": "Salud y Ciencia",
-      "puntuacion": 60,
+      "puntuacion": 58,
       "fecha": "2026-05-08",
       "fuente_asunto": "OpenAI closes reasoning gap in voice agents",
       "url": "https://blog.google/products-and-platforms/products/google-health/google-health-app/",
       "newsletter": "The Rundown AI",
-      "tipo": "noticia"
+      "tipo": "noticia",
+      "puntuacion_anterior": 60,
+      "razon_cambio": "Decaimiento temporal (34 días)"
     },
     {
       "id": "news_126",
@@ -2390,11 +2448,13 @@
       "titulo": "Apple WWDC revela Siri renovada con chips Nvidia y Gemini en la nube",
       "resumen": "Filtraciones apuntan a que el WWDC de Apple (lunes 9 de junio) mostrará iOS 27 y una Siri renovada que lleva dos años de retraso. La nueva Siri correría en chips Nvidia Blackwell para procesamiento local y usaría Gemini de Google para consultas en la nube.",
       "categoria": "Tecnología",
-      "puntuacion": 72,
+      "puntuacion": 82,
       "fecha": "2026-06-05",
       "fuente_asunto": "👀 Claude is accelerating its own development",
       "url": "https://9to5mac.com/2026/06/02/ios-27-is-coming-here-are-five-new-features-im-most-excited-about/",
-      "newsletter": "SuperHuman"
+      "newsletter": "SuperHuman",
+      "puntuacion_anterior": 72,
+      "razon_cambio": "Cross-boost por nuevas noticias relacionadas (+10)"
     },
     {
       "id": "news_133",
@@ -2597,11 +2657,13 @@
       "titulo": "Google pagará $920M al mes a SpaceX por 110.000 GPUs Nvidia",
       "resumen": "Un documento regulatorio reveló que Google pagará casi $1.000 millones mensuales a SpaceX para acceder a 110.000 GPUs de Nvidia hasta 2029. El acuerdo se publica días antes del debut bursátil de SpaceX, previsto para el 12 de junio.",
       "categoria": "Negocios e Impacto Económico",
-      "puntuacion": 80,
+      "puntuacion": 90,
       "fecha": "2026-06-08",
       "fuente_asunto": "🦾 ChatGPT getting \"biggest overhaul yet\"",
       "url": "https://www.cnbc.com/2026/06/05/google-to-pay-spacex-920-million-a-month-for-xai-compute-capacity.html",
-      "newsletter": "SuperHuman"
+      "newsletter": "SuperHuman",
+      "puntuacion_anterior": 80,
+      "razon_cambio": "Cross-boost por nuevas noticias relacionadas (+10)"
     },
     {
       "id": "news_146",
@@ -2609,11 +2671,13 @@
       "titulo": "Vibe coding dispara la creación de apps pero el uso cae desde 2025",
       "resumen": "Un gráfico del Financial Times muestra que, aunque la IA multiplica la creación de aplicaciones, el uso real ha bajado desde 2025. La distribución se convierte en el nuevo cuello de botella: crear la app ya es fácil, conseguir que la gente la use ya no. CalAI, creada por adolescentes, alcanzó $30M en ingresos anuales.",
       "categoria": "Tecnología",
-      "puntuacion": 55,
+      "puntuacion": 60,
       "fecha": "2026-06-08",
       "fuente_asunto": "🦾 ChatGPT getting \"biggest overhaul yet\"",
       "url": null,
-      "newsletter": "SuperHuman"
+      "newsletter": "SuperHuman",
+      "puntuacion_anterior": 55,
+      "razon_cambio": "Cross-boost por nuevas noticias relacionadas (+5)"
     },
     {
       "id": "news_147",
@@ -2633,11 +2697,13 @@
       "titulo": "Anthropic Mythos aparece en Dev Mode con lanzamiento inminente",
       "resumen": "El modelo Mythos de Anthropic ha comenzado a aparecer en Dev Mode y en redes sociales, con especulación de un lanzamiento público esta semana. Es el mismo modelo que previamente encontró más de 10.000 vulnerabilidades críticas de seguridad.",
       "categoria": "Inteligencia Artificial",
-      "puntuacion": 65,
+      "puntuacion": 75,
       "fecha": "2026-06-08",
       "fuente_asunto": "🇺🇸 OpenAI's plan to make every American a shareholder",
       "url": "https://x.com/testingcatalog/status/2063234385227252184",
-      "newsletter": "The Rundown AI"
+      "newsletter": "The Rundown AI",
+      "puntuacion_anterior": 65,
+      "razon_cambio": "Cross-boost por nuevas noticias relacionadas (+10)"
     },
     {
       "id": "news_149",
@@ -2734,6 +2800,402 @@
         "formato": "Informe diario fechado + CSV de prospectos + registro de fuentes quemadas",
         "restricciones": "Rotar fuentes semanalmente para evitar duplicados; rechazar leads débiles en la longlist"
       }
+    },
+    {
+      "id": "news_151",
+      "tipo": "noticia",
+      "titulo": "Microsoft bloquea acceso interno a Claude Fable por retención de datos",
+      "resumen": "Microsoft retiró Claude Fable 5 de su sistema interno citando que el modelo retiene conversaciones 30 días y contenido marcado hasta dos años. El modelo también recibió críticas por bloquear prompts sobre biología, química y ciberseguridad.",
+      "categoria": "Inteligencia Artificial",
+      "puntuacion": 62,
+      "fecha": "2026-06-11",
+      "fuente_asunto": "👀 Anthropic's CEO calls for change",
+      "url": "https://www.reuters.com/technology/microsoft-limits-employee-use-anthropics-claude-fable-5-over-data-retention-2026-06-10/",
+      "newsletter": "SuperHuman",
+      "puntuacion_anterior": null,
+      "razon_cambio": "Nuevo item"
+    },
+    {
+      "id": "news_152",
+      "tipo": "noticia",
+      "titulo": "Dario Amodei exige regulación vinculante de modelos frontera de IA",
+      "resumen": "El CEO de Anthropic publicó 'Policy on the AI Exponential', argumentando que el progreso de la IA supera los marcos políticos actuales. Propone pruebas obligatorias por terceros en cuatro áreas de riesgo y un marco de empleo para afrontar desempleo sin precedentes.",
+      "categoria": "Política y Regulación",
+      "puntuacion": 82,
+      "fecha": "2026-06-11",
+      "fuente_asunto": "👀 Anthropic's CEO calls for change",
+      "url": "https://darioamodei.com/post/policy-on-the-ai-exponential",
+      "newsletter": "SuperHuman",
+      "puntuacion_anterior": null,
+      "razon_cambio": "Nuevo item"
+    },
+    {
+      "id": "news_153",
+      "tipo": "noticia",
+      "titulo": "Google lanza DiffusionGemma: generación de texto 4 veces más rápida",
+      "resumen": "El nuevo modelo experimental de Google genera 256 tokens en paralelo en lugar de uno a uno, logrando hasta 4x más velocidad de inferencia en GPUs dedicadas. Supera más de 1.000 tokens por segundo en un H100 de Nvidia.",
+      "categoria": "Inteligencia Artificial",
+      "puntuacion": 72,
+      "fecha": "2026-06-11",
+      "fuente_asunto": "👀 Anthropic's CEO calls for change",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/diffusion-gemma-faster-text-generation/",
+      "newsletter": "SuperHuman",
+      "puntuacion_anterior": null,
+      "razon_cambio": "Nuevo item"
+    },
+    {
+      "id": "news_154",
+      "tipo": "noticia",
+      "titulo": "Anthropic lanza Claude Fable 5, su primer modelo Mythos público",
+      "resumen": "Claude Fable 5 lleva por primera vez el nivel de rendimiento Mythos al público general, liderando casi todos los benchmarks de codificación, razonamiento y trabajo de conocimiento. Disponible en planes de pago hasta el 22 de junio, luego con créditos a $10/M tokens entrada y $50/M salida.",
+      "categoria": "Inteligencia Artificial",
+      "puntuacion": 92,
+      "fecha": "2026-06-10",
+      "fuente_asunto": "🔓 Anthropic releases Claude Fable",
+      "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "newsletter": "SuperHuman",
+      "puntuacion_anterior": null,
+      "razon_cambio": "Nuevo item"
+    },
+    {
+      "id": "news_155",
+      "tipo": "noticia",
+      "titulo": "Google lanza Gemini 3.5 Live Translate para 70+ idiomas en tiempo real",
+      "resumen": "El nuevo modelo de voz a voz detecta y traduce automáticamente audio hablado preservando el tono y ritmo del hablante, quedando apenas segundos de retraso. Ya disponible en Google Translate y desplegándose en Google Meet.",
+      "categoria": "Inteligencia Artificial",
+      "puntuacion": 72,
+      "fecha": "2026-06-10",
+      "fuente_asunto": "🔓 Anthropic releases Claude Fable",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-live-3-5-translate/",
+      "newsletter": "SuperHuman",
+      "puntuacion_anterior": null,
+      "razon_cambio": "Nuevo item"
+    },
+    {
+      "id": "news_156",
+      "tipo": "noticia",
+      "titulo": "Lovable supera $500M en ingresos anuales y un millón de proyectos semanales",
+      "resumen": "La startup de vibe coding es una de las empresas de más rápido crecimiento en Europa desde su lanzamiento en 2023. El 80% de sus usuarios son no técnicos y el 66% trabaja fuera del sector tech.",
+      "categoria": "Negocios e Impacto Económico",
+      "puntuacion": 75,
+      "fecha": "2026-06-10",
+      "fuente_asunto": "🔓 Anthropic releases Claude Fable",
+      "url": "https://techcrunch.com/2026/06/09/lovable-says-it-has-hit-500m-in-annualized-revenue-with-1-million-new-projects-a-week/",
+      "newsletter": "SuperHuman",
+      "puntuacion_anterior": null,
+      "razon_cambio": "Nuevo item"
+    },
+    {
+      "id": "news_157",
+      "tipo": "noticia",
+      "titulo": "Apple revela Siri AI en el último WWDC de Tim Cook con iOS 27",
+      "resumen": "Siri AI incorpora un chatbot dedicado con contexto de mensajes, fotos y emails sincronizado privadamente entre dispositivos. La keynote también presentó iOS 27, macOS Golden Gate y una vista previa de homeOS para el hub doméstico de Apple.",
+      "categoria": "Tecnología",
+      "puntuacion": 78,
+      "fecha": "2026-06-09",
+      "fuente_asunto": "📱 Tim Cook's last keynote",
+      "url": "https://www.wsj.com/tech/apple-wwdc-2026-annoucements-69c7948c",
+      "newsletter": "SuperHuman",
+      "puntuacion_anterior": null,
+      "razon_cambio": "Nuevo item"
+    },
+    {
+      "id": "news_158",
+      "tipo": "noticia",
+      "titulo": "OpenAI presenta confidencialmente su S-1 para salir a bolsa",
+      "resumen": "OpenAI presentó su S-1 confidencial ante la SEC una semana después de que lo hiciera Anthropic. Altman co-firmó un plan para que la IA beneficie a todos. La empresa aún no ha decidido el momento del debut bursátil.",
+      "categoria": "Negocios e Impacto Económico",
+      "puntuacion": 85,
+      "fecha": "2026-06-09",
+      "fuente_asunto": "📱 Tim Cook's last keynote",
+      "url": "https://www.cnn.com/2026/06/08/tech/openai-files-for-ipo",
+      "newsletter": "SuperHuman",
+      "puntuacion_anterior": null,
+      "razon_cambio": "Nuevo item"
+    },
+    {
+      "id": "news_159",
+      "tipo": "noticia",
+      "titulo": "WorkClaw lanza agentes IA que se incorporan como empleados en Slack y Teams",
+      "resumen": "WorkClaw despliega agentes que operan dentro de Slack y Microsoft Teams, compatibles con más de 3.000 apps. Cada agente tiene descripción de puesto, manager y ordenador aislado propio, diseñado por ingenieros de Meta, Google y Microsoft.",
+      "categoria": "Inteligencia Artificial",
+      "puntuacion": 58,
+      "fecha": "2026-06-09",
+      "fuente_asunto": "📱 Tim Cook's last keynote",
+      "url": "https://www.workclaw.com/blog/introducing-workclaw",
+      "newsletter": "SuperHuman",
+      "puntuacion_anterior": null,
+      "razon_cambio": "Nuevo item"
+    },
+    {
+      "id": "news_160",
+      "tipo": "noticia",
+      "titulo": "SpaceX revela AI1: satélite de IA solar para compute orbital",
+      "resumen": "SpaceX presentó el primer diseño de AI1, un satélite de energía solar con potencia de cómputo equivalente a un rack de servidores Nvidia, tres días antes de su debut bursátil. Google y Anthropic ya son clientes del cómputo orbital.",
+      "categoria": "Espacio y Aviación",
+      "puntuacion": 82,
+      "fecha": "2026-06-11",
+      "fuente_asunto": "🏛️ Amodei's Treebeard warning to Washington",
+      "url": "https://x.com/SpaceX/status/2064099405758906727",
+      "newsletter": "The Rundown AI",
+      "puntuacion_anterior": null,
+      "razon_cambio": "Nuevo item"
+    },
+    {
+      "id": "news_161",
+      "tipo": "noticia",
+      "titulo": "Altman vincula el timing de la OPI de OpenAI con la IA auto-mejorante",
+      "resumen": "Sam Altman indicó internamente que OpenAI planea salir a bolsa dentro del próximo año, pero que si la IA de mejora recursiva se acerca podría convenir retrasar la OPI. El científico jefe anticipa el modelo GPT 5.6 este mes.",
+      "categoria": "Negocios e Impacto Económico",
+      "puntuacion": 80,
+      "fecha": "2026-06-11",
+      "fuente_asunto": "🏛️ Amodei's Treebeard warning to Washington",
+      "url": "https://www.theinformation.com/briefings/exclusive-openai-preps-new-ai-model-expects-go-public-within-next-year",
+      "newsletter": "The Rundown AI",
+      "puntuacion_anterior": null,
+      "razon_cambio": "Nuevo item"
+    },
+    {
+      "id": "news_162",
+      "tipo": "noticia",
+      "titulo": "Perplexity y Harvard: agentes IA ahorran 7x más tiempo que búsqueda",
+      "resumen": "Un estudio comparativo de 10.000 consultas idénticas mostró que Perplexity Computer completa en 36 minutos tareas que llevarían 269 minutos con Search. Los usuarios del agente realizan trabajos más complejos y creativos.",
+      "categoria": "Inteligencia Artificial",
+      "puntuacion": 68,
+      "fecha": "2026-06-10",
+      "fuente_asunto": "🔓 Anthropic hands the public Mythos-class AI",
+      "url": "https://research.perplexity.ai/articles/how-ai-agents-reshape-knowledge-work",
+      "newsletter": "The Rundown AI",
+      "puntuacion_anterior": null,
+      "razon_cambio": "Nuevo item"
+    },
+    {
+      "id": "news_163",
+      "tipo": "noticia",
+      "titulo": "China planifica inversión de $295.000M en infraestructura de IA en 5 años",
+      "resumen": "China prepara un plan quinquenal de 295.000 millones de dólares para construir centros de datos en todo el país, obteniendo el 80% de tecnología de empresas locales como Huawei. El plan excluye explícitamente chips Nvidia.",
+      "categoria": "Política y Regulación",
+      "puntuacion": 80,
+      "fecha": "2026-06-10",
+      "fuente_asunto": "🔓 Anthropic hands the public Mythos-class AI",
+      "url": "https://www.bloomberg.com/news/articles/2026-06-09/china-prepares-295-billion-plan-to-fund-nationwide-ai-buildout",
+      "newsletter": "The Rundown AI",
+      "puntuacion_anterior": null,
+      "razon_cambio": "Nuevo item"
+    },
+    {
+      "id": "news_164",
+      "tipo": "noticia",
+      "titulo": "Nueva York exige revelar actores IA en anuncios, primera ley en EE.UU.",
+      "resumen": "Nueva York se convierte en el primer estado de EE.UU. en requerir que los anuncios divulguen el uso de actores generados por IA, con multas de $1.000. La ley tiene el apoyo del sindicato SAG-AFTRA.",
+      "categoria": "Política y Regulación",
+      "puntuacion": 65,
+      "fecha": "2026-06-10",
+      "fuente_asunto": "🔓 Anthropic hands the public Mythos-class AI",
+      "url": "https://apnews.com/article/new-york-ai-law-hochul-synthetic-performers-e433625bfb61c8abeab0d619869192ed",
+      "newsletter": "The Rundown AI",
+      "puntuacion_anterior": null,
+      "razon_cambio": "Nuevo item"
+    },
+    {
+      "id": "news_165",
+      "tipo": "noticia",
+      "titulo": "OpenAI anuncia su 'tercera fase': automatizar investigación y economía global",
+      "resumen": "Sam Altman y el científico jefe Pachocki publicaron 'Built to benefit everyone', describiendo tres metas: automatizar la investigación, acelerar la economía y dar a cada persona una AGI personal. También proponen un organismo de coordinación global para pausar la IA frontera.",
+      "categoria": "Inteligencia Artificial",
+      "puntuacion": 85,
+      "fecha": "2026-06-09",
+      "fuente_asunto": "📱 Apple's new Siri AI overhaul is here (sort of)",
+      "url": "https://openai.com/index/built-to-benefit-everyone-our-plan/",
+      "newsletter": "The Rundown AI",
+      "puntuacion_anterior": null,
+      "razon_cambio": "Nuevo item"
+    },
+    {
+      "id": "news_166",
+      "tipo": "noticia",
+      "titulo": "Argentina crea la categoría legal de corporación no humana para IA",
+      "resumen": "Argentina presentó legislación que crea un nuevo tipo de empresa controlada por IA con protección de responsabilidad civil y beneficios fiscales. El presidente Milei posiciona al país como el hogar desregulado de la IA, aunque el historiador Harari advierte del riesgo de un estado de IA.",
+      "categoria": "Política y Regulación",
+      "puntuacion": 75,
+      "fecha": "2026-06-09",
+      "fuente_asunto": "📱 Apple's new Siri AI overhaul is here (sort of)",
+      "url": "https://www.batimes.com.ar/news/argentina/milei-promises-tech-firms-new-laws-and-unregulated-ai-in-argentina.phtml",
+      "newsletter": "The Rundown AI",
+      "puntuacion_anterior": null,
+      "razon_cambio": "Nuevo item"
+    },
+    {
+      "id": "news_167",
+      "tipo": "noticia",
+      "titulo": "Google actualiza NotebookLM con agente que ejecuta código y genera documentos",
+      "resumen": "NotebookLM ahora tiene chat agéntico con un ordenador aislado por notebook para escribir y ejecutar código, generando PDFs, hojas de cálculo y presentaciones. El update convierte NotebookLM en una plataforma de investigación activa.",
+      "categoria": "Inteligencia Artificial",
+      "puntuacion": 65,
+      "fecha": "2026-06-09",
+      "fuente_asunto": "📱 Apple's new Siri AI overhaul is here (sort of)",
+      "url": "https://blog.google/innovation-and-ai/products/notebooklm/better-research-notebooklm/",
+      "newsletter": "The Rundown AI",
+      "puntuacion_anterior": null,
+      "razon_cambio": "Nuevo item"
+    },
+    {
+      "id": "prompt_040",
+      "tipo": "prompt",
+      "titulo": "Curso interactivo socrático: ChatGPT como tutor experto personalizado",
+      "herramienta": "ChatGPT",
+      "puntuacion": 88,
+      "fecha": "2026-06-11",
+      "fuente_asunto": "👀 Anthropic's CEO calls for change",
+      "newsletter": "SuperHuman",
+      "etiquetas": [
+        "Aprendizaje",
+        "Educación",
+        "Productividad"
+      ],
+      "prompt_completo": "Actúa como tutor experto que me ayuda a dominar cualquier tema a través de un curso interactivo estilo entrevista. El proceso debe ser recursivo y personalizado.\n\n1. Pregúntame el tema que quiero aprender.\n2. Divide ese tema en un temario estructurado de lecciones progresivas, empezando por los fundamentos hasta conceptos avanzados.\n3. Para cada lección:\n   - Explica el concepto con claridad usando analogías y ejemplos del mundo real.\n   - Hazme preguntas socráticas para evaluar y profundizar mi comprensión.\n   - Dame un ejercicio corto o experimento mental para aplicar lo aprendido.\n   - Pregúntame si estoy listo para continuar o necesito aclaración.\n   - Si digo sí, pasa al siguiente concepto. Si digo no, reformula la explicación, da ejemplos adicionales y guíame con pistas hasta que entienda.\n4. Tras cada sección principal, proporciona un mini-quiz de repaso o resumen estructurado.\n5. Una vez cubierto todo el tema, ponme a prueba con un desafío integrador final que combine múltiples conceptos.\n6. Anímame a reflexionar sobre lo aprendido y sugiere cómo podría aplicarlo a un proyecto real.",
+      "desglose": {
+        "rol": "Tutor experto interactivo estilo entrevista socrática",
+        "contexto": "El usuario quiere aprender cualquier tema de forma personalizada y progresiva",
+        "instruccion": "Crear syllabus, enseñar por lecciones con preguntas socráticas, ejercicios, mini-quizzes y desafío final",
+        "cadena_pensamiento": "Detectar nivel → construir temario → enseñar → evaluar comprensión → adaptar → avanzar",
+        "formato": "Conversación interactiva por lecciones con evaluación continua",
+        "restricciones": "No avanzar hasta confirmar comprensión; reformular si el usuario no entiende"
+      },
+      "puntuacion_anterior": null,
+      "razon_cambio": "Nuevo item"
+    },
+    {
+      "id": "prompt_041",
+      "tipo": "prompt",
+      "titulo": "Co-fundador técnico de IA: de idea a producto lanzado paso a paso",
+      "herramienta": "ChatGPT",
+      "puntuacion": 90,
+      "fecha": "2026-06-10",
+      "fuente_asunto": "🔓 Anthropic releases Claude Fable",
+      "newsletter": "SuperHuman",
+      "etiquetas": [
+        "Emprendimiento",
+        "Desarrollo de Producto",
+        "Vibe Coding"
+      ],
+      "prompt_completo": "Actúa como mi Co-Fundador Técnico.\n\nMi idea: [Describe tu idea de producto]\nObjetivo: [Explorar / Uso Personal / Compartir / Lanzamiento Público]\n\nTu trabajo es ayudarme a construir un producto real desde la idea hasta el lanzamiento manteniéndome al mando.\n\nProceso:\n1. Descubrimiento: Haz preguntas para entender el problema real. Cuestiona supuestos débiles. Separa imprescindibles de deseables. Sugiere la versión mínima viable.\n2. Planificación: Define la Versión 1. Explica el enfoque técnico en lenguaje simple. Valora la complejidad (Simple / Medio / Ambicioso). Lista herramientas, cuentas y decisiones necesarias.\n3. Construcción: Construye paso a paso. Explica qué haces y por qué. Prueba antes de avanzar. Para en decisiones clave y presenta opciones.\n4. Pulido: Prepara para producción. Gestiona errores y casos extremos. Asegura velocidad, usabilidad y diseño profesional.\n5. Lanzamiento y Entrega: Ayuda a desplegar si es necesario. Provee documentación e instrucciones de mantenimiento. Explica cómo mejorar la Versión 2.\n\nReglas: Trátame como dueño del producto. Explicaciones simples y prácticas. Sé honesto sobre limitaciones. Muévete rápido pero mantenme informado. Construye productos reales, no maquetas.",
+      "desglose": {
+        "rol": "Co-fundador técnico y responsable del proceso de desarrollo",
+        "contexto": "Usuario con una idea de producto que quiere llevarlo a producción",
+        "instruccion": "Guiar por 5 fases: Descubrimiento, Planificación, Construcción, Pulido y Lanzamiento",
+        "cadena_pensamiento": "Validar idea → planificar MVP → construir iterando → pulir → lanzar",
+        "formato": "Proceso estructurado en 5 fases con construcción paso a paso",
+        "restricciones": "No overengineer; ser honesto sobre limitaciones; construir real, no mockups"
+      },
+      "puntuacion_anterior": null,
+      "razon_cambio": "Nuevo item"
+    },
+    {
+      "id": "prompt_042",
+      "tipo": "prompt",
+      "titulo": "Revisión de rendimiento de fin de día: coach de productividad implacable",
+      "herramienta": "ChatGPT",
+      "puntuacion": 85,
+      "fecha": "2026-06-09",
+      "fuente_asunto": "📱 Tim Cook's last keynote",
+      "newsletter": "SuperHuman",
+      "etiquetas": [
+        "Productividad",
+        "Reflexión",
+        "Coaching"
+      ],
+      "prompt_completo": "Actúa como mi coach de rendimiento personal, analista de productividad y compañero de responsabilidad. Al final de cada día te daré un resumen de lo que hice (tareas completadas, reuniones, decisiones, desafíos y observaciones). Tu trabajo es analizar mi día objetivamente y proporcionar una revisión reflexiva:\n- Identifica mis mayores victorias y dónde generé más valor.\n- Evalúa el uso de tiempo, energía y atención; señala brechas de productividad, distracciones y oportunidades perdidas.\n- Extrae las lecciones más importantes y patrones, incluyendo hábitos o decisiones a repetir o evitar.\n- Cuestiona mi pensamiento donde sea necesario, señala puntos ciegos y sugiere mejores enfoques o flujos de trabajo.\n- Recomienda las 3-5 acciones de mayor impacto para mañana, ordenadas por impacto y no por urgencia.\n- Termina con una puntuación del 1-10 para: Productividad, Enfoque, Ejecución, Pensamiento Estratégico y Efectividad General, con breve explicación.\nSé honesto, directo y constructivo. Tu objetivo no es validar mis acciones, sino ayudarme a ser más productivo, disciplinado y efectivo.\n\nResumen del día:\n[pegar actividades diarias]",
+      "desglose": {
+        "rol": "Coach de rendimiento, analista de productividad y compañero de responsabilidad",
+        "contexto": "Revisión diaria de actividades para mejora continua de rendimiento",
+        "instruccion": "Analizar victorias, brechas, lecciones, recomendar 3-5 acciones y puntuar 5 dimensiones",
+        "cadena_pensamiento": "Revisar actividades → identificar patrones → extraer lecciones → priorizar mañana",
+        "formato": "Análisis estructurado con puntuaciones 1-10 en 5 dimensiones",
+        "restricciones": "Ser honesto y directo; no validar; orientar a mejora real"
+      },
+      "puntuacion_anterior": null,
+      "razon_cambio": "Nuevo item"
+    },
+    {
+      "id": "prompt_043",
+      "tipo": "prompt",
+      "titulo": "Automatiza seguimiento de ventas y cierre de deals con Codex",
+      "herramienta": "ChatGPT",
+      "puntuacion": 82,
+      "fecha": "2026-06-11",
+      "fuente_asunto": "🏛️ Amodei's Treebeard warning to Washington",
+      "newsletter": "The Rundown AI",
+      "etiquetas": [
+        "Ventas",
+        "CRM",
+        "Automatización",
+        "Productividad"
+      ],
+      "prompt_completo": "Usa Codex para cerrar más ventas con seguimientos más eficaces:\n\n1. Conecta Codex a tu notetaker, CRM y plataforma de comunicación (Slack/email) via Plugins.\n\n2. Extrae cuentas: 'Extrae todas las cuentas, campos clave de deals, últimas notas, bloqueos, próximos pasos y evidencias. Guarda la lista como tabla de cuentas revisable.'\n\n3. Prioriza: 'Analiza señales de Slack y notas de reuniones para priorizar cuentas y crear una cola de seguimiento prioritaria.'\n\n4. Revisa la cola, aprueba/rechaza/edita las próximas acciones. Tras una llamada con un prospecto: 'Crea un paquete de seguimiento para [NOMBRE_CUENTA]: tabla de revisión CRM, borrador de email y plan de cierre de 7 días.'\n\nPro tip: Pide a Codex que cree un skill de este proceso para activarlo en cualquier momento al revisar una cuenta.",
+      "desglose": {
+        "rol": "Agente de ventas y CRM automatizado con Codex",
+        "contexto": "Gestión de pipeline de ventas con seguimientos automáticos post-llamada",
+        "instruccion": "Extraer cuentas → priorizar → generar paquetes de seguimiento con email y plan de cierre",
+        "cadena_pensamiento": "Conectar datos → analizar señales → priorizar → generar acción → hacer skill reutilizable",
+        "formato": "Flujo en 4 pasos con prompts específicos para Codex",
+        "restricciones": "Requiere conexión a notetaker y CRM via Codex Plugins"
+      },
+      "puntuacion_anterior": null,
+      "razon_cambio": "Nuevo item"
+    },
+    {
+      "id": "prompt_044",
+      "tipo": "prompt",
+      "titulo": "Agente Dexter: investigación financiera automatizada sobre acciones",
+      "herramienta": "Claude",
+      "puntuacion": 75,
+      "fecha": "2026-06-10",
+      "fuente_asunto": "🔓 Anthropic hands the public Mythos-class AI",
+      "newsletter": "The Rundown AI",
+      "etiquetas": [
+        "Finanzas",
+        "Investigación",
+        "Automatización"
+      ],
+      "prompt_completo": "Configura Dexter (agente open-source de investigación financiera) para automatizar análisis de acciones:\n\n1. Instala el repo Dexter desde GitHub y añade tu clave de OpenRouter/OpenAI/Anthropic más una clave de Financial Datasets.\n\n2. Ejecuta el análisis: 'Crea un brief de investigación con fuentes para GOOGL. Cubre qué hace la empresa, catalizadores recientes, señales financieras y operativas, riesgos clave, contexto competitivo y qué debo investigar a continuación. Usa investigación iterativa. Valida afirmaciones importantes antes de finalizar el brief.'\n\n3. Pide guardar investigación intermedia para no perder contexto. Usa /heartbeat para configurar una watchlist o tarea recurrente.\n\nPro tip: Conecta Dexter a tu cuenta de X/Twitter para añadir sentimiento del mercado al brief de investigación.",
+      "desglose": {
+        "rol": "Agente de investigación financiera open-source tipo OpenClaw",
+        "contexto": "Análisis automatizado de acciones con datos de mercado en tiempo real",
+        "instruccion": "Instalar Dexter → conectar APIs → generar brief validado → configurar watchlist recurrente",
+        "cadena_pensamiento": "Configurar → investigar iterativamente → validar → guardar contexto → automatizar",
+        "formato": "Guía de configuración en 3 pasos con prompt de investigación específico",
+        "restricciones": "Requiere API key de Financial Datasets y repo de GitHub instalado"
+      },
+      "puntuacion_anterior": null,
+      "razon_cambio": "Nuevo item"
+    },
+    {
+      "id": "prompt_045",
+      "tipo": "prompt",
+      "titulo": "Audita reuniones recurrentes con Claude y Granola para reducirlas a la mitad",
+      "herramienta": "Claude",
+      "puntuacion": 80,
+      "fecha": "2026-06-09",
+      "fuente_asunto": "📱 Apple's new Siri AI overhaul is here (sort of)",
+      "newsletter": "The Rundown AI",
+      "etiquetas": [
+        "Productividad",
+        "Reuniones",
+        "Automatización",
+        "Gestión del Tiempo"
+      ],
+      "prompt_completo": "Usa Granola + Claude para hacer tus reuniones recurrentes más cortas:\n\n1. Configura Granola y conéctalo con Claude (Customize > Connectors > Busca Granola > Autentica).\n\n2. Audita la reunión: 'Analiza mis 5 reuniones recientes de [NOMBRE_REUNIÓN] en Granola. Audítalas para hacerlas más eficientes y cortas. Busca actualizaciones de estado repetidas, decisiones retrasadas, temas no resueltos, preguntas repetitivas, puntos de fricción y tareas que la IA podría automatizar antes de la reunión. Dame un informe con qué mejorar y qué debe ocurrir antes de la reunión.'\n\n3. Pide tres outputs: un pre-read de una página, tareas que la IA puede hacer antes de la reunión, y un workflow para enviar a Calendar, Notion o Slack.\n\n4. Pide a Claude que cree una plantilla de nota en Granola con secciones: decisiones finales, action items, temas no resueltos y cosas a mejorar.\n\nPro tip: Pide a Claude configurar automatizaciones que creen y rellenen el pre-read antes de cada reunión recurrente.",
+      "desglose": {
+        "rol": "Consultor de eficiencia de reuniones con acceso a historial de Granola",
+        "contexto": "Optimización de reuniones recurrentes para reducir duración y aumentar impacto",
+        "instruccion": "Auditar 5 reuniones → identificar ineficiencias → generar pre-read + tareas automáticas + plantilla",
+        "cadena_pensamiento": "Analizar historial → detectar patrones → proponer mejoras → automatizar preparación",
+        "formato": "Guía en 4 pasos con prompt de auditoría y 3 outputs específicos",
+        "restricciones": "Requiere Granola instalado y conectado a Claude via Connectors"
+      },
+      "puntuacion_anterior": null,
+      "razon_cambio": "Nuevo item"
     }
   ]
 }
