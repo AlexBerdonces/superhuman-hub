@@ -1,18 +1,9 @@
-# GitHub Actions workflow: Publicar en LinkedIn automáticamente
-# Guardar en: .github/workflows/publish_linkedin.yml (dentro del repo superhuman-hub)
-#
-# SECRETS necesarios en GitHub → Settings → Secrets and variables → Actions:
-#   ANTHROPIC_API_KEY       → tu clave de console.anthropic.com
-#   LINKEDIN_ACCESS_TOKEN   → token OAuth de LinkedIn Developer Portal
-#   LINKEDIN_PERSON_URN     → urn:li:person:XXXXXXX (tu ID de LinkedIn)
-
 name: Publicar en LinkedIn
 
 on:
   schedule:
-    # Lunes, Miércoles, Viernes a las 08:30 hora Madrid (UTC+2 en verano = 06:30 UTC)
     - cron: '30 6 * * 1,3,5'
-  workflow_dispatch:  # permite lanzarlo manualmente desde GitHub Actions
+  workflow_dispatch:
 
 jobs:
   publish:
@@ -27,6 +18,9 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Debug - listar archivos
+        run: ls -la
+
       - name: Instalar dependencias
         run: pip install -r requirements.txt
 
@@ -39,7 +33,6 @@ jobs:
           LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
 
       - name: Guardar estado de noticias publicadas
-        # Solo hace commit si published_ids.json cambió
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
