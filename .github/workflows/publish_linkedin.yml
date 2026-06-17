@@ -24,6 +24,7 @@ jobs:
       - name: Instalar dependencias
         run: pip install anthropic>=0.40.0 openai>=1.30.0 requests>=2.31.0 python-dotenv>=1.0.0
 
+
       - name: Ejecutar script de publicación
         run: python publish.py
         env:
