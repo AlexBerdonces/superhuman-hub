@@ -1,12 +1,12 @@
 {
   "published": [
     "news_001",
-    "news_014",
-    "news_039",
+    "news_155",
     "news_024",
     "news_143",
-    "news_155"
+    "news_039",
+    "news_014",
+    "news_177"
   ],
-  "last_run": "2026-06-17T20:16:07.778331+00:00",
-  "nota": "news_014 (19 jun), news_039 (23 jun), news_155 (25 jun) programadas en LinkedIn. news_143 publicada vía API el 17 jun. news_024 y news_001 marcadas como usadas (no republicar). Primera publicación automática del nuevo sistema: lunes 30 jun 2026."
+  "last_run": "2026-06-18T19:03:22.477806+00:00"
 }
