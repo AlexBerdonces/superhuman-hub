@@ -22,7 +22,8 @@ load_dotenv(encoding='utf-8-sig')
 # CONFIGURACIÓN
 # ─────────────────────────────────────────────
 
-JSON_URL = "https://raw.githubusercontent.com/AlexBerdonces/superhuman-hub/main/newsletter_news.json"
+HTML_URL = "https://raw.githubusercontent.com/AlexBerdonces/superhuman-hub/main/index.html"
+JSON_URL = "https://raw.githubusercontent.com/AlexBerdonces/superhuman-hub/main/newsletter_news.json"  # fallback legacy
 PUBLISHED_FILE = "published_ids.json"
 MAX_AGE_DAYS = 10  # solo noticias de los últimos 10 días
 FORBIDDEN_PHRASES = ["Acabo de leer", "Es importante destacar", "En conclusión", "En resumen"]
@@ -62,10 +63,38 @@ def save_published_id(news_id: str):
 # ─────────────────────────────────────────────
 
 def fetch_news() -> list:
+    """
+    Obtiene noticias desde index.html (fuente principal, siempre actualizada).
+    Fallback: newsletter_news.json (fuente legacy).
+    """
+    # Fuente principal: index.html con RAW_DATA embebido
+    try:
+        response = requests.get(HTML_URL, timeout=15)
+        response.raise_for_status()
+        html = response.text
+
+        idx = html.find('const RAW_DATA = ')
+        if idx == -1:
+            raise ValueError("No se encontró RAW_DATA en index.html")
+
+        json_str = html[idx + len('const RAW_DATA = '):]
+        decoder = json.JSONDecoder()
+        data, _ = decoder.raw_decode(json_str)
+
+        noticias = data.get("noticias", [])
+        print(f"📊 Fuente: index.html — {len(noticias)} items (actualización: {data.get('ultima_actualizacion', '?')})")
+        return noticias
+
+    except Exception as e:
+        print(f"⚠️  Error cargando index.html ({e}). Usando newsletter_news.json como fallback...")
+
+    # Fallback: newsletter_news.json
     response = requests.get(JSON_URL, timeout=10)
     response.raise_for_status()
     data = response.json()
-    return data.get("noticias", [])
+    noticias = data.get("noticias", [])
+    print(f"📊 Fuente: newsletter_news.json (fallback) — {len(noticias)} items")
+    return noticias
 
 
 def filter_news(noticias: list, published_ids: set) -> list:
@@ -459,7 +488,7 @@ def main():
     print(f"📋 {len(published_ids)} noticias ya publicadas anteriormente")
 
     # Obtener y filtrar noticias
-    print(f"📥 Descargando noticias desde GitHub...")
+    print(f"📥 Descargando noticias...")
     noticias = fetch_news()
     candidates = filter_news(noticias, published_ids)
 
