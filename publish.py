@@ -282,12 +282,12 @@ def validate_post(post: str) -> tuple[bool, str]:
 
 
 # ─────────────────────────────────────────────
-# PASO 5: GENERAR IMAGEN CON DALL-E 3
+# PASO 5: GENERAR IMAGEN CON GPT-IMAGE-1
 # ─────────────────────────────────────────────
 
 def generate_image_prompt(noticia: dict, client: Anthropic) -> str:
     """Genera un prompt cinematográfico y específico para gpt-image-1."""
-    prompt = f"""Eres un director de arte especializado en fotografía de viajes y turismo de ocio para publicaciones como Condé Nast Traveler, Lonely Planet y National Geographic Traveler.
+    prompt = f"""Eres un director de arte especializado en fotografía de viajes y comunicación visual para publicaciones como Condé Nast Traveler, Lonely Planet y National Geographic Traveler.
 
 Tu tarea: crear un prompt en inglés para gpt-image-1 que genere una imagen IMPACTANTE y EMOTIVA para un post de LinkedIn sobre esta noticia, conectada siempre con el mundo del turismo de ocio.
 
@@ -297,50 +297,60 @@ Categoría: {noticia.get('categoria', '')}
 Resumen: {noticia['resumen'][:250]}
 
 ESTRUCTURA OBLIGATORIA del prompt (úsala siempre en este orden):
-1. SUJETO PRINCIPAL: personas reales en situación de viaje o vacaciones (específico, no genérico)
-2. ESTILO: cinematic travel photography / candid documentary / warm lifestyle photography / etc.
-3. ILUMINACIÓN: golden hour / soft morning light / bright alpine sun / warm sunset / etc.
-4. COMPOSICIÓN: wide establishing shot / candid close-up of expressions / aerial of landscape / etc.
-5. PALETA DE COLOR: 2-3 colores dominantes cálidos o vibrantes (ej: warm amber, sky blue, alpine white)
-6. ATMÓSFERA/MOOD: alegría, asombro, libertad, conexión, aventura, descanso, descubrimiento
-7. CALIDAD: hyperrealistic, sharp focus, 8K, no text, no logos
 
-PERSONAS EN LA IMAGEN — REGLAS CRÍTICAS:
-- Las personas deben ser turistas, viajeros o familias en contexto de ocio y vacaciones
-- Ropa casual de vacaciones: camisetas, gorras, abrigos de montaña, ropa de esquí, mochilas de viaje
-- NUNCA trajes, corbatas, ropa de oficina ni expresiones serias/formales de ejecutivos
-- Transmitir emociones genuinas en las caras: sonrisas, asombro, risa, alegría compartida
-- Diversidad de perfiles: familias con niños, parejas (cualquier género), grupos de amigos, viajeros solos
-- Entornos preferidos: Europa (Alpes, ciudades mediterráneas, pueblos con nieve, playas europeas)
-- Turismo de esquí: escenas en pistas, remontes, après-ski, vistas alpinas — incluirlo siempre que encaje
-- NUNCA imágenes de salas de reuniones, oficinas, laptops en escritorios ni entornos corporativos
+1. SUJETO PRINCIPAL: personas en situación de viaje o vacaciones, adaptadas a la noticia. Puede ser una familia, pareja, grupo de amigos o viajero solo. Si la noticia habla de ejecutivos o contexto profesional, se permite ropa más formal.
 
-REGLAS GENERALES:
-- NUNCA robots, cerebros digitales, circuitos flotantes ni clichés de IA
-- NUNCA texto, letras ni logos en la imagen
-- El concepto debe conectar la noticia con una escena de viaje real y reconocible
-- Personas de a pie disfrutando de sus vacaciones, no ilustraciones abstractas
+2. ESTILO: elige el que mejor encaje con el tono y tema de la noticia — nunca uses siempre el mismo. Guía orientativa:
+   - Noticia sobre IA, futuro o tecnología emergente → futuristic editorial, sci-fi travel photography, digital surrealism with human warmth
+   - Noticia sobre destino, paisaje o experiencia de viaje → cinematic travel photography, golden hour lifestyle
+   - Noticia sobre cultura, gastronomía o slow travel → candid documentary, warm editorial photography
+   - Noticia sobre aventura, deporte o naturaleza → action travel photography, dynamic composition
+   - Noticia sobre hospitalidad o bienestar → soft luxury lifestyle, serene editorial
+   Elige libremente dentro de este espectro según la noticia. El estilo debe variar entre publicaciones.
+
+3. ILUMINACIÓN: adapta la iluminación al estilo y tono de la noticia. Varía entre: golden hour, soft morning light, bright alpine sun, dramatic overcast sky, neon-ambient dusk, cool blue twilight, harsh midday Mediterranean sun, misty forest light, warm candlelight interior, crisp winter daylight. Nunca uses siempre la misma.
+
+4. COMPOSICIÓN: adapta la composición a lo que narra la noticia. Ejemplos: wide establishing shot para paisajes o destinos, close-up emocional para historias humanas, perspectiva aérea para ciudades o rutas, plano medio para interacciones entre personas, simétrico para arquitectura o espacios, dinámico en diagonal para aventura o movimiento.
+
+5. PALETA DE COLOR: define 5-7 colores específicos que tengan coherencia entre sí y consonancia con el tono de la noticia. Nómbralos con precisión (ej: warm amber, deep forest green, terracotta, sky blue, soft gold, ivory white, slate grey).
+
+6. ATMÓSFERA/MOOD: el que mejor encaje con la noticia: alegría, asombro, libertad, conexión, aventura, descanso, descubrimiento, sofisticación, nostalgia, energía.
+
+7. CALIDAD: hyperrealistic, sharp focus, 8K, no text, no logos.
+
+PERSONAS EN LA IMAGEN — REGLAS:
+- Preferentemente de rasgos caucásicos o mediterráneos
+- Ropa casual de vacaciones: camisetas, gorras, abrigos de montaña, ropa de esquí, mochilas de viaje. Formal solo si la noticia lo justifica
+- Emociones genuinas y naturales: sonrisas, asombro, conversación — sin poses forzadas ni expresiones teatrales
+- Adapta el grupo a la noticia: familia con niños, pareja, grupo de amigos, viajero solo
+- Entornos diversos: no repetir siempre los mismos. Europa mediterránea, Alpes, ciudades históricas, playas, aeropuertos modernos, hoteles boutique, mercados locales, rutas de montaña
+- Incluir turismo de esquí si encaja con la noticia
+
+PROHIBIDO:
+- Robots, cerebros digitales, circuitos flotantes ni clichés visuales de IA
+- Salas de reuniones, oficinas o laptops en escritorio (salvo que la noticia lo requiera explícitamente)
+- Texto, letras ni logos en la imagen
 
 EJEMPLOS DE PROMPTS BUENOS vs MALOS:
 
 MALO: "Business professionals in suits using AI technology in a corporate meeting room"
-BUENO: "Candid travel photography of a young couple in casual winter jackets laughing at a snowy alpine village square, one holding a smartphone showing real-time translation on screen. Warm golden afternoon light on snow-covered wooden chalets behind them. Soft amber and crisp white palette. Mood: effortless connection, travel joy. Hyperrealistic, 8K, no text, no logos."
+BUENO: "Candid travel photography of a young Caucasian couple in casual winter jackets laughing at a snowy alpine village square, one holding a smartphone showing real-time translation on screen. Warm golden afternoon light on snow-covered wooden chalets behind them. Palette: warm amber, crisp white, slate blue, pine green, soft gold. Mood: effortless connection, travel joy. Hyperrealistic, 8K, no text, no logos."
 
 MALO: "A robot helping a hotel manager at a front desk in a formal setting"
-BUENO: "Wide cinematic shot of a family of four — parents and two kids in colorful ski gear — riding a mountain gondola above a breathtaking snowy Alpine landscape at sunrise. The kids press their faces against the glass in wonder. Warm pink-gold light on snow peaks. Palette: sky blue, rose gold, pure white. Mood: awe and family adventure. Hyperrealistic, sharp focus, 8K, no text."
+BUENO: "Wide cinematic shot of a Mediterranean family of four — parents and two kids in colorful ski gear — riding a mountain gondola above a breathtaking snowy Alpine landscape at sunrise. The kids press their faces against the glass in wonder. Crisp winter daylight with pink-gold sunrise hues on snow peaks. Palette: sky blue, rose gold, pure white, warm amber, pale lavender. Mood: awe and family adventure. Hyperrealistic, sharp focus, 8K, no text."
 
 Responde SOLO con el prompt en inglés, sin explicaciones ni introducción."""
 
     message = client.messages.create(
         model="claude-haiku-4-5-20251001",
-        max_tokens=200,
+        max_tokens=300,
         messages=[{"role": "user", "content": prompt}]
     )
     return message.content[0].text.strip()
 
 
 def generate_image(image_prompt: str) -> bytes:
-    """Genera imagen con DALL-E 3 y devuelve los bytes."""
+    """Genera imagen con gpt-image-1 y devuelve los bytes."""
     openai_client = OpenAI(api_key=OPENAI_API_KEY)
 
     import base64
@@ -520,7 +530,7 @@ def main():
         print("🎨 Generando prompt de imagen...")
         image_prompt = generate_image_prompt(noticia, client)
         print(f"   Prompt completo:\n   {image_prompt}\n")
-        print("🖼️  Generando imagen con DALL-E 3...")
+        print("🖼️  Generando imagen con gpt-image-1...")
         image_bytes = generate_image(image_prompt)
         print(f"   Imagen generada ({len(image_bytes)//1024} KB)")
 
@@ -562,3 +572,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
