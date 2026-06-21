@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "ultima_actualizacion": "2026-06-21",
-  "total_noticias": 303,
+  "total_noticias": 310,
   "noticias": [
     {
       "id": "news_014",
@@ -3930,11 +3930,13 @@
       "titulo": "EE.UU. rechaza eximir a aliados del G7 del veto a modelos de Anthropic",
       "resumen": "La administración Trump rechazó la petición del primer ministro británico Keir Starmer para eximir a los aliados del G7 de la prohibición de exportación de los modelos top de Anthropic. La negativa refuerza el veto global a Fable 5 y Mythos, y añade tensión diplomática a una política que ya generó críticas de expertos en ciberseguridad.",
       "categoria": "Política y Regulación",
-      "puntuacion": 82,
+      "puntuacion": 92,
       "fecha": "2026-06-17",
       "fuente_asunto": "🚀 Musk cashes SpaceX IPO surge into Cursor",
       "url": "https://nypost.com/2026/06/16/business/trump-admin-open-to-talks-with-anthropic-over-foreigner-ban/",
-      "newsletter": "The Rundown AI"
+      "newsletter": "The Rundown AI",
+      "puntuacion_anterior": 82,
+      "razon_cambio": "The Founders Corner: Mistral aprovecha el ban de Anthropic para acelerar soberanía IA europea"
     },
     {
       "id": "news_213",
@@ -4150,11 +4152,13 @@
       "titulo": "OpenAI quemó $3.700M en Q1 2026 con ingresos de $5.700M, ambos triplican",
       "resumen": "Según documentos vistos por The Information, OpenAI acumuló $3.700M en cash burn en el primer trimestre de 2026, contra $5.700M en ingresos. Ambas cifras triplicaron los valores del año anterior, reflejando la escalada simultánea de costes e ingresos en la carrera hacia AGI.",
       "categoria": "Negocios e Impacto Económico",
-      "puntuacion": 72,
+      "puntuacion": 82,
       "fecha": "2026-06-18",
       "fuente_asunto": "🔒 Inside the deadlock keeping Mythos offline",
       "url": null,
-      "newsletter": "The Rundown AI"
+      "newsletter": "The Rundown AI",
+      "puntuacion_anterior": 72,
+      "razon_cambio": "The Founders Corner confirma la misma noticia: OpenAI quemó $3.700M en Q1 2026"
     },
     {
       "id": "news_223",
@@ -4532,6 +4536,90 @@
       "fuente_asunto": "Robot phone makes high-profile appearance",
       "url": null,
       "newsletter": "SuperHuman"
+    },
+    {
+      "id": "news_240",
+      "tipo": "noticia",
+      "titulo": "Sistema operativo de IA para empresas unipersonales",
+      "resumen": "Un framework diseñado para coordinar agentes de IA en tareas de investigación, desarrollo y operaciones permite que operadores individuales compitan con equipos. El enfoque desplaza el esfuerzo hacia la calidad de decisiones, el conocimiento del cliente y la selección de problemas, manteniendo el control estratégico humano.",
+      "categoria": "Emprendimiento",
+      "puntuacion": 65,
+      "fecha": "2026-06-20",
+      "fuente_asunto": "1-Person Company Operating System🔑, AI Distribution Layer🔍, SpaceX Valuation Math 🤔",
+      "url": "https://www.the-founders-corner.com/p/1-person-company-operating-system",
+      "newsletter": "The Founders Corner"
+    },
+    {
+      "id": "news_241",
+      "tipo": "noticia",
+      "titulo": "Mistral impulsa soberanía IA europea usando el ban de Anthropic",
+      "resumen": "Las restricciones de exportación de EEUU sobre Anthropic han reforzado el argumento de Mistral a favor de modelos de código abierto e infraestructura IA independiente. La estrategia europea de IA se orienta cada vez más a reducir la dependencia de proveedores externos antes de que se profundice.",
+      "categoria": "Política y Regulación",
+      "puntuacion": 65,
+      "fecha": "2026-06-20",
+      "fuente_asunto": "1-Person Company Operating System🔑, AI Distribution Layer🔍, SpaceX Valuation Math 🤔",
+      "url": "https://www.the-founders-corner.com/p/1-person-company-operating-system",
+      "newsletter": "The Founders Corner"
+    },
+    {
+      "id": "news_242",
+      "tipo": "noticia",
+      "titulo": "Seis líderes IA convergen en el mismo playbook de ventas para 2026",
+      "resumen": "Stripe, Google, Canva, Cloudflare y Higgsfield llegaron de forma independiente a la misma estrategia: construir mientras se vende, centralizar la inteligencia, diseñar para agentes y cobrar por resultados. Los ciclos de crecimiento se aceleran y el conocimiento propietario se convierte en la ventaja competitiva clave.",
+      "categoria": "Negocios e Impacto Económico",
+      "puntuacion": 70,
+      "fecha": "2026-06-20",
+      "fuente_asunto": "1-Person Company Operating System🔑, AI Distribution Layer🔍, SpaceX Valuation Math 🤔",
+      "url": "https://www.the-founders-corner.com/p/1-person-company-operating-system",
+      "newsletter": "The Founders Corner"
+    },
+    {
+      "id": "news_243",
+      "tipo": "noticia",
+      "titulo": "La ingeniería de inferencia es el nuevo cuello de botella de los productos IA",
+      "resumen": "Las respuestas de modelos dependen de fases separadas de cómputo y memoria, cada una con estrategias de optimización distintas. Entender esta separación determina la latencia, los costes de infraestructura y la economía de desplegar productos IA a escala.",
+      "categoria": "Inteligencia Artificial",
+      "puntuacion": 60,
+      "fecha": "2026-06-20",
+      "fuente_asunto": "1-Person Company Operating System🔑, AI Distribution Layer🔍, SpaceX Valuation Math 🤔",
+      "url": "https://www.the-founders-corner.com/p/1-person-company-operating-system",
+      "newsletter": "The Founders Corner"
+    },
+    {
+      "id": "news_244",
+      "tipo": "noticia",
+      "titulo": "El auge del SaaS de nicho: expertos de dominio sin ingenieros",
+      "resumen": "La caída del coste de crear software permite a expertos de cada sector lanzar herramientas sin formación técnica. El conocimiento de dominio se convierte en diferenciador más fuerte que la ingeniería, abriendo nuevas fuentes de ingresos para profesionales no técnicos.",
+      "categoria": "Emprendimiento",
+      "puntuacion": 55,
+      "fecha": "2026-06-20",
+      "fuente_asunto": "1-Person Company Operating System🔑, AI Distribution Layer🔍, SpaceX Valuation Math 🤔",
+      "url": "https://www.the-founders-corner.com/p/1-person-company-operating-system",
+      "newsletter": "The Founders Corner"
+    },
+    {
+      "id": "news_245",
+      "tipo": "noticia",
+      "titulo": "Jake y Logan Paul lanzan fondo de $100M en robótica, defensa y chips IA",
+      "resumen": "Los hermanos Paul han lanzado un vehículo de capital riesgo de 100 millones de dólares orientado a infraestructura de tecnología dura: robótica, defensa, semiconductores e IA. El movimiento muestra cómo creadores con grandes audiencias entran en los mercados de capital a través de nuevos vehículos de inversión.",
+      "categoria": "Emprendimiento",
+      "puntuacion": 48,
+      "fecha": "2026-06-20",
+      "fuente_asunto": "1-Person Company Operating System🔑, AI Distribution Layer🔍, SpaceX Valuation Math 🤔",
+      "url": "https://www.the-founders-corner.com/p/1-person-company-operating-system",
+      "newsletter": "The Founders Corner"
+    },
+    {
+      "id": "news_246",
+      "tipo": "noticia",
+      "titulo": "Nuevos fondos VC: €500M dual-use europeo y $123M biotech global",
+      "resumen": "AVP Earlybird lanza un fondo de €500M para tecnología dual-use y defensa en Europa. KOS Biotechnology Partners cerró su tercer fondo en $123M para life sciences globales, mientras Gutter Capital cerró $75M para startups founder-led y Angel Invest €40M para early-stage europeos.",
+      "categoria": "Emprendimiento",
+      "puntuacion": 50,
+      "fecha": "2026-06-20",
+      "fuente_asunto": "1-Person Company Operating System🔑, AI Distribution Layer🔍, SpaceX Valuation Math 🤔",
+      "url": "https://www.the-founders-corner.com/p/1-person-company-operating-system",
+      "newsletter": "The Founders Corner"
     }
   ]
 }
