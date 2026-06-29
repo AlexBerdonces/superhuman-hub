@@ -266,32 +266,40 @@ IMPORTANTE: Responde SOLO con el ID exacto de la noticia elegida (el texto entre
     return candidates[0]
  
  
-def extract_topics(noticia: dict, client: Anthropic) -> list:
+def extract_topics(noticia: dict, client: Anthropic, post_text: str = "") -> list:
     """
-    Extrae 3-6 palabras clave temáticas de una noticia publicada.
-    Se guardan para evitar repetir la misma temática en los próximos 60 días.
+    Extrae palabras clave combinando la noticia original (PRE) y el post publicado (POST).
+    - PRE: captura la temática de la fuente para no repetir el mismo tipo de noticia.
+    - POST: captura el ángulo turístico real comunicado para no repetir la misma temática.
+    Se guardan para evitar repetir temáticas en los próximos 60 días.
     """
-    prompt = f"""Extrae las palabras clave que describen el TEMA principal de esta noticia.
-No incluyas nombres de empresa ni personas, solo temáticas genéricas.
+    post_section = f"""
+POST publicado en LinkedIn (ángulo turístico):
+{post_text[:600]}
+""" if post_text else ""
  
-Noticia:
+    prompt = f"""Analiza estos dos textos y extrae las palabras clave temáticas para evitar publicar contenido similar en LinkedIn.
+ 
+NOTICIA ORIGINAL (PRE):
 Título: {noticia['titulo']}
 Resumen: {noticia['resumen'][:300]}
+{post_section}
+INSTRUCCIONES:
+- Extrae entre 5 y 8 keywords que cubran AMBOS textos: la temática de la noticia original Y el ángulo turístico del post.
+- Incluye keywords del tema tecnológico de la noticia (para no repetir noticias similares).
+- Incluye keywords del enfoque turístico/hotelero del post (para no repetir el mismo ángulo).
+- Keywords cortas: 1-3 palabras cada una. Sin nombres propios de empresa.
  
-Devuelve entre 3 y 6 keywords cortas (1-3 palabras cada una) que capturen los temas principales.
- 
-Ejemplos:
-- Noticia de robotaxis Waymo: ["robotaxis", "vehículos autónomos", "conducción autónoma", "movilidad urbana"]
-- Noticia de IA en hoteles: ["IA hotelera", "chatbots hoteles", "atención al cliente IA"]
-- Noticia de vuelos baratos en verano: ["vuelos baratos", "low cost", "temporada alta", "precios aéreos"]
-- Noticia de traducción simultánea con auriculares: ["traducción IA", "auriculares inteligentes", "idiomas en viaje"]
+Ejemplos de buenas combinaciones PRE+POST:
+- Noticia de robot tutor en escuelas + post sobre robots en hoteles: ["robot humanoide", "IA conversacional hotel", "personalización turismo IA", "automatización hospitalidad", "atención cliente robot", "educación IA"]
+- Noticia de Waymo suscripción + post sobre movilidad turismo: ["robotaxis", "vehículos autónomos", "movilidad autónoma turismo", "suscripción transporte", "transporte aeropuerto autónomo"]
  
 IMPORTANTE: Responde SOLO con un JSON array de strings. Sin texto adicional.
-Ejemplo: ["tema1", "tema2", "tema3"]"""
+Ejemplo: ["tema1", "tema2", "tema3", "tema4", "tema5"]"""
  
     message = client.messages.create(
         model="claude-haiku-4-5-20251001",
-        max_tokens=150,
+        max_tokens=200,
         messages=[{"role": "user", "content": prompt}]
     )
  
@@ -300,7 +308,7 @@ Ejemplo: ["tema1", "tema2", "tema3"]"""
         match = re.search(r'\[.*?\]', text, re.DOTALL)
         if match:
             topics = json.loads(match.group(0))
-            print(f"🏷️  Topics extraídos para cooldown: {topics}")
+            print(f"🏷️  Topics extraídos para cooldown (PRE+POST): {topics}")
             return topics
     except Exception as e:
         print(f"⚠️  Error extrayendo topics: {e}. Se guardará sin topics.")
@@ -691,7 +699,7 @@ def main():
  
         # Extraer topics temáticos y guardar estado
         print("🏷️  Extrayendo topics para cooldown...")
-        topics = extract_topics(noticia, client)
+        topics = extract_topics(noticia, client, post)
         save_published_id(noticia["id"], topics)
         print("\n🎉 ¡Proceso completado!")
         sys.exit(0)
@@ -702,4 +710,3 @@ def main():
  
 if __name__ == "__main__":
     main()
-
