@@ -10,6 +10,7 @@ import json
 import os
 import re
 import sys
+import unicodedata
 import requests
 import tempfile
 from datetime import datetime, timedelta, timezone
@@ -175,25 +176,29 @@ def filter_news(noticias: list, published_ids: set) -> list:
     return candidates
  
  
+def normalize(text: str) -> str:
+    """Elimina acentos y normaliza a minúsculas para comparación robusta."""
+    return unicodedata.normalize('NFKD', text).encode('ascii', 'ignore').decode('ascii').lower()
+ 
+ 
 def filter_by_topics(candidates: list, recent_topics: list) -> list:
     """
     Excluye candidatos que compartan temática con posts publicados en los últimos 60 días.
-    Usa text matching contra título+resumen de la noticia.
+    Usa text matching normalizado (sin acentos) contra título+resumen de la noticia.
     Safety net: si todos quedan filtrados, devuelve la lista completa para no bloquear el sistema.
     """
     if not recent_topics:
         return candidates
  
-    recent_topics_lower = [t.lower() for t in recent_topics]
+    recent_topics_norm = [normalize(t) for t in recent_topics]
     filtered = []
  
     for noticia in candidates:
-        text = (noticia.get("titulo", "") + " " + noticia.get("resumen", "")).lower()
+        text = normalize(noticia.get("titulo", "") + " " + noticia.get("resumen", ""))
         has_overlap = False
         matched_topic = None
  
-        for topic in recent_topics_lower:
-            # Buscar todas las palabras del topic en el texto
+        for topic in recent_topics_norm:
             topic_words = topic.split()
             if topic_words and all(w in text for w in topic_words):
                 has_overlap = True
