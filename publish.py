@@ -8,6 +8,7 @@ Uso:
 
 import json
 import os
+import re
 import sys
 import requests
 import tempfile
@@ -25,7 +26,8 @@ load_dotenv(encoding='utf-8-sig')
 HTML_URL = "https://raw.githubusercontent.com/AlexBerdonces/superhuman-hub/main/index.html"
 JSON_URL = "https://raw.githubusercontent.com/AlexBerdonces/superhuman-hub/main/newsletter_news.json"  # fallback legacy
 PUBLISHED_FILE = "published_ids.json"
-MAX_AGE_DAYS = 10  # solo noticias de los últimos 10 días
+MAX_AGE_DAYS = 10          # solo noticias de los últimos 10 días
+TOPICS_COOLDOWN_DAYS = 60  # días de cooldown para no repetir temáticas
 FORBIDDEN_PHRASES = ["Acabo de leer", "Es importante destacar", "En conclusión", "En resumen"]
 
 # Variables de entorno (configura en .env o GitHub Secrets)
@@ -39,23 +41,71 @@ LINKEDIN_PERSON_URN = os.environ.get("LINKEDIN_PERSON_URN")
 # PASO 1: CARGAR ESTADO (qué hemos publicado ya)
 # ─────────────────────────────────────────────
 
-def load_published_ids() -> set:
+def load_published_data() -> dict:
+    """
+    Carga el estado completo de publicaciones.
+    Migra automáticamente el formato antiguo (lista de strings) al nuevo formato
+    (lista de objetos {id, date, topics}).
+    """
     if not os.path.exists(PUBLISHED_FILE):
-        return set()
-    with open(PUBLISHED_FILE, "r") as f:
+        return {"published": [], "last_run": None}
+    with open(PUBLISHED_FILE, "r", encoding="utf-8") as f:
         data = json.load(f)
-    return set(data.get("published", []))
+    # Migración: convertir strings del formato antiguo a objetos
+    migrated = []
+    needs_migration = False
+    for item in data.get("published", []):
+        if isinstance(item, str):
+            migrated.append({"id": item, "date": None, "topics": []})
+            needs_migration = True
+        else:
+            migrated.append(item)
+    if needs_migration:
+        print(f"⚙️  Migrado formato antiguo → nuevo ({len(migrated)} entradas)")
+    data["published"] = migrated
+    return data
 
 
-def save_published_id(news_id: str):
-    published = list(load_published_ids())
-    published.append(news_id)
-    with open(PUBLISHED_FILE, "w") as f:
-        json.dump({
-            "published": published,
-            "last_run": datetime.now(timezone.utc).isoformat()
-        }, f, indent=2)
-    print(f"✅ Guardado {news_id} en {PUBLISHED_FILE}")
+def load_published_ids() -> set:
+    """Devuelve el set de IDs ya publicados."""
+    data = load_published_data()
+    return {item["id"] for item in data["published"]}
+
+
+def get_recent_topics(days: int = TOPICS_COOLDOWN_DAYS) -> list:
+    """
+    Devuelve los topics publicados en los últimos N días.
+    Se usa para evitar repetir temáticas en el período de cooldown.
+    """
+    data = load_published_data()
+    cutoff = datetime.now(timezone.utc) - timedelta(days=days)
+    recent_topics = []
+    for item in data["published"]:
+        if not item.get("date") or not item.get("topics"):
+            continue
+        try:
+            pub_date = datetime.fromisoformat(item["date"])
+            if pub_date > cutoff:
+                recent_topics.extend(item["topics"])
+        except (ValueError, TypeError):
+            continue
+    if recent_topics:
+        print(f"🏷️  Topics en cooldown ({days}d): {list(set(recent_topics))}")
+    return recent_topics
+
+
+def save_published_id(news_id: str, topics: list = None):
+    """Guarda un ID publicado junto con su fecha y topics temáticos."""
+    data = load_published_data()
+    data["published"].append({
+        "id": news_id,
+        "date": datetime.now(timezone.utc).isoformat(),
+        "topics": topics or []
+    })
+    data["last_run"] = datetime.now(timezone.utc).isoformat()
+    with open(PUBLISHED_FILE, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+    print(f"✅ Guardado {news_id} con topics: {topics or []}")
 
 
 # ─────────────────────────────────────────────
@@ -125,6 +175,44 @@ def filter_news(noticias: list, published_ids: set) -> list:
     return candidates
 
 
+def filter_by_topics(candidates: list, recent_topics: list) -> list:
+    """
+    Excluye candidatos que compartan temática con posts publicados en los últimos 60 días.
+    Usa text matching contra título+resumen de la noticia.
+    Safety net: si todos quedan filtrados, devuelve la lista completa para no bloquear el sistema.
+    """
+    if not recent_topics:
+        return candidates
+
+    recent_topics_lower = [t.lower() for t in recent_topics]
+    filtered = []
+
+    for noticia in candidates:
+        text = (noticia.get("titulo", "") + " " + noticia.get("resumen", "")).lower()
+        has_overlap = False
+        matched_topic = None
+
+        for topic in recent_topics_lower:
+            # Buscar todas las palabras del topic en el texto
+            topic_words = topic.split()
+            if topic_words and all(w in text for w in topic_words):
+                has_overlap = True
+                matched_topic = topic
+                break
+
+        if has_overlap:
+            print(f"⏭️  [{noticia['id']}] omitido — temática reciente: '{matched_topic}'")
+        else:
+            filtered.append(noticia)
+
+    if not filtered:
+        print(f"⚠️  Todos los candidatos tienen temáticas en cooldown. Safety net: usando todos.")
+        return candidates
+
+    print(f"✅ Filtro de temáticas: {len(filtered)}/{len(candidates)} candidatos disponibles")
+    return filtered
+
+
 def select_best_for_tourism(candidates: list, client: Anthropic) -> dict:
     """
     Usa Claude para seleccionar la noticia con más potencial de impacto en turismo.
@@ -159,12 +247,10 @@ IMPORTANTE: Responde SOLO con el ID exacto de la noticia elegida (el texto entre
     respuesta = message.content[0].text.strip()
     lineas = [l.strip() for l in respuesta.split("\n") if l.strip()]
 
-    import re
     # Buscar el ID de noticia (news_NNN) en la respuesta
     match = re.search(r'news_\d+', respuesta)
     if match:
         news_id = match.group(0)
-        # Encontrar la noticia correspondiente en candidates
         for noticia in candidates:
             if noticia["id"] == news_id:
                 motivo = lineas[1] if len(lineas) > 1 else ""
@@ -173,6 +259,47 @@ IMPORTANTE: Responde SOLO con el ID exacto de la noticia elegida (el texto entre
 
     print(f"⚠️  No se encontró ID válido. Respuesta de Claude: '{respuesta[:120]}'. Usando la primera candidata.")
     return candidates[0]
+
+
+def extract_topics(noticia: dict, client: Anthropic) -> list:
+    """
+    Extrae 3-6 palabras clave temáticas de una noticia publicada.
+    Se guardan para evitar repetir la misma temática en los próximos 60 días.
+    """
+    prompt = f"""Extrae las palabras clave que describen el TEMA principal de esta noticia.
+No incluyas nombres de empresa ni personas, solo temáticas genéricas.
+
+Noticia:
+Título: {noticia['titulo']}
+Resumen: {noticia['resumen'][:300]}
+
+Devuelve entre 3 y 6 keywords cortas (1-3 palabras cada una) que capturen los temas principales.
+
+Ejemplos:
+- Noticia de robotaxis Waymo: ["robotaxis", "vehículos autónomos", "conducción autónoma", "movilidad urbana"]
+- Noticia de IA en hoteles: ["IA hotelera", "chatbots hoteles", "atención al cliente IA"]
+- Noticia de vuelos baratos en verano: ["vuelos baratos", "low cost", "temporada alta", "precios aéreos"]
+- Noticia de traducción simultánea con auriculares: ["traducción IA", "auriculares inteligentes", "idiomas en viaje"]
+
+IMPORTANTE: Responde SOLO con un JSON array de strings. Sin texto adicional.
+Ejemplo: ["tema1", "tema2", "tema3"]"""
+
+    message = client.messages.create(
+        model="claude-haiku-4-5-20251001",
+        max_tokens=150,
+        messages=[{"role": "user", "content": prompt}]
+    )
+
+    try:
+        text = message.content[0].text.strip()
+        match = re.search(r'\[.*?\]', text, re.DOTALL)
+        if match:
+            topics = json.loads(match.group(0))
+            print(f"🏷️  Topics extraídos para cooldown: {topics}")
+            return topics
+    except Exception as e:
+        print(f"⚠️  Error extrayendo topics: {e}. Se guardará sin topics.")
+    return []
 
 
 # ─────────────────────────────────────────────
@@ -265,7 +392,7 @@ def generate_post(noticia: dict, client: Anthropic) -> str:
 # PASO 4: VALIDAR CALIDAD DEL POST
 # ─────────────────────────────────────────────
 
-def validate_post(post: str) -> tuple[bool, str]:
+def validate_post(post: str) -> tuple:
     words = len(post.split())
 
     if words < 100:
@@ -282,12 +409,12 @@ def validate_post(post: str) -> tuple[bool, str]:
 
 
 # ─────────────────────────────────────────────
-# PASO 5: GENERAR IMAGEN CON GPT-IMAGE-1
+# PASO 5: GENERAR IMAGEN CON DALL-E 3
 # ─────────────────────────────────────────────
 
 def generate_image_prompt(noticia: dict, client: Anthropic) -> str:
     """Genera un prompt cinematográfico y específico para gpt-image-1."""
-    prompt = f"""Eres un director de arte especializado en fotografía de viajes y comunicación visual para publicaciones como Condé Nast Traveler, Lonely Planet y National Geographic Traveler.
+    prompt = f"""Eres un director de arte especializado en fotografía de viajes y turismo de ocio para publicaciones como Condé Nast Traveler, Lonely Planet y National Geographic Traveler.
 
 Tu tarea: crear un prompt en inglés para gpt-image-1 que genere una imagen IMPACTANTE y EMOTIVA para un post de LinkedIn sobre esta noticia, conectada siempre con el mundo del turismo de ocio.
 
@@ -297,60 +424,50 @@ Categoría: {noticia.get('categoria', '')}
 Resumen: {noticia['resumen'][:250]}
 
 ESTRUCTURA OBLIGATORIA del prompt (úsala siempre en este orden):
+1. SUJETO PRINCIPAL: personas reales en situación de viaje o vacaciones (específico, no genérico)
+2. ESTILO: cinematic travel photography / candid documentary / warm lifestyle photography / etc.
+3. ILUMINACIÓN: golden hour / soft morning light / bright alpine sun / warm sunset / etc.
+4. COMPOSICIÓN: wide establishing shot / candid close-up of expressions / aerial of landscape / etc.
+5. PALETA DE COLOR: 2-3 colores dominantes cálidos o vibrantes (ej: warm amber, sky blue, alpine white)
+6. ATMÓSFERA/MOOD: alegría, asombro, libertad, conexión, aventura, descanso, descubrimiento
+7. CALIDAD: hyperrealistic, sharp focus, 8K, no text, no logos
 
-1. SUJETO PRINCIPAL: personas en situación de viaje o vacaciones, adaptadas a la noticia. Puede ser una familia, pareja, grupo de amigos o viajero solo. Si la noticia habla de ejecutivos o contexto profesional, se permite ropa más formal.
+PERSONAS EN LA IMAGEN — REGLAS CRÍTICAS:
+- Las personas deben ser turistas, viajeros o familias en contexto de ocio y vacaciones
+- Ropa casual de vacaciones: camisetas, gorras, abrigos de montaña, ropa de esquí, mochilas de viaje
+- NUNCA trajes, corbatas, ropa de oficina ni expresiones serias/formales de ejecutivos
+- Transmitir emociones genuinas en las caras: sonrisas, asombro, risa, alegría compartida
+- Diversidad de perfiles: familias con niños, parejas (cualquier género), grupos de amigos, viajeros solos
+- Entornos preferidos: Europa (Alpes, ciudades mediterráneas, pueblos con nieve, playas europeas)
+- Turismo de esquí: escenas en pistas, remontes, après-ski, vistas alpinas — incluirlo siempre que encaje
+- NUNCA imágenes de salas de reuniones, oficinas, laptops en escritorios ni entornos corporativos
 
-2. ESTILO: elige el que mejor encaje con el tono y tema de la noticia — nunca uses siempre el mismo. Guía orientativa:
-   - Noticia sobre IA, futuro o tecnología emergente → futuristic editorial, sci-fi travel photography, digital surrealism with human warmth
-   - Noticia sobre destino, paisaje o experiencia de viaje → cinematic travel photography, golden hour lifestyle
-   - Noticia sobre cultura, gastronomía o slow travel → candid documentary, warm editorial photography
-   - Noticia sobre aventura, deporte o naturaleza → action travel photography, dynamic composition
-   - Noticia sobre hospitalidad o bienestar → soft luxury lifestyle, serene editorial
-   Elige libremente dentro de este espectro según la noticia. El estilo debe variar entre publicaciones.
-
-3. ILUMINACIÓN: adapta la iluminación al estilo y tono de la noticia. Varía entre: golden hour, soft morning light, bright alpine sun, dramatic overcast sky, neon-ambient dusk, cool blue twilight, harsh midday Mediterranean sun, misty forest light, warm candlelight interior, crisp winter daylight. Nunca uses siempre la misma.
-
-4. COMPOSICIÓN: adapta la composición a lo que narra la noticia. Ejemplos: wide establishing shot para paisajes o destinos, close-up emocional para historias humanas, perspectiva aérea para ciudades o rutas, plano medio para interacciones entre personas, simétrico para arquitectura o espacios, dinámico en diagonal para aventura o movimiento.
-
-5. PALETA DE COLOR: define 5-7 colores específicos que tengan coherencia entre sí y consonancia con el tono de la noticia. Nómbralos con precisión (ej: warm amber, deep forest green, terracotta, sky blue, soft gold, ivory white, slate grey).
-
-6. ATMÓSFERA/MOOD: el que mejor encaje con la noticia: alegría, asombro, libertad, conexión, aventura, descanso, descubrimiento, sofisticación, nostalgia, energía.
-
-7. CALIDAD: hyperrealistic, sharp focus, 8K, no text, no logos.
-
-PERSONAS EN LA IMAGEN — REGLAS:
-- Preferentemente de rasgos caucásicos o mediterráneos
-- Ropa casual de vacaciones: camisetas, gorras, abrigos de montaña, ropa de esquí, mochilas de viaje. Formal solo si la noticia lo justifica
-- Emociones genuinas y naturales: sonrisas, asombro, conversación — sin poses forzadas ni expresiones teatrales
-- Adapta el grupo a la noticia: familia con niños, pareja, grupo de amigos, viajero solo
-- Entornos diversos: no repetir siempre los mismos. Europa mediterránea, Alpes, ciudades históricas, playas, aeropuertos modernos, hoteles boutique, mercados locales, rutas de montaña
-- Incluir turismo de esquí si encaja con la noticia
-
-PROHIBIDO:
-- Robots, cerebros digitales, circuitos flotantes ni clichés visuales de IA
-- Salas de reuniones, oficinas o laptops en escritorio (salvo que la noticia lo requiera explícitamente)
-- Texto, letras ni logos en la imagen
+REGLAS GENERALES:
+- NUNCA robots, cerebros digitales, circuitos flotantes ni clichés de IA
+- NUNCA texto, letras ni logos en la imagen
+- El concepto debe conectar la noticia con una escena de viaje real y reconocible
+- Personas de a pie disfrutando de sus vacaciones, no ilustraciones abstractas
 
 EJEMPLOS DE PROMPTS BUENOS vs MALOS:
 
 MALO: "Business professionals in suits using AI technology in a corporate meeting room"
-BUENO: "Candid travel photography of a young Caucasian couple in casual winter jackets laughing at a snowy alpine village square, one holding a smartphone showing real-time translation on screen. Warm golden afternoon light on snow-covered wooden chalets behind them. Palette: warm amber, crisp white, slate blue, pine green, soft gold. Mood: effortless connection, travel joy. Hyperrealistic, 8K, no text, no logos."
+BUENO: "Candid travel photography of a young couple in casual winter jackets laughing at a snowy alpine village square, one holding a smartphone showing real-time translation on screen. Warm golden afternoon light on snow-covered wooden chalets behind them. Soft amber and crisp white palette. Mood: effortless connection, travel joy. Hyperrealistic, 8K, no text, no logos."
 
 MALO: "A robot helping a hotel manager at a front desk in a formal setting"
-BUENO: "Wide cinematic shot of a Mediterranean family of four — parents and two kids in colorful ski gear — riding a mountain gondola above a breathtaking snowy Alpine landscape at sunrise. The kids press their faces against the glass in wonder. Crisp winter daylight with pink-gold sunrise hues on snow peaks. Palette: sky blue, rose gold, pure white, warm amber, pale lavender. Mood: awe and family adventure. Hyperrealistic, sharp focus, 8K, no text."
+BUENO: "Wide cinematic shot of a family of four — parents and two kids in colorful ski gear — riding a mountain gondola above a breathtaking snowy Alpine landscape at sunrise. The kids press their faces against the glass in wonder. Warm pink-gold light on snow peaks. Palette: sky blue, rose gold, pure white. Mood: awe and family adventure. Hyperrealistic, sharp focus, 8K, no text."
 
 Responde SOLO con el prompt en inglés, sin explicaciones ni introducción."""
 
     message = client.messages.create(
         model="claude-haiku-4-5-20251001",
-        max_tokens=300,
+        max_tokens=200,
         messages=[{"role": "user", "content": prompt}]
     )
     return message.content[0].text.strip()
 
 
 def generate_image(image_prompt: str) -> bytes:
-    """Genera imagen con gpt-image-1 y devuelve los bytes."""
+    """Genera imagen con DALL-E 3 y devuelve los bytes."""
     openai_client = OpenAI(api_key=OPENAI_API_KEY)
 
     import base64
@@ -497,6 +614,9 @@ def main():
     published_ids = load_published_ids()
     print(f"📋 {len(published_ids)} noticias ya publicadas anteriormente")
 
+    # Cargar topics en cooldown (últimos 60 días)
+    recent_topics = get_recent_topics()
+
     # Obtener y filtrar noticias
     print(f"📥 Descargando noticias...")
     noticias = fetch_news()
@@ -507,6 +627,9 @@ def main():
         sys.exit(0)
 
     print(f"📰 {len(candidates)} noticias de los últimos 10 días disponibles")
+
+    # Filtrar por temáticas recientes (cooldown 60 días)
+    candidates = filter_by_topics(candidates, recent_topics)
 
     # Claude selecciona la más relevante para turismo
     client = Anthropic(api_key=ANTHROPIC_API_KEY)
@@ -530,7 +653,7 @@ def main():
         print("🎨 Generando prompt de imagen...")
         image_prompt = generate_image_prompt(noticia, client)
         print(f"   Prompt completo:\n   {image_prompt}\n")
-        print("🖼️  Generando imagen con gpt-image-1...")
+        print("🖼️  Generando imagen con DALL-E 3...")
         image_bytes = generate_image(image_prompt)
         print(f"   Imagen generada ({len(image_bytes)//1024} KB)")
 
@@ -561,8 +684,10 @@ def main():
         post_id = publish_to_linkedin(post, asset_urn)
         print(f"✅ Publicado con éxito. Post ID: {post_id}")
 
-        # Guardar estado
-        save_published_id(noticia["id"])
+        # Extraer topics temáticos y guardar estado
+        print("🏷️  Extrayendo topics para cooldown...")
+        topics = extract_topics(noticia, client)
+        save_published_id(noticia["id"], topics)
         print("\n🎉 ¡Proceso completado!")
         sys.exit(0)
 
@@ -572,4 +697,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
