@@ -1,19 +1,165 @@
 {
   "published": [
-    "news_177",
-    "news_024",
-    "news_014",
-    "news_001",
-    "news_039",
-    "news_174",
-    "news_188",
-    "news_173",
-    "news_206",
-    "news_234",
-    "news_143",
-    "news_155",
-    "news_197",
-    "news_278"
+    {
+      "id": "news_001",
+      "date": null,
+      "topics": []
+    },
+    {
+      "id": "news_155",
+      "date": "2026-06-02T10:00:00+00:00",
+      "topics": [
+        "Gemini Live translate",
+        "traduccion tiempo real",
+        "traduccion simultanea",
+        "idiomas turismo",
+        "multilingue hoteleria",
+        "barrera idioma viaje"
+      ]
+    },
+    {
+      "id": "news_024",
+      "date": null,
+      "topics": []
+    },
+    {
+      "id": "news_143",
+      "date": "2026-06-06T10:00:00+00:00",
+      "topics": [
+        "ChatGPT turismo",
+        "OpenAI asistente viajes",
+        "superapp IA turismo",
+        "agente IA customer experience",
+        "itinerarios IA"
+      ]
+    },
+    {
+      "id": "news_039",
+      "date": "2026-06-09T10:00:00+00:00",
+      "topics": [
+        "LLM turismo",
+        "ChatGPT hoteles vuelos",
+        "recomendacion IA turismo",
+        "conversion IA viajes",
+        "marketing turistico IA"
+      ]
+    },
+    {
+      "id": "news_014",
+      "date": "2026-06-11T10:00:00+00:00",
+      "topics": [
+        "ChatGPT viajes",
+        "LLM recomendacion turismo",
+        "intencion compra IA",
+        "trafico IA turismo",
+        "AEO turismo"
+      ]
+    },
+    {
+      "id": "news_177",
+      "date": "2026-06-13T10:00:00+00:00",
+      "topics": [
+        "robotaxis",
+        "vehiculos autonomos",
+        "movilidad autonoma turismo",
+        "transporte autonomo Europa",
+        "Waymo turismo",
+        "coche autonomo viaje"
+      ]
+    },
+    {
+      "id": "news_188",
+      "date": "2026-06-18T19:03:22+00:00",
+      "topics": [
+        "auriculares traduccion IA",
+        "Timekettle",
+        "idiomas en viaje",
+        "traduccion simultanea turismo",
+        "barrera idioma hotel",
+        "wearable tecnologia viaje"
+      ]
+    },
+    {
+      "id": "linkedin_20260622_sam_altman_empleos",
+      "date": "2026-06-22T10:00:00+00:00",
+      "topics": [
+        "Sam Altman empleos IA",
+        "IA destruccion empleo",
+        "futuro del trabajo IA",
+        "transformacion roles IA",
+        "productividad IA trabajadores",
+        "apocalipsis laboral IA"
+      ]
+    },
+    {
+      "id": "linkedin_20260622_google_translate",
+      "date": "2026-06-22T08:30:00+00:00",
+      "topics": [
+        "Google translate turismo",
+        "traduccion voz tiempo real",
+        "idiomas hoteleria",
+        "formacion idiomas hotel",
+        "multilingue viaje"
+      ]
+    },
+    {
+      "id": "linkedin_20260622_google_seo",
+      "date": "2026-06-22T10:30:00+00:00",
+      "topics": [
+        "SEO IA generativa",
+        "busqueda Google IA",
+        "trafico organico turismo",
+        "motor busqueda generativo",
+        "AEO travel",
+        "visibilidad IA buscadores"
+      ]
+    },
+    {
+      "id": "linkedin_20260623_neura_robots",
+      "date": "2026-06-23T08:30:00+00:00",
+      "topics": [
+        "robotica hotelera",
+        "robots turismo",
+        "automatizacion hotelera",
+        "robots aprendizaje colaborativo",
+        "humanoides hotel"
+      ]
+    },
+    {
+      "id": "linkedin_20260624_mundial_ia",
+      "date": "2026-06-24T10:00:00+00:00",
+      "topics": [
+        "IA deportiva turismo",
+        "democratizacion IA hoteleria",
+        "datos comportamiento viajero",
+        "infraestructura IA turismo",
+        "integracion IA operaciones",
+        "tecnologia hoteleria democratizada"
+      ]
+    },
+    {
+      "id": "linkedin_20260624_waymo_suscripcion",
+      "date": "2026-06-24T08:30:00+00:00",
+      "topics": [
+        "Waymo suscripcion",
+        "movilidad autonoma suscripcion",
+        "vehiculos autonomos turismo",
+        "transporte aeropuerto autonomo",
+        "robotaxis",
+        "movilidad inteligente viaje"
+      ]
+    },
+    {
+      "id": "linkedin_20260626_genie_one",
+      "date": "2026-06-26T08:30:00+00:00",
+      "topics": [
+        "coworker IA empresa",
+        "agente IA automatizacion",
+        "tareas repetitivas hoteleria",
+        "Databricks IA turismo",
+        "IA operaciones agencia"
+      ]
+    }
   ],
-  "last_run": "2026-06-29T11:31:12.399407+00:00"
+  "last_run": "2026-06-29T10:00:00+00:00"
 }
