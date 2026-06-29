@@ -425,55 +425,66 @@ def validate_post(post: str) -> tuple:
 # PASO 5: GENERAR IMAGEN CON DALL-E 3
 # ─────────────────────────────────────────────
  
-def generate_image_prompt(noticia: dict, client: Anthropic) -> str:
-    """Genera un prompt cinematográfico y específico para gpt-image-1."""
-    prompt = f"""Eres un director de arte especializado en fotografía de viajes y turismo de ocio para publicaciones como Condé Nast Traveler, Lonely Planet y National Geographic Traveler.
+def generate_image_prompt(noticia: dict, client: Anthropic, post_text: str = "") -> str:
+    """
+    Genera un prompt cinematográfico para gpt-image-1.
+    Usa tanto la noticia original (PRE) como el post publicado (POST) para que
+    la imagen refleje el ángulo turístico real del contenido, no solo la noticia de origen.
+    """
+    post_section = f"""
+POST PUBLICADO EN LINKEDIN (ángulo turístico — priorizar este para la imagen):
+{post_text[:500]}
+""" if post_text else ""
  
-Tu tarea: crear un prompt en inglés para gpt-image-1 que genere una imagen IMPACTANTE y EMOTIVA para un post de LinkedIn sobre esta noticia, conectada siempre con el mundo del turismo de ocio.
+    prompt = f"""Eres un director de arte especializado en fotografía de viajes, turismo y hospitalidad para publicaciones como Condé Nast Traveler, Lonely Planet y National Geographic Traveler.
  
-NOTICIA:
+Tu tarea: crear un prompt en inglés para gpt-image-1 que genere una imagen IMPACTANTE y EMOTIVA que ilustre visualmente el mensaje del post de LinkedIn, conectada siempre con el mundo del turismo, los viajes o la hospitalidad.
+ 
+NOTICIA ORIGINAL:
 Título: {noticia['titulo']}
 Categoría: {noticia.get('categoria', '')}
-Resumen: {noticia['resumen'][:250]}
+Resumen: {noticia['resumen'][:200]}
+{post_section}
+INSTRUCCIÓN PRINCIPAL:
+Basa la imagen en el POST de LinkedIn, no en la noticia original. El post ya tiene el ángulo turístico: úsalo para visualizar la escena concreta que ilustra el mensaje.
  
-ESTRUCTURA OBLIGATORIA del prompt (úsala siempre en este orden):
-1. SUJETO PRINCIPAL: personas reales en situación de viaje o vacaciones (específico, no genérico)
-2. ESTILO: cinematic travel photography / candid documentary / warm lifestyle photography / etc.
-3. ILUMINACIÓN: golden hour / soft morning light / bright alpine sun / warm sunset / etc.
-4. COMPOSICIÓN: wide establishing shot / candid close-up of expressions / aerial of landscape / etc.
-5. PALETA DE COLOR: 2-3 colores dominantes cálidos o vibrantes (ej: warm amber, sky blue, alpine white)
-6. ATMÓSFERA/MOOD: alegría, asombro, libertad, conexión, aventura, descanso, descubrimiento
+ESTRUCTURA OBLIGATORIA del prompt (en este orden):
+1. SUJETO PRINCIPAL: escena específica que visualiza el mensaje del post (personas, tecnología, entorno — lo que mejor lo representa)
+2. ESTILO: cinematic travel photography / warm hospitality photography / candid documentary / futuristic hospitality / etc. — elige el que encaje con el tono del post
+3. ILUMINACIÓN: golden hour / soft lobby light / bright alpine sun / warm indoor glow / etc.
+4. COMPOSICIÓN: wide establishing shot / intimate close-up / aerial / over-the-shoulder / etc.
+5. PALETA DE COLOR: 2-3 colores dominantes que refuercen el mood del post
+6. ATMÓSFERA/MOOD: el que corresponda al post (asombro, eficiencia, calidez, libertad, innovación, conexión...)
 7. CALIDAD: hyperrealistic, sharp focus, 8K, no text, no logos
  
-PERSONAS EN LA IMAGEN — REGLAS CRÍTICAS:
-- Las personas deben ser turistas, viajeros o familias en contexto de ocio y vacaciones
-- Ropa casual de vacaciones: camisetas, gorras, abrigos de montaña, ropa de esquí, mochilas de viaje
-- NUNCA trajes, corbatas, ropa de oficina ni expresiones serias/formales de ejecutivos
-- Transmitir emociones genuinas en las caras: sonrisas, asombro, risa, alegría compartida
-- Diversidad de perfiles: familias con niños, parejas (cualquier género), grupos de amigos, viajeros solos
-- Entornos preferidos: Europa (Alpes, ciudades mediterráneas, pueblos con nieve, playas europeas)
-- Turismo de esquí: escenas en pistas, remontes, après-ski, vistas alpinas — incluirlo siempre que encaje
-- NUNCA imágenes de salas de reuniones, oficinas, laptops en escritorios ni entornos corporativos
+REGLAS DE PERSONAS:
+- Turistas, viajeros, familias o staff hotelero en contexto real de viaje u hospitalidad
+- Ropa casual de vacaciones o uniforme hotelero elegante — nunca trajes de ejecutivo
+- Emociones genuinas: sonrisas, asombro, curiosidad, alegría
+- Entornos preferidos: hoteles europeos, aeropuertos modernos, destinos mediterráneos o alpinos
  
-REGLAS GENERALES:
-- NUNCA robots, cerebros digitales, circuitos flotantes ni clichés de IA
+REGLA SOBRE TECNOLOGÍA EN LA IMAGEN:
+- Si el post trata de robots, IA física o tecnología en hospitalidad: SÍ puedes mostrar un robot humanoide elegante en un hotel de lujo, un asistente robótico en recepción, o tecnología integrada en un entorno de viaje cálido — siempre con estética de travel photography, nunca ciencia ficción fría
+- NO uses: cerebros digitales flotantes, circuitos abstractos, hologramas futuristas, clichés de IA genérica
+- NO uses: salas de reuniones, oficinas, laptops en escritorios ni entornos corporativos
 - NUNCA texto, letras ni logos en la imagen
-- El concepto debe conectar la noticia con una escena de viaje real y reconocible
-- Personas de a pie disfrutando de sus vacaciones, no ilustraciones abstractas
  
-EJEMPLOS DE PROMPTS BUENOS vs MALOS:
+EJEMPLOS:
  
-MALO: "Business professionals in suits using AI technology in a corporate meeting room"
-BUENO: "Candid travel photography of a young couple in casual winter jackets laughing at a snowy alpine village square, one holding a smartphone showing real-time translation on screen. Warm golden afternoon light on snow-covered wooden chalets behind them. Soft amber and crisp white palette. Mood: effortless connection, travel joy. Hyperrealistic, 8K, no text, no logos."
+Post sobre traducción IA en viajes →
+BUENO: "Candid travel photography of a young couple in casual jackets laughing at a snowy alpine village square, one holding a smartphone showing real-time translation. Warm golden afternoon light. Soft amber and crisp white palette. Mood: effortless connection. Hyperrealistic, 8K, no text."
  
-MALO: "A robot helping a hotel manager at a front desk in a formal setting"
-BUENO: "Wide cinematic shot of a family of four — parents and two kids in colorful ski gear — riding a mountain gondola above a breathtaking snowy Alpine landscape at sunrise. The kids press their faces against the glass in wonder. Warm pink-gold light on snow peaks. Palette: sky blue, rose gold, pure white. Mood: awe and family adventure. Hyperrealistic, sharp focus, 8K, no text."
+Post sobre robot humanoide en hoteles →
+BUENO: "Cinematic hospitality photography of a sleek friendly humanoid robot with warm LED eyes greeting a smiling family of tourists in the marble lobby of a luxury Mediterranean hotel. Soft warm indoor lighting, potted palms, golden hour glow through tall windows. Palette: warm ivory, soft gold, Mediterranean blue. Mood: welcoming innovation, human-robot warmth. Hyperrealistic, 8K, no text, no logos."
+ 
+Post sobre SEO/búsqueda IA en turismo →
+BUENO: "Lifestyle travel photography of a solo female traveler in casual clothes sitting at a sunlit café terrace in Barcelona, smiling at her phone as she discovers the perfect hotel. Warm morning light, cobblestone street behind her. Palette: warm terracotta, soft blue sky, cream. Mood: effortless discovery, freedom. Hyperrealistic, 8K, no text."
  
 Responde SOLO con el prompt en inglés, sin explicaciones ni introducción."""
  
     message = client.messages.create(
         model="claude-haiku-4-5-20251001",
-        max_tokens=200,
+        max_tokens=300,
         messages=[{"role": "user", "content": prompt}]
     )
     return message.content[0].text.strip()
@@ -664,7 +675,7 @@ def main():
  
         # Generar imagen
         print("🎨 Generando prompt de imagen...")
-        image_prompt = generate_image_prompt(noticia, client)
+        image_prompt = generate_image_prompt(noticia, client, post)
         print(f"   Prompt completo:\n   {image_prompt}\n")
         print("🖼️  Generando imagen con DALL-E 3...")
         image_bytes = generate_image(image_prompt)
