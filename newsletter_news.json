@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "ultima_actualizacion": "2026-07-06",
-  "total_noticias": 439,
+  "total_noticias": 448,
   "noticias": [
     {
       "id": "news_014",
@@ -4809,11 +4809,13 @@
       "titulo": "Anthropic lanza Claude Tag en Slack: Claude como compañero de equipo que trabaja en canales",
       "resumen": "Anthropic lanzó Claude Tag en versión beta para clientes Enterprise y Team de Slack. Cualquier miembro puede etiquetar @Claude en un canal, que lee el contexto de la conversación, ejecuta tareas usando herramientas y datos aprobados, y responde cuando termina. Andrej Karpathy lo calificó como 'el tercer gran rediseño de la UI/UX de LLMs'.",
       "categoria": "Inteligencia Artificial",
-      "puntuacion": 82,
+      "puntuacion": 92,
       "fecha": "2026-06-24",
       "fuente_asunto": "🎥 Startup launches \"vibe directing\" platform",
       "url": "https://claude.com/product/tag",
-      "newsletter": "SuperHuman"
+      "newsletter": "SuperHuman",
+      "puntuacion_anterior": 82,
+      "razon_cambio": "Seguimiento directo: ReinoIA cubre el mismo lanzamiento de Claude Tag en Slack (25 jun 2026)"
     },
     {
       "id": "news_259",
@@ -5439,11 +5441,13 @@
       "titulo": "OpenAI lanza GPT-5.6 Sol con acceso restringido por el gobierno de EE.UU.",
       "resumen": "OpenAI ha lanzado su modelo más potente hasta la fecha, GPT-5.6 Sol, junto a dos versiones más asequibles: Terra (equivalente a GPT-5.5 a la mitad de coste) y Luna (la más rápida y barata). A petición del gobierno estadounidense, el acceso está limitado a unos 20 socios verificados en una fase inicial controlada. Sol incluye un modo ultra que lanza subagentes en paralelo para tareas complejas.",
       "categoria": "Inteligencia Artificial",
-      "puntuacion": 88,
+      "puntuacion": 93,
       "fecha": "2026-06-29",
       "fuente_asunto": "🔐 OpenAI's new models are government-gated (for now)",
       "url": null,
-      "newsletter": "SuperHuman"
+      "newsletter": "SuperHuman",
+      "puntuacion_anterior": 88,
+      "razon_cambio": "Relacionado: ReinoIA añade detalle sobre la familia GPT-5.6 Sol/Terra/Luna (2 jul 2026)"
     },
     {
       "id": "news_295",
@@ -5800,11 +5804,13 @@
       "titulo": "Anthropic lanza Claude Sonnet 5",
       "resumen": "Sonnet 5 es el modelo Sonnet más agéntico de Anthropic hasta la fecha, con un rendimiento que rivaliza con Opus 4.8 a un precio mucho menor. Ya está disponible en la app de Claude.",
       "categoria": "Inteligencia Artificial",
-      "puntuacion": 78,
+      "puntuacion": 88,
       "fecha": "2026-07-01",
       "fuente_asunto": "👀 Anthropic releases Sonnet 5",
       "url": "https://www.anthropic.com/news/claude-sonnet-5",
-      "newsletter": "SuperHuman"
+      "newsletter": "SuperHuman",
+      "puntuacion_anterior": 78,
+      "razon_cambio": "Seguimiento directo: ReinoIA cubre el mismo lanzamiento de Claude Sonnet 5 (2 jul 2026)"
     },
     {
       "id": "news_313",
@@ -5860,11 +5866,13 @@
       "titulo": "Sonnet 5 llega a la sombra del regreso de Fable",
       "resumen": "Anthropic lanzó Sonnet 5, su modelo de gama media más agéntico, justo cuando el Departamento de Comercio levantaba el veto de exportación sobre Fable 5 y Mythos 5 tras 18 días bloqueados. Sonnet 5 mejora en codificación y razonamiento agéntico, pero sus benchmarks de ciberseguridad empeoraron frente a Sonnet 4.6.",
       "categoria": "Inteligencia Artificial",
-      "puntuacion": 67,
+      "puntuacion": 77,
       "fecha": "2026-07-01",
       "fuente_asunto": "🔓 Anthropic's Sonnet 5 ships as Washington frees Fable",
       "url": "https://www.anthropic.com/news/claude-sonnet-5",
-      "newsletter": "The Rundown AI"
+      "newsletter": "The Rundown AI",
+      "puntuacion_anterior": 67,
+      "razon_cambio": "Seguimiento directo: ReinoIA cubre el mismo lanzamiento de Claude Sonnet 5 (2 jul 2026)"
     },
     {
       "id": "news_318",
@@ -6099,11 +6107,13 @@
       "titulo": "Anthropic reactiva Fable 5 tras levantarse el veto de EE.UU.",
       "resumen": "Anthropic reabrió el acceso a Fable 5 después de que el Departamento de Comercio levantara el control de exportación, aunque el modelo vuelve con filtros más estrictos y con el compromiso de dar a EE.UU. acceso previo a futuros modelos antes de su lanzamiento. El nuevo filtro de seguridad bloquea el problema de ciberseguridad detectado en más del 99% de los casos.",
       "categoria": "Política y Regulación",
-      "puntuacion": 85,
+      "puntuacion": 90,
       "fecha": "2026-07-02",
       "fuente_asunto": "🎉 Anthropic's Fable 5 returns worldwide",
       "url": "https://www.anthropic.com/news/redeploying-fable-5",
-      "newsletter": "The Rundown AI"
+      "newsletter": "The Rundown AI",
+      "puntuacion_anterior": 85,
+      "razon_cambio": "Relacionado: ReinoIA detalla las capacidades de Fable 5 tras su reactivación (6 jul 2026)"
     },
     {
       "id": "news_334",
@@ -6463,6 +6473,174 @@
         "cadena_pensamiento": "No especificada",
         "formato": "Pull request listo para revisar, aprobar y fusionar desde el móvil",
         "restricciones": "Requiere plan Cursor Pro, app Cursor iOS y GitHub Mobile instalados"
+      }
+    },
+    {
+      "id": "news_352",
+      "tipo": "noticia",
+      "titulo": "SpaceX y el misterioso prototipo de móvil con IA que Musk niega",
+      "resumen": "El WSJ reportó que SpaceX mostró a inversores un prototipo de dispositivo tipo smartphone con IA de xAI integrada y sistema operativo propio, antes de su salida a bolsa del 12 de junio. Musk lo negó en X con \"Utterly false\", repitiendo el mismo patrón de negativas breves que usó en febrero con rumores similares de un teléfono Starlink.",
+      "categoria": "Tecnología",
+      "puntuacion": 50,
+      "fecha": "2026-07-06",
+      "fuente_asunto": "📲​ SpaceX, un prototipo misterioso y una negativa: la historia que divide a Silicon Valley",
+      "url": "https://www.reinoia.com/p/spacex-un-prototipo-misterioso-y-una-negativa-la-historia-que-divide-a-silicon-valley",
+      "newsletter": "ReinoIA"
+    },
+    {
+      "id": "news_353",
+      "tipo": "noticia",
+      "titulo": "12 trucos ocultos de Chrome que casi nadie conoce",
+      "resumen": "Chrome integra una IA (Gemini), editor de PDF, envío de pestañas entre dispositivos, subtítulos automáticos en cualquier vídeo y un menú de más de 8.000 funciones experimentales (chrome://flags), entre otras funciones poco conocidas que no requieren extensiones.",
+      "categoria": "Tecnología",
+      "puntuacion": 35,
+      "fecha": "2026-06-29",
+      "fuente_asunto": "🏠 ​Nori AI: La primera IA que nota lo que importa en casa y piensa en quien siempre piensa en los demás",
+      "url": null,
+      "newsletter": "ReinoIA"
+    },
+    {
+      "id": "news_354",
+      "tipo": "noticia",
+      "titulo": "Investigadores de Chicago mejoran la predicción meteorológica con IA",
+      "resumen": "Un equipo liderado por el Dr. Pedram Hassanzadeh en la Universidad de Chicago entrena modelos de IA con 40 años de datos meteorológicos para generar previsiones más rápidas y energéticamente eficientes que los superordenadores tradicionales. El equipo de CBS News Chicago ya los usa en producción junto a los modelos físicos clásicos, combinando ambos enfoques para cubrir fenómenos extremos.",
+      "categoria": "Ciencia y Matemáticas",
+      "puntuacion": 48,
+      "fecha": "2026-06-25",
+      "fuente_asunto": "💬 Claude acaba de unirse a tu equipo de Slack. Y trabaja mientras tú duermes",
+      "url": null,
+      "newsletter": "ReinoIA"
+    },
+    {
+      "id": "news_355",
+      "tipo": "noticia",
+      "titulo": "Las 5 características más destacadas de Claude Fable 5",
+      "resumen": "Fable 5, primer modelo de la familia Mythos accesible al público, destaca por razonamiento siempre activo antes de responder, trabajo agéntico autónomo de horas o días (Stripe comprimió meses de migración de código en días), ventana de contexto de 1M de tokens, visión mejorada para reconstruir código desde capturas, y clasificadores de seguridad que redirigen consultas sensibles a Opus 4.8 sin cortar la respuesta.",
+      "categoria": "Inteligencia Artificial",
+      "puntuacion": 55,
+      "fecha": "2026-07-06",
+      "fuente_asunto": "📲​ SpaceX, un prototipo misterioso y una negativa: la historia que divide a Silicon Valley",
+      "url": null,
+      "newsletter": "ReinoIA"
+    },
+    {
+      "id": "prompt_089",
+      "tipo": "prompt",
+      "titulo": "Crear agentes de IA dentro de Slack o Teams con Viktor",
+      "herramienta": "Viktor",
+      "puntuacion": 68,
+      "fecha": "2026-06-25",
+      "fuente_asunto": "💬 Claude acaba de unirse a tu equipo de Slack. Y trabaja mientras tú duermes",
+      "newsletter": "ReinoIA",
+      "etiquetas": [
+        "Automatización",
+        "Slack",
+        "Contenido"
+      ],
+      "prompt_completo": "1. Instala Viktor en tu espacio de trabajo de Slack o Microsoft Teams.\n2. Describe en lenguaje natural el agente que quieres crear, por ejemplo: \"Quiero una aplicación que convierta cualquier URL o texto en un hilo de X con 10 publicaciones, genere 3 hooks virales y sugiera ideas para quote posts.\"\n3. Viktor genera automáticamente la aplicación y la integra en tu workspace.\n4. Pega una URL, documento o texto dentro de Slack.\n5. El agente genera un hilo listo para editar, variantes de hooks y nuevas ideas de contenido.\n6. Revisa, ajusta y publica.",
+      "desglose": {
+        "rol": "Constructor de agentes de IA sin código dentro de Slack/Teams",
+        "contexto": "Quieres automatizar tareas repetitivas de contenido sin salir de tu herramienta de chat de equipo",
+        "instruccion": "Describir en lenguaje natural el agente deseado para que Viktor lo genere e integre automáticamente",
+        "cadena_pensamiento": "No especificada",
+        "formato": "Agente conversacional dentro de Slack/Teams que procesa el input pegado y devuelve el resultado en el canal",
+        "restricciones": "Automatizar solo tareas repetitivas sin valor creativo; el criterio editorial y el toque humano siguen siendo responsabilidad del usuario"
+      }
+    },
+    {
+      "id": "prompt_090",
+      "tipo": "prompt",
+      "titulo": "Configurar SuperNori, el primer agente de IA familiar proactivo",
+      "herramienta": "Nori / SuperNori",
+      "puntuacion": 55,
+      "fecha": "2026-06-29",
+      "fuente_asunto": "🏠 ​Nori AI: La primera IA que nota lo que importa en casa y piensa en quien siempre piensa en los demás",
+      "newsletter": "ReinoIA",
+      "etiquetas": [
+        "Vida familiar",
+        "Productividad",
+        "Automatización"
+      ],
+      "prompt_completo": "1. Accede a la lista de espera en Nori y regístrate indicando tu contexto familiar.\n2. Conecta tus fuentes de información: calendario, apps de lista de la compra, dispositivos del hogar.\n3. Define tus preferencias de actuación (qué acciones autorizar con confirmación rápida y cuáles requieren aprobación explícita).\n4. Deja que SuperNori observe en segundo plano sin preguntarle nada.\n5. Responde a sus notificaciones aprobando, ajustando o descartando cada sugerencia; SuperNori aprende de tus descartes.",
+      "desglose": {
+        "rol": "Agente de IA familiar proactivo que observa en vez de esperar preguntas",
+        "contexto": "Gestionar la carga mental de una casa (compra, calendario, salud, cumpleaños) sin que nadie tenga que preguntarle nada a la IA",
+        "instruccion": "Conectar las fuentes de información familiares y dejar que el agente note patrones y proponga acciones con confirmación previa",
+        "cadena_pensamiento": "No especificada",
+        "formato": "Notificaciones con situación detectada + acción propuesta, a aprobar, ajustar o descartar",
+        "restricciones": "Requiere una fase inicial de configuración exhaustiva (rutinas, preferencias) para que las sugerencias posteriores sean relevantes"
+      }
+    },
+    {
+      "id": "prompt_091",
+      "tipo": "prompt",
+      "titulo": "De imagen a pieza 3D lista para imprimir con Hitem3D V2.1",
+      "herramienta": "Hitem3D",
+      "puntuacion": 50,
+      "fecha": "2026-06-29",
+      "fuente_asunto": "🏠 ​Nori AI: La primera IA que nota lo que importa en casa y piensa en quien siempre piensa en los demás",
+      "newsletter": "ReinoIA",
+      "etiquetas": [
+        "Generación 3D",
+        "Impresión 3D",
+        "Diseño"
+      ],
+      "prompt_completo": "1. Prepara una imagen de referencia con fondo neutro, un solo objeto centrado, silueta clara e iluminación suave.\n2. Elige Fast Mode (2-3 min, ideal para iterar) o Quality Mode (más tiempo, máximo detalle).\n3. Sube la imagen y genera el modelo; verifica la textura en rotación 360°.\n4. Si el destino es impresión 3D, aplica Smart Splitting: elige template de personaje y tipo de conector (pines fijos o rótulas).\n5. Exporta cada parte por separado e imprime; ensambla con los conectores generados.",
+      "desglose": {
+        "rol": "Generador de modelos 3D con segmentación automática para impresión",
+        "contexto": "Convertir una imagen en un modelo 3D imprimible sin limpieza manual de geometría en Blender",
+        "instruccion": "Generar primero en Fast Mode para validar la estructura antes de invertir tiempo en Quality Mode, y aplicar Smart Splitting solo cuando el modelo base sea sólido",
+        "cadena_pensamiento": "No especificada",
+        "formato": "Modelo 3D dividido en partes imprimibles (mesh watertight) con conectores de ensamblaje",
+        "restricciones": "La calidad del input determina la calidad del output; una imagen de referencia deficiente arruina incluso el Quality Mode"
+      }
+    },
+    {
+      "id": "prompt_092",
+      "tipo": "prompt",
+      "titulo": "Cómo dominar a Claude en una semana con un sistema, no con mejores prompts",
+      "herramienta": "Claude",
+      "puntuacion": 75,
+      "fecha": "2026-07-02",
+      "fuente_asunto": "⚡ Claude Sonnet 5 ya está aquí. Casi tan potente como Opus. Y cuesta la mitad",
+      "newsletter": "ReinoIA",
+      "etiquetas": [
+        "Productividad",
+        "Organización",
+        "Proyectos"
+      ],
+      "prompt_completo": "1. Instala la app de escritorio de Claude y familiarízate con sus modos de trabajo.\n2. Crea un sistema de carpetas para proyectos, plantillas, información personal y resultados.\n3. Sustituye los prompts repetitivos por archivos de referencia (about-me.md, anti-ai-style.md).\n4. Trabaja siempre dentro de Projects para conservar contexto entre tareas.\n5. Deja que Claude planifique: pídele que proponga opciones y diseñe el proceso antes de ejecutar.\n6. Conecta tus herramientas (Drive, Slack, Notion, Gmail) para que trabaje directamente sobre tus documentos.\n7. Automatiza tareas repetitivas para que se ejecuten sin intervención manual.",
+      "desglose": {
+        "rol": "Usuario avanzado que convierte a Claude en un sistema de trabajo, no un chatbot puntual",
+        "contexto": "La mayoría de usuarios trata a Claude como ChatGPT: un prompt, una respuesta, y vuelta a empezar",
+        "instruccion": "Construir una estructura de carpetas, archivos de contexto y reglas reutilizables una sola vez para que cada proyecto nuevo requiera menos instrucciones",
+        "cadena_pensamiento": "No especificada",
+        "formato": "Sistema persistente de Projects + archivos de referencia + conectores, no una serie de prompts sueltos",
+        "restricciones": "Requiere una inversión inicial de tiempo en construir la estructura antes de ver el ahorro de tiempo"
+      }
+    },
+    {
+      "id": "prompt_093",
+      "tipo": "prompt",
+      "titulo": "Convertir cualquier tema en un deck listo para usar con Skywork",
+      "herramienta": "Skywork",
+      "puntuacion": 65,
+      "fecha": "2026-07-06",
+      "fuente_asunto": "📲​ SpaceX, un prototipo misterioso y una negativa: la historia que divide a Silicon Valley",
+      "newsletter": "ReinoIA",
+      "etiquetas": [
+        "Presentaciones",
+        "Productividad",
+        "Investigación"
+      ],
+      "prompt_completo": "1. Crea tu cuenta en Skywork con Google (incluye créditos gratuitos, sin tarjeta).\n2. Elige el agente de Diapositivas en el panel principal.\n3. Responde al brief previo: tema, idioma, enfoque, nivel de detalle y audiencia (no te lo saltes).\n4. Deja que DeepResearch investigue automáticamente escaneando cientos de fuentes.\n5. Revisa el resultado: presentación con estructura, diseño, gráficos y citas verificables.\n6. Edita con lenguaje natural (\"Haz la intro más visual\", \"Añade un slide con datos de mercado\").\n7. Exporta en PPTX, PDF o formato web según el destino.",
+      "desglose": {
+        "rol": "Agente de investigación y generación de presentaciones que ejecuta en vez de solo responder",
+        "contexto": "Necesitas una presentación con datos verificados y diseño coherente sin abrir pestañas de investigación manual",
+        "instruccion": "Dar un brief específico (audiencia, objetivo, tono, número de slides) para que DeepResearch investigue y genere el deck completo",
+        "cadena_pensamiento": "Escanea más de 600 páginas web, extrae datos con citas, organiza la estructura y genera gráficos automáticamente",
+        "formato": "Presentación exportable en PPTX, PDF o web, editable con instrucciones en lenguaje natural",
+        "restricciones": "Un brief genérico da un resultado genérico; cuanto más específico el contexto inicial, menos ajuste manual hace falta después"
       }
     }
   ]
