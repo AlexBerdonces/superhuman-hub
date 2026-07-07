@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "ultima_actualizacion": "2026-07-07",
-  "total_noticias": 456,
+  "total_noticias": 448,
   "noticias": [
     {
       "id": "news_014",
@@ -163,17 +163,6 @@
       "tipo": "noticia",
       "puntuacion_anterior": 82,
       "razon_cambio": "Cross-boost por nuevas noticias relacionadas (+10)"
-    },
-    {
-      "id": "news_042",
-      "titulo": "Andrej Karpathy se une a Anthropic tras salir de OpenAI",
-      "resumen": "Andrej Karpathy, uno de los investigadores de IA más influyentes del mundo y cofundador de OpenAI, se une al equipo de Anthropic. Su incorporación representa un golpe simbólico y técnico significativo que podría acelerar la capacidad de investigación de la empresa.",
-      "categoria": "Inteligencia Artificial",
-      "puntuacion": 80,
-      "fecha": "2026-05-20",
-      "fuente_asunto": "🦾 Gemini becomes your personal agent",
-      "url": "https://www.engadget.com/2175740/the-jury-in-the-openai-case-has-ruled-against-elon-musk/",
-      "tipo": "noticia"
     },
     {
       "id": "news_029",
@@ -848,19 +837,6 @@
       "tipo": "noticia"
     },
     {
-      "id": "news_067",
-      "titulo": "Thinking Machines presenta su primer modelo de interacción con IA",
-      "resumen": "Thinking Machines ha presentado su primer modelo de IA diseñado para interacciones naturales y prolongadas con usuarios, con énfasis en la coherencia conversacional a largo plazo. La empresa, fundada por ex-investigadores de OpenAI, entra en el competitivo mercado de modelos fundacionales.",
-      "categoria": "Inteligencia Artificial",
-      "puntuacion": 10,
-      "fecha": "2026-05-12",
-      "fuente_asunto": "👀 Gemini's next video model leaks",
-      "url": "https://thinkingmachines.ai/blog/interaction-models/",
-      "tipo": "noticia",
-      "puntuacion_anterior": 28,
-      "razon_cambio": "Decaimiento temporal (30 días)"
-    },
-    {
       "id": "news_043",
       "titulo": "Creatify lanza agente creativo que produce anuncios completos en minutos",
       "resumen": "Creatify ha presentado un agente de IA que crea anuncios publicitarios completos listos para publicar en cuestión de minutos, desde el concepto hasta la producción final. El sistema desafía el modelo tradicional de agencias creativas al reducir tiempos de meses a minutos.",
@@ -918,19 +894,6 @@
       "fuente_asunto": "🌊 The ocean had its own T. rex",
       "url": "https://www.reuters.com/science/chicks-hatch-artificial-egg-us-company-aims-revive-extinct-species-2026-05-22/",
       "tipo": "noticia"
-    },
-    {
-      "id": "news_046",
-      "titulo": "Cursor lanza Composer 2.5 e insinúa colaboración con SpaceX-xAI",
-      "resumen": "El editor de código con IA Cursor ha lanzado Composer 2.5 con mejoras significativas en generación de código complejo. También ha insinuado una futura colaboración con la división de IA de SpaceX (xAI), lo que podría traer capacidades de Grok directamente al entorno de desarrollo.",
-      "categoria": "Inteligencia Artificial",
-      "puntuacion": 10,
-      "fecha": "2026-05-19",
-      "fuente_asunto": "🎮 Odyssey raises the bar for world models",
-      "url": "https://cursor.com/blog/composer-2-5",
-      "tipo": "noticia",
-      "puntuacion_anterior": 35,
-      "razon_cambio": "La 'insinuación' de colaboración con SpaceX de Cursor nunca fue confirmada; la noticia era especulativa y no tuvo continuidad"
     },
     {
       "id": "news_007",
@@ -2084,12 +2047,29 @@
       "titulo": "Anthropic ficha al cofundador de OpenAI Andrej Karpathy",
       "resumen": "Andrej Karpathy, cofundador de OpenAI y exjefe de Autopilot de Tesla, se unió a Anthropic para trabajar en el equipo de pre-entrenamiento y liderar un esfuerzo interno para usar Claude en el propio pipeline de entrenamiento de la empresa. Karpathy escribió en X que 'los próximos años en la frontera de los LLMs serán especialmente formativos'.",
       "categoria": "Inteligencia Artificial",
-      "puntuacion": 38,
+      "puntuacion": 105,
       "fecha": "2026-05-20",
       "fuente_asunto": "The biggest reveals from Google I/O",
       "url": "https://x.com/karpathy/status/2056753169888334312",
       "newsletter": "The Rundown AI",
-      "tipo": "noticia"
+      "tipo": "noticia",
+      "fuentes": [
+        {
+          "newsletter": "The Rundown AI",
+          "url": "https://x.com/karpathy/status/2056753169888334312"
+        },
+        {
+          "newsletter": "SuperHuman",
+          "url": null
+        }
+      ],
+      "puntuacion_previa_fusion": {
+        "news_117": 38,
+        "news_042": 80
+      },
+      "ids_fusionados": [
+        "news_042"
+      ]
     },
     {
       "id": "prompt_028",
@@ -2133,12 +2113,29 @@
       "titulo": "Cursor lanza Composer 2.5 con rendimiento cercano a la frontera a menos de $1 por tarea",
       "resumen": "Cursor lanzó Composer 2.5, construido sobre Kimi K2.5 de Moonshot, con rendimiento cercano a Anthropic Opus 4.7 y GPT-5.5 en benchmarks de desarrollo a menos de $1 por tarea promedio, comparado con los $11 de sus rivales. El modelo fue parcialmente entrenado en Colossus 2 de xAI, y Cursor está entrenando ya un modelo más grande con 10x más cómputo.",
       "categoria": "Inteligencia Artificial",
-      "puntuacion": 75,
+      "puntuacion": 100,
       "fecha": "2026-05-19",
       "fuente_asunto": "Musk's OpenAI case runs out of time",
       "url": "https://cursor.com/blog/composer-2-5",
       "newsletter": "The Rundown AI",
-      "tipo": "noticia"
+      "tipo": "noticia",
+      "fuentes": [
+        {
+          "newsletter": "The Rundown AI",
+          "url": "https://cursor.com/blog/composer-2-5"
+        },
+        {
+          "newsletter": "SuperHuman",
+          "url": null
+        }
+      ],
+      "puntuacion_previa_fusion": {
+        "news_119": 75,
+        "news_046": 10
+      },
+      "ids_fusionados": [
+        "news_046"
+      ]
     },
     {
       "id": "prompt_029",
@@ -2219,14 +2216,31 @@
       "titulo": "Thinking Machines Lab de Mira Murati presenta modelos de interacción en tiempo real",
       "resumen": "TML (Thinking Machines Lab) de Mira Murati introdujo un preview de investigación de 'modelos de interacción', un nuevo tipo de IA construida para colaborar en tiempo real a través de voz, video y texto en chunks de 200ms sin pausas de turno. Un segundo modelo en segundo plano maneja el razonamiento lento y las búsquedas, mientras el modelo en vivo continúa interactuando con el usuario.",
       "categoria": "Inteligencia Artificial",
-      "puntuacion": 22,
+      "puntuacion": 47,
       "fecha": "2026-05-12",
       "fuente_asunto": "Thinking Machines gets interactive with new AI",
       "url": "https://thinkingmachines.ai/blog/interaction-models/",
       "newsletter": "The Rundown AI",
       "tipo": "noticia",
       "puntuacion_anterior": 65,
-      "razon_cambio": "Decaimiento temporal (30 días)"
+      "razon_cambio": "Decaimiento temporal (30 días)",
+      "fuentes": [
+        {
+          "newsletter": "The Rundown AI",
+          "url": "https://thinkingmachines.ai/blog/interaction-models/"
+        },
+        {
+          "newsletter": "SuperHuman",
+          "url": null
+        }
+      ],
+      "puntuacion_previa_fusion": {
+        "news_122": 22,
+        "news_067": 10
+      },
+      "ids_fusionados": [
+        "news_067"
+      ]
     },
     {
       "id": "news_123",
@@ -5792,11 +5806,12 @@
       "titulo": "EE.UU. levanta el veto sobre Fable y Mythos",
       "resumen": "El Departamento de Comercio de EE.UU. levantó los controles de exportación que mantenían bloqueados los modelos Fable 5 y Mythos 5 de Anthropic desde hacía 18 días. Ambos modelos volvieron a estar disponibles a partir del miércoles, tras semanas de presión de investigadores y aliados del G7 que pedían su desbloqueo.",
       "categoria": "Política y Regulación",
-      "puntuacion": 100,
+      "puntuacion": 110,
       "fecha": "2026-07-01",
       "fuente_asunto": "👀 Anthropic releases Sonnet 5",
       "url": "https://x.com/AnthropicAI/status/2072106151890809341",
-      "newsletter": "SuperHuman"
+      "newsletter": "SuperHuman",
+      "razon_boost": "Seguimiento directo: Anthropic reactiva Fable 5 tras el veto (news_333), +10 relevancia cruzada"
     },
     {
       "id": "news_312",
@@ -5811,18 +5826,6 @@
       "newsletter": "SuperHuman",
       "puntuacion_anterior": 78,
       "razon_cambio": "Seguimiento directo: ReinoIA cubre el mismo lanzamiento de Claude Sonnet 5 (2 jul 2026)"
-    },
-    {
-      "id": "news_313",
-      "tipo": "noticia",
-      "titulo": "Anthropic lanza Claude Science para investigación",
-      "resumen": "Claude Science es una nueva app en beta de Anthropic pensada para científicos, capaz de ejecutar análisis, integrarse con herramientas existentes y conectar con más de 60 bases de datos científicas.",
-      "categoria": "Salud y Ciencia",
-      "puntuacion": 68,
-      "fecha": "2026-07-01",
-      "fuente_asunto": "👀 Anthropic releases Sonnet 5",
-      "url": "https://claude.com/product/claude-science",
-      "newsletter": "SuperHuman"
     },
     {
       "id": "news_314",
@@ -5842,11 +5845,28 @@
       "titulo": "Google abre imágenes personalizadas y lanza Nano Banana 2 Lite",
       "resumen": "Gemini abrió a todos los usuarios elegibles la generación de imágenes personalizada, que usa datos de Gmail, Fotos y Search para adaptar las fotos. Google también lanzó Nano Banana 2 Lite y Gemini Omni Flash, sus modelos de imagen y vídeo más rápidos y baratos hasta ahora.",
       "categoria": "Inteligencia Artificial",
-      "puntuacion": 62,
+      "puntuacion": 87,
       "fecha": "2026-07-01",
       "fuente_asunto": "👀 Anthropic releases Sonnet 5",
       "url": "https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana-us-expansion/",
-      "newsletter": "SuperHuman"
+      "newsletter": "SuperHuman",
+      "fuentes": [
+        {
+          "newsletter": "SuperHuman",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana-us-expansion/"
+        },
+        {
+          "newsletter": "The Rundown AI",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-flash-nano-banana-2-lite"
+        }
+      ],
+      "puntuacion_previa_fusion": {
+        "news_315": 62,
+        "news_318": 55
+      },
+      "ids_fusionados": [
+        "news_318"
+      ]
     },
     {
       "id": "news_316",
@@ -5875,28 +5895,33 @@
       "razon_cambio": "Seguimiento directo: ReinoIA cubre el mismo lanzamiento de Claude Sonnet 5 (2 jul 2026)"
     },
     {
-      "id": "news_318",
-      "tipo": "noticia",
-      "titulo": "Google lanza Nano Banana 2 Lite y Gemini Omni Flash",
-      "resumen": "Google añadió a su API dos modelos de medios: Nano Banana 2 Lite, que genera imágenes en 4 segundos a $0.034 cada una para trabajos masivos y económicos, y Gemini Omni Flash, un modelo de vídeo que edita clips de 10 segundos y lidera los rankings de texto a vídeo.",
-      "categoria": "Inteligencia Artificial",
-      "puntuacion": 55,
-      "fecha": "2026-07-01",
-      "fuente_asunto": "🔓 Anthropic's Sonnet 5 ships as Washington frees Fable",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-flash-nano-banana-2-lite",
-      "newsletter": "The Rundown AI"
-    },
-    {
       "id": "news_319",
       "tipo": "noticia",
       "titulo": "Claude Science debuta con programa de fármacos",
       "resumen": "Anthropic lanzó Claude Science, un hub de IA para científicos que unifica revisión de papers, bases de datos, generación de figuras y cómputo, con trazabilidad completa del proceso de investigación. La compañía también anunció su propio programa de descubrimiento de fármacos centrado en enfermedades 'desatendidas' por las farmacéuticas.",
       "categoria": "Salud y Ciencia",
-      "puntuacion": 68,
+      "puntuacion": 93,
       "fecha": "2026-07-01",
       "fuente_asunto": "🔓 Anthropic's Sonnet 5 ships as Washington frees Fable",
       "url": "https://www.anthropic.com/news/claude-science-ai-workbench",
-      "newsletter": "The Rundown AI"
+      "newsletter": "The Rundown AI",
+      "fuentes": [
+        {
+          "newsletter": "The Rundown AI",
+          "url": "https://www.anthropic.com/news/claude-science-ai-workbench"
+        },
+        {
+          "newsletter": "SuperHuman",
+          "url": "https://claude.com/product/claude-science"
+        }
+      ],
+      "puntuacion_previa_fusion": {
+        "news_319": 68,
+        "news_313": 68
+      },
+      "ids_fusionados": [
+        "news_313"
+      ]
     },
     {
       "id": "news_320",
@@ -6030,30 +6055,6 @@
       "newsletter": "SuperHuman"
     },
     {
-      "id": "news_327",
-      "tipo": "noticia",
-      "titulo": "Meta prepara negocio de cloud para vender su compute",
-      "resumen": "Meta desarrolla un nuevo segmento interno, llamado 'Meta Compute', para alquilar capacidad de cómputo y modelos de IA a terceros, como AWS, Azure y Google Cloud. La medida llega después de que Meta comprometiera $183.000 millones en infraestructura de IA sin ver demanda significativa de sus propios modelos. Sus acciones subieron más de un 8% con la noticia.",
-      "categoria": "Negocios e Impacto Económico",
-      "puntuacion": 62,
-      "fecha": "2026-07-02",
-      "fuente_asunto": "🤐 A $5B startup emerges from stealth",
-      "url": "https://techcrunch.com/2026/07/01/meta-like-spacex-looks-to-turn-excess-ai-compute-into-cash/",
-      "newsletter": "SuperHuman"
-    },
-    {
-      "id": "news_328",
-      "tipo": "noticia",
-      "titulo": "Modelo especializado de Bridgewater supera a la IA frontier",
-      "resumen": "Bridgewater y Thinking Machines Lab entrenaron un modelo Qwen3-235B con datos de sus propios expertos para filtrar noticias financieras relevantes, alcanzando 85% de precisión frente al 50% de los modelos frontier con prompts básicos, y funcionando 14 veces más barato. El caso confirma que modelos pequeños y especializados pueden superar a los grandes modelos genéricos en tareas concretas.",
-      "categoria": "Negocios e Impacto Económico",
-      "puntuacion": 58,
-      "fecha": "2026-07-02",
-      "fuente_asunto": "🤐 A $5B startup emerges from stealth",
-      "url": "https://thinkingmachines.ai/news/learning-to-replicate-expert-judgment-in-financial-tasks/",
-      "newsletter": "SuperHuman"
-    },
-    {
       "id": "news_329",
       "tipo": "noticia",
       "titulo": "Altman propone foro global de seguridad IA liderado por EE.UU.",
@@ -6083,11 +6084,28 @@
       "titulo": "IA especializada de Bridgewater supera a modelos frontier",
       "resumen": "Un modelo Qwen3-235B ajustado con ejemplos de analistas de Bridgewater alcanzó 84,7% de precisión filtrando noticias financieras relevantes, frente al 50% de GPT, Claude y Gemini con prompts básicos, y a una fracción del coste. El caso demuestra que modelos pequeños y especializados pueden superar a los grandes modelos genéricos en tareas muy específicas.",
       "categoria": "Negocios e Impacto Económico",
-      "puntuacion": 58,
+      "puntuacion": 83,
       "fecha": "2026-07-03",
       "fuente_asunto": "🏛️ Altman's global safety pitch has a 5% twist",
       "url": "https://thinkingmachines.ai/news/learning-to-replicate-expert-judgment-in-financial-tasks/",
-      "newsletter": "The Rundown AI"
+      "newsletter": "The Rundown AI",
+      "fuentes": [
+        {
+          "newsletter": "The Rundown AI",
+          "url": "https://thinkingmachines.ai/news/learning-to-replicate-expert-judgment-in-financial-tasks/"
+        },
+        {
+          "newsletter": "SuperHuman",
+          "url": null
+        }
+      ],
+      "puntuacion_previa_fusion": {
+        "news_331": 58,
+        "news_328": 58
+      },
+      "ids_fusionados": [
+        "news_328"
+      ]
     },
     {
       "id": "news_332",
@@ -6121,11 +6139,28 @@
       "titulo": "Meta prepara negocio cloud con su exceso de cómputo",
       "resumen": "Meta trabaja en un servicio de nube para alquilar la capacidad sobrante de sus centros de datos, una opción que impulsó sus acciones un 9,3% al ofrecer una segunda vía de retorno sobre su inversión de $182.900 millones en infraestructura. La compañía seguiría el ejemplo de SpaceX y xAI con Colossus, cuya capacidad ya alquilan Anthropic, Google y Reflection AI.",
       "categoria": "Negocios e Impacto Económico",
-      "puntuacion": 62,
+      "puntuacion": 87,
       "fecha": "2026-07-02",
       "fuente_asunto": "🎉 Anthropic's Fable 5 returns worldwide",
       "url": "https://www.bloomberg.com/news/articles/2026-07-01/meta-is-building-a-cloud-business-to-sell-excess-ai-compute",
-      "newsletter": "The Rundown AI"
+      "newsletter": "The Rundown AI",
+      "fuentes": [
+        {
+          "newsletter": "The Rundown AI",
+          "url": "https://www.bloomberg.com/news/articles/2026-07-01/meta-is-building-a-cloud-business-to-sell-excess-ai-compute"
+        },
+        {
+          "newsletter": "SuperHuman",
+          "url": "https://techcrunch.com/2026/07/01/meta-like-spacex-looks-to-turn-excess-ai-compute-into-cash/"
+        }
+      ],
+      "puntuacion_previa_fusion": {
+        "news_334": 62,
+        "news_327": 62
+      },
+      "ids_fusionados": [
+        "news_327"
+      ]
     },
     {
       "id": "prompt_083",
@@ -6332,18 +6367,6 @@
       "newsletter": "SuperHuman"
     },
     {
-      "id": "news_344",
-      "tipo": "noticia",
-      "titulo": "Meta dice que su modelo Watermelon iguala a GPT-5.5",
-      "resumen": "El jefe de superinteligencia de Meta, Alexandr Wang, afirmó que el próximo modelo insignia de la compañía, con nombre en clave 'Watermelon', ha igualado a GPT-5.5 de OpenAI en benchmarks clave. Wang también adelantó una actualización de Muse Spark con mejoras en programación para acercarse a Claude Opus. Meta invertirá hasta $145.000 millones en infraestructura de IA este año.",
-      "categoria": "Inteligencia Artificial",
-      "puntuacion": 68,
-      "fecha": "2026-07-06",
-      "fuente_asunto": "🍉 Meta teases 'Watermelon'",
-      "url": "https://www.businessinsider.com/meta-ai-model-catches-up-openai-gpt-5-says-2026-7",
-      "newsletter": "SuperHuman"
-    },
-    {
       "id": "news_345",
       "tipo": "noticia",
       "titulo": "Corea del Sur acelera plan de $576.000M en chips IA",
@@ -6409,11 +6432,28 @@
       "titulo": "Meta entrena Watermelon con 10 veces más cómputo que Muse Spark",
       "resumen": "Alexandr Wang, jefe de superinteligencia de Meta, dijo a sus empleados que 'Watermelon', el modelo que Meta entrena actualmente, ya iguala a GPT-5.5 y usa unas 10 veces más cómputo que su predecesor Muse Spark (lanzado en abril). Wang también adelantó un modelo de código 'nivel Opus' que llegará 'pronto', además de una actualización de Muse Spark con mejoras de programación y agentes para Meta AI y su nueva API.",
       "categoria": "Inteligencia Artificial",
-      "puntuacion": 68,
+      "puntuacion": 93,
       "fecha": "2026-07-06",
       "fuente_asunto": "🍉 Meta sizes up GPT-5.5 with 'Watermelon'",
       "url": "https://www.businessinsider.com/meta-ai-model-catches-up-openai-gpt-5-says-2026-7",
-      "newsletter": "The Rundown AI"
+      "newsletter": "The Rundown AI",
+      "fuentes": [
+        {
+          "newsletter": "The Rundown AI",
+          "url": "https://www.businessinsider.com/meta-ai-model-catches-up-openai-gpt-5-says-2026-7"
+        },
+        {
+          "newsletter": "SuperHuman",
+          "url": null
+        }
+      ],
+      "puntuacion_previa_fusion": {
+        "news_348": 68,
+        "news_344": 68
+      },
+      "ids_fusionados": [
+        "news_344"
+      ]
     },
     {
       "id": "news_349",
