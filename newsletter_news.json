@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "ultima_actualizacion": "2026-07-19",
-  "total_noticias": 532,
+  "total_noticias": 536,
   "noticias": [
     {
       "id": "news_014",
@@ -8119,6 +8119,54 @@
       "fecha": "2026-07-17",
       "fuente_asunto": "🤝 Nvidia places massive bet on Japan",
       "url": "https://mashable.com/tech/new-york-school-testing-robot-teacher",
+      "newsletter": "SuperHuman"
+    },
+    {
+      "id": "news_430",
+      "tipo": "noticia",
+      "titulo": "Japón logra su primer aterrizaje de cohete reutilizable",
+      "resumen": "El cohete experimental RV-X de Japón despegó y aterrizó con éxito en un vuelo de prueba de menos de un minuto en el centro de Noshiro. Llega un día después de que China recuperase por primera vez un propulsor, señal de que la carrera de cohetes reutilizables, antes dominada por SpaceX, ya tiene varios competidores nuevos.",
+      "categoria": "Espacio y Aviación",
+      "puntuacion": 60,
+      "fecha": "2026-07-19",
+      "fuente_asunto": "🚀 Japan lands a reusable rocket",
+      "url": "https://apnews.com/article/japan-reusable-rocket-h3-test-space-china-eb83b8385641a094b4cd69c3ee48090a",
+      "newsletter": "SuperHuman"
+    },
+    {
+      "id": "news_431",
+      "tipo": "noticia",
+      "titulo": "Detectan atmósfera en el exoplaneta más habitable conocido",
+      "resumen": "Astrónomos confirmaron que LHS 1140b, un planeta rocoso en la zona habitable de su estrella, también tiene atmósfera: la primera vez que se encuentran juntos los tres ingredientes clave para la vida fuera del sistema solar. Se convierte así en el candidato más prometedor hallado hasta ahora.",
+      "categoria": "Espacio y Aviación",
+      "puntuacion": 45,
+      "fecha": "2026-07-19",
+      "fuente_asunto": "🚀 Japan lands a reusable rocket",
+      "url": "https://www.science.org/content/article/astronomers-spot-first-atmosphere-around-potentially-habitable-alien-world",
+      "newsletter": "SuperHuman"
+    },
+    {
+      "id": "news_432",
+      "tipo": "noticia",
+      "titulo": "FDA aprueba pastilla anticolesterol más potente que las estatinas",
+      "resumen": "Merck lanza Lipfendra, una pastilla diaria que bloquea la proteína PCSK9 y reduce el colesterol LDL hasta un 60% en ensayos clínicos, muy por encima de las estatinas tradicionales. Cuesta $315 al mes y ya está disponible para adultos con riesgo cardiovascular.",
+      "categoria": "Salud y Ciencia",
+      "puntuacion": 48,
+      "fecha": "2026-07-19",
+      "fuente_asunto": "🚀 Japan lands a reusable rocket",
+      "url": "https://www.scientificamerican.com/article/u-s-approves-pill-for-cholesterol-that-drives-levels-down-far-below-statins/",
+      "newsletter": "SuperHuman"
+    },
+    {
+      "id": "news_433",
+      "tipo": "noticia",
+      "titulo": "Detectan azúcar por primera vez en el medio interestelar",
+      "resumen": "Científicos hallaron una molécula de azúcar, esencial para el ADN y el ARN, en el gas y polvo entre sistemas estelares por primera vez. El hallazgo sugiere que estas moléculas podrían estar muy extendidas en la galaxia, reforzando la idea de que las condiciones para la vida no son exclusivas de la Tierra.",
+      "categoria": "Ciencia y Matemáticas",
+      "puntuacion": 30,
+      "fecha": "2026-07-19",
+      "fuente_asunto": "🚀 Japan lands a reusable rocket",
+      "url": "https://www.nytimes.com/2026/07/13/science/space/sugar-milky-way.html",
       "newsletter": "SuperHuman"
     }
   ]
