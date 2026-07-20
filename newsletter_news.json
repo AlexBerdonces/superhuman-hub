@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "ultima_actualizacion": "2026-07-20",
-  "total_noticias": 536,
+  "total_noticias": 544,
   "noticias": [
     {
       "id": "news_014",
@@ -4509,11 +4509,13 @@
       "titulo": "Alibaba abre su suite Qwen-Robot para humanoides, brazos y robots cuadrúpedos",
       "resumen": "Alibaba ha publicado en open-source el Qwen-Robot Suite, un conjunto de tres modelos de IA para robótica desplegables en humanoides, brazos robóticos y robots cuadrúpedos. Entra en competencia directa con iniciativas de NVIDIA y Google en IA robótica de propósito general.",
       "categoria": "Inteligencia Artificial",
-      "puntuacion": 55,
+      "puntuacion": 60,
       "fecha": "2026-06-20",
       "fuente_asunto": "Robot phone makes high-profile appearance",
       "url": null,
-      "newsletter": "SuperHuman"
+      "newsletter": "SuperHuman",
+      "puntuacion_anterior": 55,
+      "razon_cambio": "Cross-boost (+5): Nuevo movimiento de Alibaba en IA (Qwen3.8), mismo actor que Qwen-Robot"
     },
     {
       "id": "news_237",
@@ -5806,12 +5808,14 @@
       "titulo": "EE.UU. levanta el veto sobre Fable y Mythos",
       "resumen": "El Departamento de Comercio de EE.UU. levantó los controles de exportación que mantenían bloqueados los modelos Fable 5 y Mythos 5 de Anthropic desde hacía 18 días. Ambos modelos volvieron a estar disponibles a partir del miércoles, tras semanas de presión de investigadores y aliados del G7 que pedían su desbloqueo.",
       "categoria": "Política y Regulación",
-      "puntuacion": 100,
+      "puntuacion": 105,
       "fecha": "2026-07-01",
       "fuente_asunto": "👀 Anthropic releases Sonnet 5",
       "url": "https://x.com/AnthropicAI/status/2072106151890809341",
       "newsletter": "SuperHuman",
-      "razon_boost": "Seguimiento directo: Anthropic reactiva Fable 5 tras el veto (news_333), +10 relevancia cruzada"
+      "razon_boost": "Seguimiento directo: Anthropic reactiva Fable 5 tras el veto (news_333), +10 relevancia cruzada",
+      "puntuacion_anterior": 100,
+      "razon_cambio": "Cross-boost (+5): Nuevo desenlace del acceso a Fable 5, relacionado con el levantamiento del veto de EE.UU."
     },
     {
       "id": "news_312",
@@ -6125,13 +6129,13 @@
       "titulo": "Anthropic reactiva Fable 5 tras levantarse el veto de EE.UU.",
       "resumen": "Anthropic reabrió el acceso a Fable 5 después de que el Departamento de Comercio levantara el control de exportación, aunque el modelo vuelve con filtros más estrictos y con el compromiso de dar a EE.UU. acceso previo a futuros modelos antes de su lanzamiento. El nuevo filtro de seguridad bloquea el problema de ciberseguridad detectado en más del 99% de los casos.",
       "categoria": "Política y Regulación",
-      "puntuacion": 78,
+      "puntuacion": 88,
       "fecha": "2026-07-02",
       "fuente_asunto": "🎉 Anthropic's Fable 5 returns worldwide",
       "url": "https://www.anthropic.com/news/redeploying-fable-5",
       "newsletter": "The Rundown AI",
-      "puntuacion_anterior": 85,
-      "razon_cambio": "Relacionado: ReinoIA detalla las capacidades de Fable 5 tras su reactivación (6 jul 2026)"
+      "puntuacion_anterior": 78,
+      "razon_cambio": "Cross-boost (+10): Anthropic da respuesta definitiva a la saga de acceso a Fable 5 (seguimiento directo)"
     },
     {
       "id": "news_334",
@@ -7134,11 +7138,13 @@
       "titulo": "GPT-5.6 Sol se lanza al público con costos reducidos",
       "resumen": "OpenAI lanzó la familia GPT-5.6 con tres tiers: Sol (flagship), Terra y Luna. Sol se posiciona ligeramente por debajo de Fable pero supera en codificación agéntica, con mejoras en uso de computadora, diseño y ciberseguridad. El precio coincide con GPT-5.5.",
       "categoria": "Inteligencia Artificial",
-      "puntuacion": 64,
+      "puntuacion": 69,
       "fecha": "2026-07-10",
       "fuente_asunto": "🧑‍💻 ChatGPT gets a work-focused agent / 🌞 OpenAI's GPT 5.6 class, ChatGPT Work arrive",
       "newsletter": "The Rundown AI",
-      "url": "https://openai.com/index/gpt-5-6/"
+      "url": "https://openai.com/index/gpt-5-6/",
+      "puntuacion_anterior": 64,
+      "razon_cambio": "Cross-boost (+5): CFO de OpenAI usa a Sol como ejemplo de coste frente a Fable 5 (mismo sector, actor relacionado)"
     },
     {
       "id": "news_378",
@@ -7326,7 +7332,7 @@
       "titulo": "Moonshot AI lanza Kimi K3 y cierra la brecha con la frontera",
       "resumen": "El laboratorio chino Moonshot AI lanzó Kimi K3, un modelo de pesos abiertos con ventana de contexto de 1M que supera a Claude Fable 5 y GPT-5.6 Sol en benchmarks de investigación web, hojas de cálculo, diseño frontend y código largo. Obtiene 57 puntos en el Intelligence Index de Artificial Analysis, solo detrás de Fable (60) y Sol (59), con precios equivalentes a Claude Sonnet 5 y pesos públicos previstos para el 27 de julio.",
       "categoria": "Inteligencia Artificial",
-      "puntuacion": 88,
+      "puntuacion": 98,
       "fecha": "2026-07-17",
       "fuente_asunto": "Kimi K3 (SuperHuman + The Rundown AI, 17 jul)",
       "fuentes": [
@@ -7338,7 +7344,9 @@
           "newsletter": "SuperHuman",
           "url": "https://techcrunch.com/2026/07/16/moonshots-upcoming-kimi-3-is-expected-to-close-the-gap-with-anthropics-opus-4-8/"
         }
-      ]
+      ],
+      "puntuacion_anterior": 88,
+      "razon_cambio": "Cross-boost (+10): Moonshot pausa nuevas suscripciones de Kimi K3 por exceso de demanda (seguimiento directo)"
     },
     {
       "id": "news_394",
@@ -8168,6 +8176,146 @@
       "fuente_asunto": "🚀 Japan lands a reusable rocket",
       "url": "https://www.nytimes.com/2026/07/13/science/space/sugar-milky-way.html",
       "newsletter": "SuperHuman"
+    },
+    {
+      "id": "news_434",
+      "titulo": "Alibaba pone en preview su modelo frontera Qwen3.8",
+      "resumen": "Alibaba lanzó en vista previa Qwen3.8, su próximo modelo insignia, afirmando que rivaliza con lo mejor de OpenAI y Anthropic y que solo queda por detrás de Claude Fable 5. Llega apenas días después del lanzamiento de Kimi K3 de Moonshot AI, otra muestra de la rapidez con la que los labs chinos cierran la brecha con la frontera.",
+      "categoria": "Inteligencia Artificial",
+      "puntuacion": 87,
+      "fecha": "2026-07-20",
+      "fuente_asunto": "👀  Alibaba teases new frontier model",
+      "tipo": "noticia",
+      "fuentes": [
+        {
+          "newsletter": "SuperHuman",
+          "url": "https://www.qwencloud.com/pricing/token-plan"
+        },
+        {
+          "newsletter": "The Rundown AI",
+          "url": "https://x.com/qwen_cloud/status/2078758151390953489?s"
+        }
+      ]
+    },
+    {
+      "id": "news_435",
+      "titulo": "Xi pide cooperación global en IA en la Conferencia de Shanghái",
+      "resumen": "En la Conferencia Mundial de IA de Shanghái, el presidente chino Xi Jinping pidió más esfuerzos globales para guiar el desarrollo de la IA y criticó las restricciones de EE.UU. al intercambio tecnológico. También anunció un plan para ofrecer 5.000 plazas de formación en IA a países en desarrollo, en un contexto de disputa creciente por quién marca las reglas de la IA global.",
+      "categoria": "Política y Regulación",
+      "puntuacion": 55,
+      "fecha": "2026-07-20",
+      "fuente_asunto": "👀  Alibaba teases new frontier model",
+      "url": "https://www.pbs.org/newshour/world/chinas-xi-calls-for-more-global-efforts-to-guide-ai-chides-us-for-its-curbs-on-tech-sharing",
+      "newsletter": "SuperHuman",
+      "tipo": "noticia"
+    },
+    {
+      "id": "news_436",
+      "titulo": "Decart lanza Lucy 2.5, edición de vídeo en tiempo real",
+      "resumen": "El laboratorio de IA Decart presentó Lucy 2.5, su modelo más avanzado hasta ahora, capaz de editar vídeo casi en tiempo real: añadir o quitar objetos, restilizar el encuadre y crear efectos al vuelo. Decart apunta a aplicaciones en ecommerce, streaming y publicidad, anticipando efectos visuales de nivel cine en emisiones en directo.",
+      "categoria": "Inteligencia Artificial",
+      "puntuacion": 45,
+      "fecha": "2026-07-20",
+      "fuente_asunto": "👀  Alibaba teases new frontier model",
+      "url": "https://decart.ai/lucy",
+      "newsletter": "SuperHuman",
+      "tipo": "noticia"
+    },
+    {
+      "id": "news_437",
+      "titulo": "Anthropic pone fin a la incertidumbre de acceso a Fable 5",
+      "resumen": "Tras un mes de plazos cambiantes, Anthropic anunció que Claude Fable 5 se queda de forma permanente en los planes Max y Team Premium, con la mitad de los límites de uso habituales; los planes inferiores recibirán un crédito único de $100 antes de pasar a pago por uso. La decisión llega tras la presión competitiva de Kimi K3 de Moonshot y la ampliación continua de los límites de GPT-5.6 Sol.",
+      "categoria": "Inteligencia Artificial",
+      "puntuacion": 68,
+      "fecha": "2026-07-20",
+      "fuente_asunto": "📕 Anthropic closes the book on Fable access",
+      "url": "https://x.com/claudeai/status/2078302415804379218?s",
+      "newsletter": "The Rundown AI",
+      "tipo": "noticia"
+    },
+    {
+      "id": "news_438",
+      "titulo": "CFO de OpenAI propone nueva métrica para presupuestos de IA",
+      "resumen": "La directora financiera de OpenAI, Sarah Friar, publicó un marco para evaluar presupuestos corporativos de IA basado en 'inteligencia útil por dólar' en vez del precio por token. OpenAI usó el benchmark de programación DeepSWE para mostrar que Sol supera a Fable 5 en 2,8 puntos con un coste estimado de API un 36,2% menor.",
+      "categoria": "Negocios e Impacto Económico",
+      "puntuacion": 42,
+      "fecha": "2026-07-20",
+      "fuente_asunto": "📕 Anthropic closes the book on Fable access",
+      "url": "https://openai.com/index/a-scorecard-for-the-ai-age/",
+      "newsletter": "The Rundown AI",
+      "tipo": "noticia"
+    },
+    {
+      "id": "prompt_112",
+      "tipo": "prompt",
+      "titulo": "Encuentra ideas de negocio con encaje problema-solución",
+      "herramienta": "ChatGPT",
+      "puntuacion": 55,
+      "fecha": "2026-07-20",
+      "fuente_asunto": "👀  Alibaba teases new frontier model",
+      "newsletter": "SuperHuman",
+      "etiquetas": [
+        "Emprendimiento",
+        "Estrategia",
+        "Productividad"
+      ],
+      "prompt_completo": "Actúa como un estratega de startups. Identifica 10 problemas reales que enfrenta [audiencia objetivo]. Para cada problema, propón una idea de negocio viable que lo resuelva. Estructura la respuesta así: descripción del problema, soluciones actuales y sus limitaciones, tu solución propuesta, propuesta de valor y modelo de negocio. Asegúrate de que cada solución tenga un camino claro a la monetización.",
+      "desglose": {
+        "rol": "Estratega de startups",
+        "contexto": "Quieres validar oportunidades de negocio reales para una audiencia concreta",
+        "instruccion": "Identificar 10 problemas reales y proponer para cada uno una solución de negocio monetizable",
+        "cadena_pensamiento": "Elegir audiencia objetivo → identificar 10 problemas reales → para cada uno describir la solución actual y su limitación → proponer tu solución → definir propuesta de valor → definir modelo de negocio",
+        "formato": "Lista de 10 problemas, cada uno con solución actual, limitación, solución propuesta, propuesta de valor y modelo de negocio",
+        "restricciones": "Cada solución debe tener un camino claro a la monetización"
+      }
+    },
+    {
+      "id": "prompt_113",
+      "tipo": "prompt",
+      "titulo": "Ilustraciones acuareladas estilo libro infantil vintage",
+      "herramienta": "ChatGPT",
+      "puntuacion": 38,
+      "fecha": "2026-07-20",
+      "fuente_asunto": "👀  Alibaba teases new frontier model",
+      "newsletter": "SuperHuman",
+      "etiquetas": [
+        "Generación de imágenes",
+        "Diseño",
+        "Creatividad"
+      ],
+      "prompt_completo": "Ilustración caprichosa, hecha a mano, con acuarela y lápiz de color, de una escena cotidiana y apacible, inspirada en un libro infantil vintage acogedor. Crea un entorno rico en detalles y con historia, con personas comunes y encantadoras haciendo actividades sencillas del día a día: cocinando en una cocina cálida, cuidando un jardín exuberante, tomando té en una mesa de madera, trabajando en un vecindario tranquilo o encontrándose en un camino rural. Contornos de tinta negra sueltos e imperfectos, proporciones ingenuas dibujadas a mano, trazos de lápiz visibles, aguadas de acuarela suaves, coloreado ligeramente desigual, textura de papel cálida, rojos, verdes, azules, amarillos apagados y naranjas terrosos. Llena la composición con pequeños detalles narrativos: flores, árboles frondosos, plantas en macetas, gatos o perros pequeños, pájaros, tazas, utensilios de cocina, fruteros, muebles antiguos, hojas de otoño dispersas y objetos domésticos acogedores. Composición amplia tipo libro de cuentos, perspectiva juguetona, atmósfera nostálgica y tranquila, emoción humana cálida, ilustración analógica tradicional, aspecto de papel vintage escaneado, sin fotorrealismo, sin 3D, sin arte digital brillante, sin texto, ilustración editorial infantil muy detallada.",
+      "desglose": {
+        "rol": "Generador de imágenes con estilo ilustrado a mano",
+        "contexto": "Quieres una ilustración con estética de libro infantil vintage para uso editorial o decorativo",
+        "instruccion": "Describir escena, estilo técnico (acuarela, lápiz), paleta de colores y nivel de detalle narrativo",
+        "cadena_pensamiento": "Definir la escena cotidiana → especificar técnica y textura → definir paleta de colores → añadir detalles narrativos pequeños → excluir estilos no deseados (3D, fotorrealismo, texto)",
+        "formato": "Imagen ilustrada estilo acuarela/lápiz, composición amplia tipo libro de cuentos",
+        "restricciones": "Sin fotorrealismo, sin 3D, sin arte digital brillante, sin texto en la imagen"
+      }
+    },
+    {
+      "id": "prompt_114",
+      "tipo": "prompt",
+      "titulo": "Despliega una mini-SaaS en minutos con ChatGPT Sites",
+      "herramienta": "ChatGPT",
+      "puntuacion": 55,
+      "fecha": "2026-07-20",
+      "fuente_asunto": "📕 Anthropic closes the book on Fable access",
+      "newsletter": "The Rundown AI",
+      "etiquetas": [
+        "Desarrollo Web",
+        "Prototipado",
+        "Automatización"
+      ],
+      "prompt_completo": "Abre la lista de APIs públicas en GitHub (public-apis/public-apis) y elige una. Pide a ChatGPT que convierta la API y tu idea en un plan de producto (PRD). Luego ve a Codex y pídele que construya el MVP a partir del plan, usando Git y el plugin de Sites. Una vez construido, pide a Codex que lo despliegue con Sites: puedes desplegarlo en privado para que solo tu equipo lo use, o en público para que cualquiera pueda visitarlo. Desde la barra lateral de Sites puedes ver y gestionar estos despliegues, además de seguir analíticas web y añadir dominios personalizados.",
+      "desglose": {
+        "rol": "Asistente que convierte una API pública en una mini aplicación web desplegada",
+        "contexto": "Quieres lanzar un producto sencillo (mini-SaaS) a partir de una API pública sin montar infraestructura desde cero",
+        "instruccion": "Elegir una API pública, generar un PRD con ChatGPT, construir el MVP con Codex y desplegarlo con Sites",
+        "cadena_pensamiento": "Elegir API pública → convertir idea en PRD con ChatGPT → construir MVP en Codex a partir del PRD → desplegar con Sites (privado o público) → gestionar analíticas y dominio desde la barra lateral",
+        "formato": "Aplicación web desplegada y accesible por URL, con opción de dominio personalizado",
+        "restricciones": "Decidir despliegue privado (solo equipo) o público (cualquiera) según el caso de uso"
+      }
     }
   ]
 }
