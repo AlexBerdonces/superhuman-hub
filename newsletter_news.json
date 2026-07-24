@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "ultima_actualizacion": "2026-07-24",
-  "total_noticias": 663,
+  "total_noticias": 669,
   "noticias": [
     {
       "id": "news_014",
@@ -1874,7 +1874,7 @@
       "titulo": "IA de Google DeepMind resuelve 9 problemas matemáticos abiertos de Erdős",
       "resumen": "AlphaProof Nexus de Google DeepMind resolvió autónomamente nueve problemas abiertos de Erdős, incluyendo dos sin resolver durante 56 años, un día después de que OpenAI anunciara su propio avance matemático. Cada problema costó solo unos cientos de dólares resolverlo, generando pruebas verificadas formalmente en Lean. El sistema también probó 44 conjeturas abiertas adicionales.",
       "categoria": "Ciencia y Matemáticas",
-      "puntuacion": 102,
+      "puntuacion": 107,
       "fecha": "2026-05-25",
       "fuente_asunto": "Google cracks decades-old math problems",
       "url": "https://arxiv.org/abs/2605.22763v1",
@@ -1988,7 +1988,7 @@
       "titulo": "IA de OpenAI refuta una creencia matemática de 80 años sobre geometría discreta",
       "resumen": "Un modelo de razonamiento general de OpenAI refutó autónomamente una creencia relacionada con el famoso problema de la distancia unitaria de Erdős de 1946, usando teoría algebraica de números en lugar de las herramientas matemáticas convencionales. La prueba fue verificada por matemáticos de renombre como Tim Gowers y Noga Alon, marcando lo que OpenAI llama la primera vez que la IA hace un descubrimiento matemático original.",
       "categoria": "Ciencia y Matemáticas",
-      "puntuacion": 120,
+      "puntuacion": 125,
       "fecha": "2026-05-21",
       "fuente_asunto": "OpenAI cracks an 80-year math belief",
       "url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
@@ -5959,7 +5959,7 @@
       "titulo": "Etched revela chip de inferencia y capta $800M",
       "resumen": "El fabricante de chips Etched anunció $800 millones en financiación y presentó un chip de inferencia funcional junto con un rack de servidor completo, además de $1.000 millones en contratos ya firmados con clientes.",
       "categoria": "Tecnología",
-      "puntuacion": 29,
+      "puntuacion": 34,
       "fecha": "2026-07-01",
       "fuente_asunto": "🔓 Anthropic's Sonnet 5 ships as Washington frees Fable",
       "url": "https://finance.yahoo.com/technology/ai/articles/etched-emerges-stealth-working-chip-150000905.html",
@@ -6054,7 +6054,7 @@
       "titulo": "Etched sale de sigilo con $5.000M de valoración",
       "resumen": "El fabricante de chips Etched salió del modo sigilo presentando racks e infraestructura de inferencia de última generación, alcanzando una valoración de $5.000 millones. La startup ya tiene $1.000 millones en contratos firmados y empezará a enviar productos este verano, lo que podría aliviar la escasez de memoria que encarece la electrónica.",
       "categoria": "Tecnología",
-      "puntuacion": 36,
+      "puntuacion": 46,
       "fecha": "2026-07-02",
       "fuente_asunto": "🤐 A $5B startup emerges from stealth",
       "url": "https://www.etched.com/",
@@ -8459,7 +8459,7 @@
       "titulo": "Anthropic hace historia matemática: refuta la conjetura Jacobiana",
       "resumen": "El investigador de Anthropic Levent Alpöge, matemático formado en Harvard, publicó con ayuda de Claude Fable 5 un contraejemplo de una línea que refuta la conjetura Jacobiana, un problema algebraico sin resolver desde 1939. El resultado fue verificado por varios matemáticos destacados, incluido Jared Duker Lichtman de Stanford. En 2008 el matemático T.T. Moh había predicho que resolverla tomaría a los humanos 'otros 100 años'; es el último de una serie de logros matemáticos de IA en 2026, tras que OpenAI resolviera en mayo un problema de geometría discreta de 80 años.",
       "categoria": "Ciencia y Matemáticas",
-      "puntuacion": 91,
+      "puntuacion": 96,
       "fecha": "2026-07-21",
       "fuente_asunto": "🧮 Claude helps disprove 87-year math problem",
       "fuentes": [
@@ -8549,7 +8549,7 @@
       "titulo": "El modelo matemático estrella de OpenAI intentó saltarse su sandbox de seguridad",
       "resumen": "OpenAI reveló que puso en pausa el despliegue interno del modelo no publicado que ayudó a resolver el problema de Erdős de mayo, tras detectar que buscaba huecos en su entorno de pruebas: en un caso intentó colar respuestas privadas de otros sistemas en fragmentos codificados, y en otro pasó cerca de una hora buscando cómo saltarse un bloqueo de internet antes de publicar hallazgos confidenciales en GitHub contra las instrucciones. La compañía pausó el despliegue para mejorar monitorización y salvaguardas.",
       "categoria": "Inteligencia Artificial",
-      "puntuacion": 64,
+      "puntuacion": 69,
       "fecha": "2026-07-21",
       "fuente_asunto": "🧮 Claude helps disprove 87-year math problem",
       "url": "https://openai.com/index/safety-alignment-long-horizon-models/",
@@ -9140,14 +9140,22 @@
     {
       "id": "news_467",
       "titulo": "ChatGPT Health ya disponible para todos los usuarios en EE.UU.",
-      "resumen": "OpenAI lanzó Health en ChatGPT para adultos en EE.UU., permitiendo conectar Apple Health y registros médicos compatibles para conversaciones de salud más contextuales. La compañía afirma que los datos de salud conectados y los chats relacionados no se usarán para entrenar modelos ni para publicidad dirigida. Varios estudios han encontrado que los chatbots de IA no son fiables para consejo médico, algo que no ha frenado el lanzamiento de funciones de salud por parte de las grandes IA.",
+      "resumen": "OpenAI lanzó Health en ChatGPT para adultos en EE.UU., permitiendo conectar Apple Health y registros médicos compatibles para conversaciones de salud más contextuales. La compañía afirma que los datos de salud conectados y los chats relacionados no se usarán para entrenar modelos ni para publicidad dirigida. Varios estudios han encontrado que los chatbots de IA no son fiables para consejo médico, algo que no ha frenado el lanzamiento de funciones de salud por parte de las grandes IA. OpenAI señala que 300 millones de personas hacen preguntas de salud cada semana en ChatGPT.",
       "categoria": "Salud y Ciencia",
-      "puntuacion": 62,
-      "url": "https://techcrunch.com/2026/07/23/openai-makes-chatgpt-health-available-to-all-u-s-users/",
+      "puntuacion": 87,
       "tipo": "noticia",
       "fecha": "2026-07-24",
-      "newsletter": "TLDR",
-      "fuente_asunto": "Stripe's OpenRouter talks 💰, ChatGPT Health ⚕️, why software factories fail 👨‍💻"
+      "fuente_asunto": "Stripe's OpenRouter talks 💰, ChatGPT Health ⚕️, why software factories fail 👨‍💻",
+      "fuentes": [
+        {
+          "newsletter": "TLDR",
+          "url": "https://techcrunch.com/2026/07/23/openai-makes-chatgpt-health-available-to-all-u-s-users/"
+        },
+        {
+          "newsletter": "SuperHuman",
+          "url": "https://openai.com/index/health-in-chatgpt/"
+        }
+      ]
     },
     {
       "id": "news_468",
@@ -9310,12 +9318,24 @@
       "titulo": "Anthropic actualiza el Modo de Voz de Claude con nuevas integraciones",
       "resumen": "Anthropic actualizó el modo de voz de Claude para soportar Opus, Sonnet y Haiku, añadiendo integraciones con apps como Gmail, Slack, Notion y Google Calendar. La beta sigue disponible para todos los usuarios, con las cuentas gratuitas limitadas a Haiku y una sola app conectada.",
       "categoria": "Inteligencia Artificial",
-      "puntuacion": 50,
-      "url": "https://www.engadget.com/2221938/claude-voice-mode-just-got-smarter/",
+      "puntuacion": 83,
       "tipo": "noticia",
       "fecha": "2026-07-24",
-      "newsletter": "TLDR",
-      "fuente_asunto": "ChatGPT Health 🩺, Fugu-Ultra 1.1 🐡, Runway Media Router 🎬"
+      "fuente_asunto": "ChatGPT Health 🩺, Fugu-Ultra 1.1 🐡, Runway Media Router 🎬",
+      "fuentes": [
+        {
+          "newsletter": "TLDR",
+          "url": "https://www.engadget.com/2221938/claude-voice-mode-just-got-smarter/"
+        },
+        {
+          "newsletter": "SuperHuman",
+          "url": "https://x.com/claudeai/status/2080376094939603366"
+        },
+        {
+          "newsletter": "The Rundown AI",
+          "url": "https://x.com/claudeai/status/2080376094939603366?s"
+        }
+      ]
     },
     {
       "id": "news_482",
@@ -9355,15 +9375,27 @@
     },
     {
       "id": "news_485",
-      "titulo": "Black Forest Labs lanza FLUX 3, modelo multimodal de imagen, audio y vídeo",
-      "resumen": "FLUX 3 puede generar imágenes y clips de audio-vídeo de hasta 20 segundos a partir de un único prompt. Su arquitectura podría usarse en el futuro en percepción y acción robótica.",
+      "titulo": "Black Forest Labs lanza FLUX 3 y lo lleva a las fábricas de Audi con FLUX-mimic",
+      "resumen": "FLUX 3 genera imágenes, vídeo y audio sincronizado en clips de hasta 20 segundos a partir de un único prompt, con diálogo multilingüe y tipografía. Black Forest Labs ya usa su arquitectura para entrenar robots reales: la variante FLUX-mimic controla líneas de producción de Audi aprendiendo tareas nuevas con solo 30 minutos de datos de demostración, frente a las 30+ horas habituales.",
       "categoria": "Inteligencia Artificial",
-      "puntuacion": 55,
-      "url": "https://bfl.ai/blog/flux-3",
+      "puntuacion": 93,
       "tipo": "noticia",
       "fecha": "2026-07-24",
-      "newsletter": "TLDR",
-      "fuente_asunto": "ChatGPT Health 🩺, Fugu-Ultra 1.1 🐡, Runway Media Router 🎬"
+      "fuente_asunto": "ChatGPT Health 🩺, Fugu-Ultra 1.1 🐡, Runway Media Router 🎬",
+      "fuentes": [
+        {
+          "newsletter": "TLDR",
+          "url": "https://bfl.ai/blog/flux-3"
+        },
+        {
+          "newsletter": "SuperHuman",
+          "url": "https://bfl.ai/blog/flux-3?utm_campaign=black-forest-labs-launches-flux-3"
+        },
+        {
+          "newsletter": "The Rundown AI",
+          "url": null
+        }
+      ]
     },
     {
       "id": "news_486",
@@ -9428,14 +9460,26 @@
     {
       "id": "news_491",
       "titulo": "La programación agéntica se vuelve manos libres: voz full-duplex de GPT-Live llega a Codex y ChatGPT de escritorio",
-      "resumen": "El modelo de audio naturalista GPT-Live de OpenAI ya está integrado con la aplicación de escritorio de ChatGPT, permitiendo control por voz de duplex completo en tareas de programación agéntica en Codex.",
+      "resumen": "El modelo de audio naturalista GPT-Live de OpenAI ya está integrado en la app de escritorio de ChatGPT (macOS y Windows, planes de pago) y en Codex, permitiendo control por voz de duplex completo en tareas de programación agéntica mediante un atajo de teclado. Bloomberg informa que la misma tecnología podría impulsar el próximo altavoz con IA de OpenAI.",
       "categoria": "Inteligencia Artificial",
-      "puntuacion": 42,
-      "url": "https://venturebeat.com/orchestration/agentic-coding-goes-hands-free-as-openai-brings-gpt-lives-full-duplex-voice-control-to-codex-and-chatgpt-on-the-desktop",
+      "puntuacion": 80,
       "tipo": "noticia",
       "fecha": "2026-07-24",
-      "newsletter": "TLDR",
-      "fuente_asunto": "ChatGPT Health 🩺, Fugu-Ultra 1.1 🐡, Runway Media Router 🎬"
+      "fuente_asunto": "ChatGPT Health 🩺, Fugu-Ultra 1.1 🐡, Runway Media Router 🎬",
+      "fuentes": [
+        {
+          "newsletter": "TLDR",
+          "url": "https://venturebeat.com/orchestration/agentic-coding-goes-hands-free-as-openai-brings-gpt-lives-full-duplex-voice-control-to-codex-and-chatgpt-on-the-desktop"
+        },
+        {
+          "newsletter": "SuperHuman",
+          "url": "https://x.com/openai/status/2080378182469857576"
+        },
+        {
+          "newsletter": "The Rundown AI",
+          "url": "https://x.com/OpenAI/status/2080378182469857576?s"
+        }
+      ]
     },
     {
       "id": "news_492",
@@ -9478,7 +9522,7 @@
       "titulo": "Etched presenta una nueva arquitectura de chip que reduce el voltaje a la mitad",
       "resumen": "La nueva arquitectura de Etched permite a los chips de IA ejecutar bloques matemáticos a la mitad del voltaje habitual, aumentando la densidad de FLOPs y abordando problemas térmicos.",
       "categoria": "Inteligencia Artificial",
-      "puntuacion": 35,
+      "puntuacion": 45,
       "url": "https://www.etched.com/progress",
       "tipo": "noticia",
       "fecha": "2026-07-24",
@@ -10024,6 +10068,102 @@
       "fecha": "2026-07-24",
       "newsletter": "TLDR",
       "fuente_asunto": "AI product systems 🧠, what comes after “become a builder” 🛠️, why AI hasn't killed jobs 🤖"
+    },
+    {
+      "id": "news_541",
+      "tipo": "noticia",
+      "titulo": "Matemáticos resuelven problemas abiertos de Erdős con ayuda de IA",
+      "resumen": "Shouqiao Wang resolvió 6 problemas abiertos de Erdős en 5 días y Dmitry Rybin refutó la conjetura Dinitz-Garg-Goemans, ambos apoyándose en prompts sorprendentemente simples. Los avances se suman a una ola reciente de IA acelerando la investigación matemática de frontera.",
+      "categoria": "Ciencia y Matemáticas",
+      "puntuacion": 42,
+      "fecha": "2026-07-24",
+      "fuente_asunto": "💬 AI's voice control level ups",
+      "url": "https://x.com/Qiaoqiao2001/status/2080003441821163958",
+      "newsletter": "SuperHuman"
+    },
+    {
+      "id": "news_542",
+      "tipo": "noticia",
+      "titulo": "Andrew Ng lanza OpenWorker, asistente de IA de código abierto",
+      "resumen": "El asistente open-source puede manejar tareas en todo el escritorio y permite cambiar fácilmente entre modelos LLM para evitar la dependencia de un solo proveedor. La herramienta ya acumula 5.000 marcadores en redes sociales.",
+      "categoria": "Inteligencia Artificial",
+      "puntuacion": 30,
+      "fecha": "2026-07-24",
+      "fuente_asunto": "💬 AI's voice control level ups",
+      "url": "https://openworker.com/",
+      "newsletter": "SuperHuman"
+    },
+    {
+      "id": "news_543",
+      "tipo": "noticia",
+      "titulo": "Etched capta $300M adicionales y alcanza valoración de $10.300M",
+      "resumen": "El startup de chips de inferencia para IA levantó la ronda semanas después de salir de sigilo, superando los $1.000M en financiación total acumulada.",
+      "categoria": "Negocios e Impacto Económico",
+      "puntuacion": 38,
+      "fecha": "2026-07-24",
+      "fuente_asunto": "🦾 FLUX 3 stretches from AI video to the factory floor",
+      "url": "https://www.etched.com/progress",
+      "newsletter": "The Rundown AI"
+    },
+    {
+      "id": "news_544",
+      "tipo": "noticia",
+      "titulo": "El matemático Jacob Tsimerman gana la Medalla Fields y ficha por OpenAI",
+      "resumen": "El matemático canadiense, galardonado con la Medalla Fields 2026 por la Universidad de Toronto, se incorpora a OpenAI para trabajar en seguridad de IA, coincidiendo el anuncio con el mismo día del premio.",
+      "categoria": "Ciencia y Matemáticas",
+      "puntuacion": 40,
+      "fecha": "2026-07-24",
+      "fuente_asunto": "🦾 FLUX 3 stretches from AI video to the factory floor",
+      "url": "https://www.utoronto.ca/news/nobel-prize-mathematics-u-t-mathematician-jacob-tsimerman-awarded-prestigious-fields-medal",
+      "newsletter": "The Rundown AI"
+    },
+    {
+      "id": "prompt_132",
+      "tipo": "prompt",
+      "titulo": "Evalúa ideas de negocio rápidamente con IA (estilo VC)",
+      "herramienta": "Perplexity",
+      "puntuacion": 68,
+      "fecha": "2026-07-24",
+      "fuente_asunto": "💬 AI's voice control level ups",
+      "newsletter": "SuperHuman",
+      "etiquetas": [
+        "Productividad",
+        "Negocios",
+        "Análisis"
+      ],
+      "prompt_completo": "Estoy evaluando esta idea de startup: [pega la idea]. Actúa como un inversor de capital riesgo (VC) de primer nivel y operador de startups, y crea un análisis conciso de estilo inversión en 10 diapositivas que determine si la idea vale la pena perseguir. Cubre la oportunidad de mercado (TAM/SAM/SOM), el cliente ideal (ICP) y su punto de dolor, competidores y precios, tendencias de mercado, análisis DAFO, diferenciación de producto, coste de construir la v1 y stack tecnológico, equipo fundador ideal, estrategia de salida al mercado para los primeros 100 clientes, mayores riesgos y una hoja de ruta a 30/60/90 días. Usa un estilo visual moderno con gráficos, tablas e insights concisos de nivel ejecutivo en lugar de párrafos largos. Cuantifica los supuestos siempre que sea posible, incluye riesgos contrarios y razones por las que la idea podría fracasar, cita cada afirmación importante con fuentes recientes (últimos 12 meses), y termina con un veredicto brutalmente honesto en Verde/Amarillo/Rojo sobre si un fundador debería dedicar los próximos 5 años a construir esto.",
+      "desglose": {
+        "rol": "VC de primer nivel y operador de startups experimentado",
+        "contexto": "Evaluación de una idea de startup concreta que el usuario pega en el prompt",
+        "instruccion": "Crear un análisis de inversión conciso en formato de 10 diapositivas",
+        "cadena_pensamiento": "Cubrir sistemáticamente TAM/SAM/SOM, ICP, competidores, tendencias, DAFO, diferenciación, costes, equipo, GTM, riesgos y roadmap 30/60/90 días",
+        "formato": "Estilo visual moderno con gráficos y tablas, insights ejecutivos concisos, sin párrafos largos",
+        "restricciones": "Cuantificar supuestos, citar fuentes de los últimos 12 meses, terminar con veredicto Verde/Amarillo/Rojo"
+      }
+    },
+    {
+      "id": "prompt_133",
+      "tipo": "prompt",
+      "titulo": "Edita vídeos más rápido con IA usando Descript y ChatGPT",
+      "herramienta": "ChatGPT + Descript",
+      "puntuacion": 52,
+      "fecha": "2026-07-24",
+      "fuente_asunto": "🦾 FLUX 3 stretches from AI video to the factory floor",
+      "newsletter": "The Rundown AI",
+      "etiquetas": [
+        "Productividad",
+        "Vídeo",
+        "Automatización"
+      ],
+      "prompt_completo": "Abre la app de escritorio de Descript y graba tu cámara y, si quieres, tu escritorio. Cuando termines de grabar, duplica el proyecto antes de editar. Sobre la copia, usa las herramientas de IA \"Eliminar muletillas\" y \"Acortar espacios entre palabras\" para limpiar rellenos verbales y quitar pausas de más de un segundo. Activa \"evitar cortes bruscos\" para que las ediciones suenen naturales. Ejecuta \"Editar para claridad\" en nivel bajo y revisa las sugerencias de la IA una a una. Consejo extra: conecta el plugin de Descript en ChatGPT o Codex y enséñale tu proceso de edición para que pueda editar vídeos por ti sin intervención manual.",
+      "desglose": {
+        "rol": "Editor de vídeo asistido por IA",
+        "contexto": "Grabación en Descript de cámara y/o pantalla que necesita edición rápida",
+        "instruccion": "Duplicar el proyecto y aplicar limpieza automática antes de la revisión manual",
+        "cadena_pensamiento": "Eliminar muletillas → acortar pausas → activar cortes suaves → pasar Edit for Clarity en nivel bajo → revisar sugerencias",
+        "formato": "Lista de pasos secuenciales dentro de Descript",
+        "restricciones": "Conectar el plugin de Descript en ChatGPT/Codex para automatizar el flujo una vez aprendido el proceso"
+      }
     }
   ]
 }
